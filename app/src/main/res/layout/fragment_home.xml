@@ -89,6 +89,21 @@ tools:context=".ui.home.HomeFragment">
             android:src="@drawable/baseline_pan_tool_alt_24"/>
     </com.google.android.material.card.MaterialCardView>
 
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_brown_eyes"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="@color/eyesColorBrown"-->
+<!--        android:elevation="@dimen/step_small"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:contentDescription="@string/no_description"-->
+
+<!--        android:textAlignment="center"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical_second"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/card_mother"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/card_mother" />-->
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_mother_heart"
         style="@style/style_card_view"
@@ -354,9 +369,12 @@ tools:context=".ui.home.HomeFragment">
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/step_x_large"
+        android:layout_height="@dimen/step_xx_large"
         android:background="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@id/card_child_back"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_child_back" />
 
 
 
