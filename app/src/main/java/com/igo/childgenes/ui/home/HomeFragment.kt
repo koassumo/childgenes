@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.cardMother.setOnClickListener {
-                findNavController().navigate(R.id.action_navigation_home_to_selectFragment2)
+                findNavController().navigate(R.id.action_navigation_home_to_select_eyes_fragment)
         }
     }
 

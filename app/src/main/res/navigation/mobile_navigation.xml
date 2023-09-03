@@ -11,8 +11,8 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_selectFragment2"
-            app:destination="@id/selectFragment2" />
+            android:id="@+id/action_navigation_home_to_select_eyes_fragment"
+            app:destination="@id/select_eyes_fragment" />
     </fragment>
 
     <fragment
@@ -26,9 +26,10 @@
         android:name="com.igo.childgenes.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
     <fragment
-        android:id="@+id/selectFragment2"
-        android:name="com.igo.childgenes.ui.home.SelectFragment"
+        android:id="@+id/select_eyes_fragment"
+        android:name="com.igo.childgenes.ui.home.SelectEyesFragment"
         android:label="fragment_select"
-        tools:layout="@layout/fragment_select" />
+        tools:layout="@layout/fragment_select_eyes" />
 </navigation>
