@@ -10,7 +10,7 @@
 
     <!--   1.1. child style for title -->
     <style name="heading_title_top" parent="heading_title">
-        <item name="android:layout_marginTop">@dimen/step_x_large</item>
+        <item name="android:layout_marginTop">@dimen/step_normal_plus</item>
     </style>
 
     <!--   1.2. child style for text -->
@@ -37,10 +37,10 @@
         <item name="cardCornerRadius">@dimen/radius_small</item>
         <item name="cardElevation">@dimen/elevation_normal</item>
         <item name="strokeWidth">@dimen/step_zero</item>
-        <item name="android:layout_marginTop">@dimen/step_minus_normal</item>
+        <item name="android:layout_marginTop">@dimen/step_x_large</item>
         <item name="android:layout_marginBottom">@dimen/step_minus_normal</item>
-        <item name="android:layout_marginStart">@dimen/step_large</item>
-        <item name="android:layout_marginEnd">@dimen/step_large</item>
+        <item name="android:layout_marginStart">@dimen/step_zero</item>
+        <item name="android:layout_marginEnd">@dimen/step_zero</item>
     </style>
 
     <!--   2.1. child style for title -->

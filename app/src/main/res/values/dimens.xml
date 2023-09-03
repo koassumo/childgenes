@@ -23,6 +23,7 @@
     <dimen name="text_size_large">16sp</dimen>
 
     <!--normal-->
+    <dimen name="step_normal_plus">20dp</dimen>
     <dimen name="step_normal">12dp</dimen>
     <dimen name="step_normal_too">8dp</dimen>
     <dimen name="step_bottom_normal">12dp</dimen>
