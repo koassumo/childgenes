@@ -36,7 +36,15 @@ tools:context=".ui.home.HomeFragment">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintGuide_percent="0.48"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_centre_vertical_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.52"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--Mother-->
@@ -121,7 +129,7 @@ tools:context=".ui.home.HomeFragment">
         style="@style/heading_title_top"
         android:text="@string/father"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
-        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
@@ -129,7 +137,7 @@ tools:context=".ui.home.HomeFragment">
         style="@style/style_card_view"
         app:cardBackgroundColor="@color/grey_500"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
-        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
         app:layout_constraintTop_toBottomOf="@+id/message_father">
 
         <ImageView
@@ -153,7 +161,7 @@ tools:context=".ui.home.HomeFragment">
         style="@style/style_card_view"
         app:cardBackgroundColor="@color/grey_500"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
-        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
         app:layout_constraintTop_toBottomOf="@+id/card_father">
 
         <ImageView
@@ -175,7 +183,7 @@ tools:context=".ui.home.HomeFragment">
         style="@style/style_card_view"
         app:cardBackgroundColor="@color/grey_500"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
-        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
         app:layout_constraintTop_toBottomOf="@+id/card_father_heart">
 
         <ImageView
