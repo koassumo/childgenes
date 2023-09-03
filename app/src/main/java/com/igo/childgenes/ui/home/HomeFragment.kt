@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.igo.childgenes.R
 import com.igo.childgenes.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -32,6 +34,14 @@ class HomeFragment : Fragment() {
 //            textView.text = it
 //        }
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.cardMother.setOnClickListener {
+                findNavController().navigate(R.id.action_navigation_home_to_selectFragment2)
+        }
     }
 
     override fun onDestroyView() {

@@ -13,4 +13,6 @@
     <string name="brown">Brown</string>
     <string name="blue_grey">Blue / Grey</string>
     <string name="green">Green</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
