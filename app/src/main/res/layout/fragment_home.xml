@@ -79,7 +79,7 @@
             <ImageView
                 android:id="@+id/iv_eyes"
                 style="@style/style_image_banner"
-                android:src="@drawable/eyes_y"
+                android:src="@drawable/eyes"
                 android:visibility="visible" />
 
             <TextView
