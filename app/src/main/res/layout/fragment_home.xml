@@ -46,6 +46,55 @@
             app:layout_constraintGuide_percent="0.52"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_start_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_end_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+        <!--Banner-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/banner_eyes"
+            style="@style/style_card_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_eyes"
+                style="@style/style_image_banner"
+                android:src="@drawable/eyes_y"
+                android:visibility="visible" />
+
+            <TextView
+                style="@style/banner_text"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:elevation="@dimen/elevation_normal"
+                android:text="@string/title_home"
+                android:textColor="@color/grey_800"
+                android:textFontWeight="900" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
         <!--Mother-->
 
         <com.google.android.material.card.MaterialCardView
@@ -55,7 +104,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/card_mother_height"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/banner_eyes" />
 
 
         <TextView
@@ -161,7 +210,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/card_father_height"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/banner_eyes"  />
 
         <TextView
             android:id="@+id/message_father"

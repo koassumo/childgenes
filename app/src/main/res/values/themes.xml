@@ -13,9 +13,13 @@
         <!--        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
         <!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
 
-        <item name="colorPrimary">@color/blue_700</item>
-        <item name="myColorPrimaryLight">@color/blue_100</item>
-        <item name="colorPrimaryDark">@color/blue_200</item>
+        <item name="android:fontFamily">@font/kumbh_sans</item>
+<!--        <item name="android:textFontWeight">900</item>-->
+<!--        <item name="android:fontWeight">900</item>-->
+
+        <item name="colorPrimary">@color/grey_800</item>
+        <item name="myColorPrimaryLight">@color/white</item>
+        <item name="colorPrimaryDark">@color/brown_background_light</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="strokeColor">?attr/colorPrimary</item>
         <item name="colorAccent">?attr/colorPrimary</item>
@@ -27,7 +31,7 @@
 
         <!--    navigationBar panel (which is system) is customizable here    -->
         <item name="android:navigationBarColor">?attr/colorPrimaryDark</item>
-        <!--    but Bottom Bar panel (which is for navigation viesw) is customizable as a view    -->
+        <!--    but Bottom Bar panel (which is for navigation views) is customizable as a view    -->
 
 
         <!--        secondary for fab-->
