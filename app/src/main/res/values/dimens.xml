@@ -9,7 +9,7 @@
     <!--heading-->
     <dimen name="step_top_heading">36dp</dimen>
     <dimen name="step_start_heading">12dp</dimen>
-    <dimen name="text_size_banner">48sp</dimen>
+    <dimen name="text_size_banner">32sp</dimen>
     <dimen name="text_size_appbar">20sp</dimen>
     <dimen name="text_size_title">24sp</dimen>
 
