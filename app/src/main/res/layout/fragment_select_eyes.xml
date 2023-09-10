@@ -33,18 +33,32 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--  Select  -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_select_back"
+        style="@style/style_card_view_back_child"
+        app:cardBackgroundColor="@color/white_transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/card_green"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
     <TextView
         android:id="@+id/message_select"
         style="@style/heading_title_top"
         android:text="@string/select_eyes_color"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
         app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/card_select_back" />
 
     <!-- 1 Brown-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_brown"
         style="@style/style_card_view_end"
+        android:layout_marginTop="@dimen/step_normal_plus"
         app:cardBackgroundColor="@color/eyesColorBrown"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintTop_toBottomOf="@+id/message_select">
@@ -58,7 +72,7 @@
 
     <TextView
         android:id="@+id/message_brown"
-        style="@style/heading_title_start"
+        style="@style/text_select"
         android:text="@string/brown"
         app:layout_constraintBottom_toBottomOf="@+id/card_brown"
         app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
@@ -82,7 +96,7 @@
 
     <TextView
         android:id="@+id/message_grey"
-        style="@style/heading_title_start"
+        style="@style/text_select"
         android:text="@string/blue_grey"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/card_grey"
@@ -107,7 +121,7 @@
 
     <TextView
         android:id="@+id/message_green"
-        style="@style/heading_title_start"
+        style="@style/text_select"
         android:text="@string/green"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/card_green"

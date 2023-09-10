@@ -31,6 +31,13 @@
         <item name="android:textSize">@dimen/text_size_normal</item>
     </style>
 
+    <!--   1.2. child style for text -->
+    <style name="text_select" parent="heading_title">
+        <item name="android:layout_marginStart">@dimen/step_normal_plus</item>
+        <item name="android:layout_marginTop">@dimen/step_zero</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
     <!--   1.1. child style for explanation -->
     <style name="heading_title_explanation" parent="heading_title">
         <item name="android:layout_margin">@dimen/step_zero</item>
@@ -91,7 +98,7 @@
     <!--   2.2. child style for select -->
     <style name="style_card_view_end" parent="style_card_view">
         <item name="android:layout_marginTop">@dimen/step_normal</item>
-        <item name="android:layout_marginEnd">@dimen/step_minus_normal</item>
+        <item name="android:layout_marginEnd">@dimen/step_zero</item>
     </style>
 
     <!--   2.4. child style for children -->
