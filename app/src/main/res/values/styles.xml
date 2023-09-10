@@ -26,8 +26,9 @@
 
     <!--   1.2. child style for text -->
     <style name="heading_title_start" parent="heading_title">
-        <item name="android:layout_marginStart">@dimen/step_large</item>
-        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:layout_marginStart">@dimen/step_zero</item>
+        <item name="android:layout_marginTop">@dimen/step_zero</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
     </style>
 
     <!--   1.1. child style for explanation -->
@@ -77,6 +78,11 @@
         <item name="android:layout_marginEnd">@dimen/step_zero</item>
     </style>
 
+    <style name="style_card_view_back_child" parent="style_card_view_back">
+        <item name="android:layout_marginStart">@dimen/step_normal_plus</item>
+        <item name="android:layout_marginEnd">@dimen/step_normal_plus</item>
+    </style>
+
     <!--   2.1. child style for title -->
     <style name="style_card_view_top" parent="style_card_view">
         <item name="android:layout_marginTop">@dimen/step_normal</item>
@@ -93,8 +99,8 @@
         <item name="android:layout_width">@dimen/card_view_width_small</item>
         <item name="android:layout_height">@dimen/card_view_height_small</item>
         <item name="cardCornerRadius">@dimen/radius_small</item>
-        <item name="android:layout_marginTop">@dimen/step_zero</item>
-        <item name="android:layout_marginEnd">@dimen/step_minus_normal</item>
+        <item name="android:layout_marginTop">@dimen/step_x_small</item>
+        <item name="android:layout_marginEnd">@dimen/step_normal</item>
     </style>
 
     <!--   2.4. child style for children -->
@@ -137,6 +143,16 @@
         <item name="android:layout_height">@dimen/step_xxx_small</item>
         <item name="android:layout_margin">@dimen/step_zero</item>
         <item name="android:background">@color/orange_500</item>
+    </style>
+
+    <!--   -->
+    <style name="my_progress_bar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/step_large</item>
+        <item name="android:max">100</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:progress">50</item>
     </style>
 
 
@@ -200,8 +216,7 @@
     </style>
 
 
-
-<!--        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>-->
+    <!--        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>-->
 
 
 </resources>
