@@ -31,6 +31,7 @@
     <dimen name="step_bottom_normal">12dp</dimen>
     <dimen name="step_between_rv_items_normal">8dp</dimen>
     <dimen name="text_size_normal">12sp</dimen>
+    <dimen name="text_size_normal_plus">16sp</dimen>
 
     <!--small-->
     <dimen name="step_small">6dp</dimen>
@@ -50,7 +51,7 @@
     <!--  Card view  -->
     <dimen name="card_view_width">108dp</dimen>
     <dimen name="card_view_height">100dp</dimen>
-    <dimen name="radius_large">36dp</dimen>
+    <dimen name="radius_large">68dp</dimen>
     <dimen name="stroke_width_normal">1dp</dimen>
 
     <dimen name="card_view_width_small">76dp</dimen>
