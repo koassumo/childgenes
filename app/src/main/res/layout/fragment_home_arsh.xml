@@ -109,21 +109,23 @@
 
         <!--Mother-->
 
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/card_mother_back"-->
-<!--            style="@style/style_card_view_back"-->
-<!--            app:cardBackgroundColor="@color/white_transparent"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/card_mother"-->
-<!--            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/guide_line_start"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/banner_bottom_text" />-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_mother_back"
+            style="@style/style_card_view_back"
+            app:cardBackgroundColor="@color/white_transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/card_mother"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+            app:layout_constraintTop_toBottomOf="@+id/banner_bottom_text" />
+
 
         <TextView
-            android:id="@+id/subtitle_message_mother"
+            android:id="@+id/message_mother"
             style="@style/heading_title_top"
             android:text="@string/mother"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@id/banner_bottom_text"/>
+            app:layout_constraintTop_toTopOf="@id/card_mother_back" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_mother"
@@ -131,7 +133,7 @@
             app:cardBackgroundColor="@color/grey_500"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/subtitle_message_mother">
+            app:layout_constraintTop_toBottomOf="@+id/message_mother">
 
             <ImageView
                 android:id="@+id/iv_mother_eye"
@@ -147,7 +149,6 @@
                 android:src="@drawable/baseline_pan_tool_alt_24"
                 android:visibility="visible" />
         </com.google.android.material.card.MaterialCardView>
-
 
 
         <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
@@ -166,23 +167,22 @@
 
 
         <!--  Father  -->
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/card_father_back"-->
-<!--            style="@style/style_card_view_back"-->
-<!--            app:cardBackgroundColor="@color/white_transparent"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/card_father"-->
-<!--            app:layout_constraintEnd_toStartOf="@+id/guide_line_end"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/banner_bottom_text" />-->
-
-
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_father_back"
+            style="@style/style_card_view_back"
+            app:cardBackgroundColor="@color/white_transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/card_father"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
+            app:layout_constraintTop_toBottomOf="@+id/banner_bottom_text" />
 
         <TextView
-            android:id="@+id/subtitle_message_father"
+            android:id="@+id/message_father"
             style="@style/heading_title_top"
             android:text="@string/father"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@id/banner_bottom_text" />
+            app:layout_constraintTop_toTopOf="@id/card_father_back" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_father"
@@ -190,7 +190,7 @@
             app:cardBackgroundColor="@color/grey_500"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@+id/subtitle_message_father">
+            app:layout_constraintTop_toBottomOf="@+id/message_father">
 
             <ImageView
                 android:id="@+id/iv_father_eye"
@@ -210,125 +210,91 @@
 
 
         <!--  Child  -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_child_back"
+            style="@style/style_card_view_back_child"
+            app:cardBackgroundColor="@color/white_transparent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/card_green"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+            app:layout_constraintTop_toBottomOf="@+id/card_mother_back"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/message_child"
             style="@style/heading_title_top"
             android:text="@string/child"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/card_mother" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_child_back"
-            style="@style/style_card_view_long"
-            app:cardBackgroundColor="@color/white_transparent"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/message_child"
-            app:layout_constraintBottom_toBottomOf="@id/card_green">
-
-<!--            <ImageView-->
-<!--                android:id="@+id/iv_brown_n"-->
-<!--                style="@style/style_image_inside_card_view_n"-->
-<!--                android:contentDescription="@string/no_description"-->
-<!--                android:src="@drawable/ic_eye_24"-->
-<!--                android:layout_width="100dp"-->
-<!--                android:layout_height="70dp"-->
-<!--                android:layout_gravity="start|top"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                />-->
-
-
-
-
-                <ImageView
-                    android:id="@+id/iv_brown_nn"
-                    style="@style/style_image_inside_card_view_n"
-                    android:layout_height="80dp"
-                    android:layout_width="120dp"
-                    android:contentDescription="@string/no_description"
-                    android:src="@drawable/ic_eye_24"
-                    app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-                    app:layout_constraintTop_toTopOf="@+id/card_child_back"
-                    app:layout_constraintStart_toStartOf="@id/guide_line_start"
-
-                    />
-
-
-
-
-
-        </com.google.android.material.card.MaterialCardView>
-
+            app:layout_constraintTop_toTopOf="@+id/card_child_back" />
 
         <!-- 1 Brown-->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_brown"
-            style="@style/style_card_view_children_pure"
-            android:visibility="visible"
+            style="@style/style_card_view_children_first"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/brown_400"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-            app:layout_constraintTop_toTopOf="@+id/card_child_back"
-            app:layout_constraintStart_toStartOf="@id/guide_line_start"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/message_child">
 
             <ImageView
                 android:id="@+id/iv_brown"
-                style="@style/style_image_inside_card_view_n"
+                style="@style/style_image_inside_card_view"
                 android:contentDescription="@string/no_description"
                 android:src="@drawable/ic_eye_24" />
         </com.google.android.material.card.MaterialCardView>
 
+
         <ProgressBar
             android:id="@+id/progress_bar_brown"
             style="@style/my_progress_bar"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/card_brown"
             app:layout_constraintEnd_toEndOf="@+id/card_child_back"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
             app:layout_constraintTop_toTopOf="@+id/card_brown" />
 
         <TextView
             android:id="@+id/message_brown"
             style="@style/heading_title_start"
-            android:text="40"
-            android:visibility="visible"
+            android:text=""
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
             app:layout_constraintTop_toBottomOf="@+id/progress_bar_brown" />
 
         <!-- 2 Blue/grey-->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_grey"
-            style="@style/style_card_view_children_pure"
-            android:visibility="visible"
+            style="@style/style_card_view_children"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/blue_grey_400"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-            app:layout_constraintTop_toBottomOf="@+id/card_brown"
-            app:layout_constraintStart_toStartOf="@id/guide_line_start">
+            app:layout_constraintTop_toBottomOf="@+id/card_brown">
 
             <ImageView
                 android:id="@+id/iv_grey"
-                style="@style/style_image_inside_card_view_n"
+                style="@style/style_image_inside_card_view"
                 android:contentDescription="@string/no_description"
-                android:src="@drawable/ic_eye_24"
-                app:tint="@color/blue_grey_400" />
+                android:src="@drawable/ic_eye_24" />
         </com.google.android.material.card.MaterialCardView>
 
         <ProgressBar
             android:id="@+id/progress_bar_grey"
             style="@style/my_progress_bar"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/card_grey"
             app:layout_constraintEnd_toEndOf="@+id/card_child_back"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
             app:layout_constraintTop_toTopOf="@+id/card_grey" />
 
         <TextView
             android:id="@+id/message_grey"
             style="@style/heading_title_start"
             android:text=""
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
             app:layout_constraintTop_toBottomOf="@+id/progress_bar_grey" />
 
@@ -336,15 +302,15 @@
         <!-- 3 Green -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_green"
-            style="@style/style_card_view_children_pure"
-            android:visibility="visible"
+            style="@style/style_card_view_children"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/light_green_600"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-            app:layout_constraintTop_toBottomOf="@+id/card_grey"
-            app:layout_constraintStart_toStartOf="@id/guide_line_start">
+            app:layout_constraintTop_toBottomOf="@+id/card_grey">
 
             <ImageView
                 android:id="@+id/iv_green"
-                style="@style/style_image_inside_card_view_n"
+                style="@style/style_image_inside_card_view"
                 android:contentDescription="@string/no_description"
                 android:src="@drawable/ic_eye_24" />
         </com.google.android.material.card.MaterialCardView>
@@ -353,17 +319,17 @@
         <ProgressBar
             android:id="@+id/progress_bar_green"
             style="@style/my_progress_bar"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/card_green"
             app:layout_constraintEnd_toEndOf="@+id/card_child_back"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
             app:layout_constraintTop_toTopOf="@+id/card_green" />
 
         <TextView
             android:id="@+id/message_green"
             style="@style/heading_title_start"
             android:text=""
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
             app:layout_constraintTop_toBottomOf="@+id/progress_bar_green" />
 
@@ -373,7 +339,7 @@
             style="@style/style_card_view_back"
             android:layout_height="match_parent"
             app:cardBackgroundColor="@color/white_transparent"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
             app:layout_constraintTop_toBottomOf="@id/card_child_back">
@@ -402,7 +368,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/step_zero"
                     android:layout_marginEnd="@dimen/step_large"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_baseline_keyboard_arrow_up_36" />
@@ -418,7 +384,7 @@
                     android:id="@+id/message_explain_unfolded"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/step_normal"
                     android:text="@string/explanation_eyes"
                     app:layout_constraintEnd_toEndOf="parent"

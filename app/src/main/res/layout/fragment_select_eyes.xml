@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.05"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_line_end"
@@ -34,16 +35,16 @@
 
     <!--  Select  -->
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_select_back"
-        style="@style/style_card_view_back_child"
-        app:cardBackgroundColor="@color/white_transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/card_green"
-        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/card_select_back"-->
+<!--        style="@style/style_card_view_back_child"-->
+<!--        app:cardBackgroundColor="@color/white_transparent"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/card_green"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guide_line_end"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guide_line_start"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="1.0" />-->
 
 
     <TextView
@@ -52,22 +53,26 @@
         android:text="@string/select_eyes_color"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
         app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-        app:layout_constraintTop_toTopOf="@+id/card_select_back" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 1 Brown-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_brown"
         style="@style/style_card_view_end"
         android:layout_marginTop="@dimen/step_normal_plus"
-        app:cardBackgroundColor="@color/eyesColorBrown"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/message_select">
+        app:layout_constraintTop_toBottomOf="@+id/message_select"
+        app:layout_constraintStart_toStartOf="@id/guide_line_start"
+        >
+<!--        app:cardBackgroundColor="@color/eyesColorBrown"-->
 
         <ImageView
             android:id="@+id/iv_brown"
             style="@style/style_image_inside_card_view"
             android:contentDescription="@string/no_description"
-            android:src="@drawable/ic_eye_24" />
+            android:src="@drawable/ic_eye_24"
+            android:background="@drawable/gradient_brown"
+            app:tint="@color/eyesColorBrown" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
@@ -83,15 +88,18 @@
         android:id="@+id/card_grey"
         style="@style/style_card_view_end"
         android:visibility="visible"
-        app:cardBackgroundColor="@color/eyesColorGrey"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/card_brown">
+        app:layout_constraintTop_toBottomOf="@+id/card_brown"
+        app:layout_constraintStart_toStartOf="@id/guide_line_start"
+        >
 
         <ImageView
             android:id="@+id/iv_grey"
             style="@style/style_image_inside_card_view"
             android:contentDescription="@string/no_description"
-            android:src="@drawable/ic_eye_24" />
+            android:src="@drawable/ic_eye_24"
+            android:background="@drawable/gradient_blue"
+            app:tint="@color/eyesColorGrey" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
@@ -110,13 +118,17 @@
         android:visibility="visible"
         app:cardBackgroundColor="@color/eyesColorGreen"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/card_grey">
+        app:layout_constraintTop_toBottomOf="@+id/card_grey"
+        app:layout_constraintStart_toStartOf="@id/guide_line_start">
+
 
         <ImageView
             android:id="@+id/iv_green"
             style="@style/style_image_inside_card_view"
             android:contentDescription="@string/no_description"
-            android:src="@drawable/ic_eye_24" />
+            android:src="@drawable/ic_eye_24"
+            android:background="@drawable/gradient_green"
+            app:tint="@color/eyesColorGreen" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView

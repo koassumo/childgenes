@@ -1,5 +1,8 @@
 package com.igo.childgenes.ui.home
 
+import android.graphics.Color
+import android.graphics.PorterDuff
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -92,6 +95,7 @@ class HomeFragment : Fragment() {
                     eyesMotherColor = eyesColor
                     fillCardMotherColor()
                 }
+
                 FATHER -> {
                     eyesFatherColor = eyesColor
                     fillCardFatherColor()
@@ -111,9 +115,11 @@ class HomeFragment : Fragment() {
                 BROWN -> binding.cardMother.setCardBackgroundColor(
                     ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
                 )
+
                 GREY -> binding.cardMother.setCardBackgroundColor(
                     ContextCompat.getColor(requireContext(), R.color.eyesColorGrey)
                 )
+
                 GREEN -> binding.cardMother.setCardBackgroundColor(
                     ContextCompat.getColor(requireContext(), R.color.eyesColorGreen)
                 )
@@ -129,12 +135,32 @@ class HomeFragment : Fragment() {
             binding.ivFatherQuestion.visibility = View.GONE
             binding.ivFatherEye.visibility = View.VISIBLE
             when (eyesFatherColor) {
-                BROWN -> binding.cardFather.setCardBackgroundColor(
-                    ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
-                )
+                BROWN -> {
+                    binding.cardFather.setCardBackgroundColor(
+                        ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
+                    )
+                    // Получите Drawable из ресурсов
+                    val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_eye_24)
+                    // Создайте копию Drawable с цветовой фильтрацией
+                    val coloredDrawable: Drawable? = drawable?.mutate()
+                    coloredDrawable?.setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN)
+                    // Установите фон как градиентный Drawable
+                    val gradientDrawable = resources.getDrawable(R.drawable.gradient_brown) as Drawable
+                    binding.ivFatherEye.background = gradientDrawable
+
+                    binding.ivFatherEye.setColorFilter(ContextCompat.getColor(requireContext(), R.color.eyesColorBrown))
+
+
+
+
+
+
+                }
+
                 GREY -> binding.cardFather.setCardBackgroundColor(
                     ContextCompat.getColor(requireContext(), R.color.eyesColorGrey)
                 )
+
                 GREEN -> binding.cardFather.setCardBackgroundColor(
                     ContextCompat.getColor(requireContext(), R.color.eyesColorGreen)
                 )
@@ -143,30 +169,30 @@ class HomeFragment : Fragment() {
     }
 
     private fun checkChildRenderNeeded() {
-        if (eyesMotherColor!=NOT_SELECTED && eyesFatherColor!=NOT_SELECTED) countColor()
+        if (eyesMotherColor != NOT_SELECTED && eyesFatherColor != NOT_SELECTED) countColor()
     }
 
     private fun countColor() {
-        val parentsColor = Pair (eyesMotherColor, eyesFatherColor)
+        val parentsColor = Pair(eyesMotherColor, eyesFatherColor)
         // if (parentsColor == BROWN to BROWN) {val sfdad: Int = 23}
         //Toast.makeText(requireContext(), "Colors: $parentsColor", Toast.LENGTH_SHORT).show()
 
         val childColor = when (parentsColor) {
-            BROWN to BROWN -> Triple (75.0, 6.25, 18.75)
-            GREEN to BROWN -> Triple (50.0, 12.5, 37.5)
-            BROWN to GREEN -> Triple (50.0, 12.5, 37.5)
-            GREY to BROWN -> Triple (50.0, 50.0, 0.0)
-            BROWN to GREY -> Triple (50.0, 50.0, 0.0)
-            GREEN to GREEN -> Triple (1.0, 24.5, 74.5)
-            GREEN to GREY -> Triple (0.0, 50.0, 50.0)
-            GREY to GREEN -> Triple (0.0, 50.0, 50.0)
-            GREY to GREY -> Triple (0.0, 99.0, 1.0)
-            else ->         Triple (0.0, 0.0, 0.0)
+            BROWN to BROWN -> Triple(75.0, 6.25, 18.75)
+            GREEN to BROWN -> Triple(50.0, 12.5, 37.5)
+            BROWN to GREEN -> Triple(50.0, 12.5, 37.5)
+            GREY to BROWN -> Triple(50.0, 50.0, 0.0)
+            BROWN to GREY -> Triple(50.0, 50.0, 0.0)
+            GREEN to GREEN -> Triple(1.0, 24.5, 74.5)
+            GREEN to GREY -> Triple(0.0, 50.0, 50.0)
+            GREY to GREEN -> Triple(0.0, 50.0, 50.0)
+            GREY to GREY -> Triple(0.0, 99.0, 1.0)
+            else -> Triple(0.0, 0.0, 0.0)
         }
-        displayChildColor (childColor)
+        displayChildColor(childColor)
     }
 
-    private fun displayChildColor (childColor: Triple <Double, Double, Double>) {
+    private fun displayChildColor(childColor: Triple<Double, Double, Double>) {
         binding.cardBrown.visibility = View.GONE
         binding.cardGrey.visibility = View.GONE
         binding.cardGreen.visibility = View.GONE
