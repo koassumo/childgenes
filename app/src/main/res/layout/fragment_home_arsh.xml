@@ -121,7 +121,7 @@
 
         <TextView
             android:id="@+id/message_mother"
-            style="@style/heading_title_top"
+            style="@style/title_button_top"
             android:text="@string/mother"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
@@ -178,7 +178,7 @@
 
         <TextView
             android:id="@+id/message_father"
-            style="@style/heading_title_top"
+            style="@style/title_button_top"
             android:text="@string/father"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
@@ -224,7 +224,7 @@
 
         <TextView
             android:id="@+id/message_child"
-            style="@style/heading_title_top"
+            style="@style/title_button_top"
             android:text="@string/child"
             android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
@@ -259,7 +259,7 @@
 
         <TextView
             android:id="@+id/message_brown"
-            style="@style/heading_title_start"
+            style="@style/title_button_top_nostart"
             android:text=""
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
@@ -292,7 +292,7 @@
 
         <TextView
             android:id="@+id/message_grey"
-            style="@style/heading_title_start"
+            style="@style/title_button_top_nostart"
             android:text=""
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
@@ -327,7 +327,7 @@
 
         <TextView
             android:id="@+id/message_green"
-            style="@style/heading_title_start"
+            style="@style/title_button_top_nostart"
             android:text=""
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
@@ -351,7 +351,7 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_arrow_down"
-                    style="@style/heading_title_top"
+                    style="@style/title_button_top"
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
                     android:layout_margin="@dimen/step_zero"
@@ -363,7 +363,7 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_arrow_up"
-                    style="@style/heading_title_top"
+                    style="@style/title_button_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/step_zero"

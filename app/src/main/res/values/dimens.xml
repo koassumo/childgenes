@@ -9,9 +9,6 @@
     <!--heading-->
     <dimen name="step_top_heading">36dp</dimen>
     <dimen name="step_start_heading">12dp</dimen>
-    <dimen name="text_size_banner">32sp</dimen>
-    <dimen name="text_size_appbar">20sp</dimen>
-    <dimen name="text_size_title">24sp</dimen>
 
     <!--large-->
     <dimen name="step_xxxx_large">250dp</dimen>
@@ -21,7 +18,6 @@
     <dimen name="step_large_plus">28dp</dimen>
     <dimen name="step_large">32dp</dimen>
     <dimen name="stroke_width_large">4dp</dimen>
-    <dimen name="text_size_large">20sp</dimen>
 
     <!--normal-->
     <dimen name="step_normal_plus">20dp</dimen>
@@ -30,8 +26,6 @@
     <dimen name="step_normal_too">8dp</dimen>
     <dimen name="step_bottom_normal">12dp</dimen>
     <dimen name="step_between_rv_items_normal">8dp</dimen>
-    <dimen name="text_size_normal">12sp</dimen>
-    <dimen name="text_size_normal_plus">16sp</dimen>
 
     <!--small-->
     <dimen name="step_small">6dp</dimen>
@@ -39,13 +33,22 @@
     <dimen name="step_xx_small">2dp</dimen>
     <dimen name="step_xxx_small">1dp</dimen>
 
-    <dimen name="text_size_small">6sp</dimen>
-
     <!--negative-->
     <dimen name="step_minus_large">-32dp</dimen>
     <dimen name="step_minus_normal">-24dp</dimen>
     <dimen name="step_minus_small">-14dp</dimen>
     <dimen name="step_negative">-10dp</dimen>
+
+
+
+    <!-- ********************************  Text  ********************************  -->
+    <dimen name="text_size_banner">32sp</dimen>
+    <dimen name="text_size_appbar">20sp</dimen>
+    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_normal_plus">16sp</dimen>
+    <dimen name="text_size_normal">12sp</dimen>
+    <dimen name="text_size_small">6sp</dimen>
 
 
     <!-- ********************************  Particular  ********************************  -->

@@ -110,7 +110,6 @@ class HomeFragment : Fragment() {
             binding.ivMotherQuestion.visibility = View.VISIBLE
         } else {
             binding.ivMotherQuestion.visibility = View.GONE
-            binding.ivMotherEye.visibility = View.VISIBLE
             when (eyesMotherColor) {
                 BROWN -> binding.cardMother.setCardBackgroundColor(
                     ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
@@ -133,37 +132,36 @@ class HomeFragment : Fragment() {
             binding.ivFatherQuestion.visibility = View.VISIBLE
         } else {
             binding.ivFatherQuestion.visibility = View.GONE
-            binding.ivFatherEye.visibility = View.VISIBLE
             when (eyesFatherColor) {
                 BROWN -> {
-                    binding.cardFather.setCardBackgroundColor(
-                        ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
-                    )
-                    // Получите Drawable из ресурсов
-                    val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_eye_24)
-                    // Создайте копию Drawable с цветовой фильтрацией
-                    val coloredDrawable: Drawable? = drawable?.mutate()
-                    coloredDrawable?.setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN)
-                    // Установите фон как градиентный Drawable
-                    val gradientDrawable = resources.getDrawable(R.drawable.gradient_brown) as Drawable
-                    binding.ivFatherEye.background = gradientDrawable
-
-                    binding.ivFatherEye.setColorFilter(ContextCompat.getColor(requireContext(), R.color.eyesColorBrown))
-
-
-
-
-
+                    binding.ivFatherGradientBrown.visibility = View.VISIBLE
+//                    binding.cardFather.setCardBackgroundColor(
+//                        ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
+//                    )
+//                    // Получите Drawable из ресурсов
+//                    val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_eye_24)
+//                    // Создайте копию Drawable с цветовой фильтрацией
+//                    val coloredDrawable: Drawable? = drawable?.mutate()
+//                    coloredDrawable?.setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN)
+//                    // Установите фон как градиентный Drawable
+//                    val gradientDrawable = resources.getDrawable(R.drawable.gradient_brown) as Drawable
+//                    binding.ivFatherEye.background = gradientDrawable
+//
+//                    binding.ivFatherEye.setColorFilter(ContextCompat.getColor(requireContext(), R.color.eyesColorBrown))
 
                 }
 
-                GREY -> binding.cardFather.setCardBackgroundColor(
-                    ContextCompat.getColor(requireContext(), R.color.eyesColorGrey)
-                )
+                GREY ->
+                    binding.ivFatherGradientBlue.visibility = View.VISIBLE
+//                    binding.cardFather.setCardBackgroundColor(
+//                    ContextCompat.getColor(requireContext(), R.color.eyesColorGrey)
+//                )
 
-                GREEN -> binding.cardFather.setCardBackgroundColor(
-                    ContextCompat.getColor(requireContext(), R.color.eyesColorGreen)
-                )
+                GREEN ->
+                   binding.ivFatherGradientGreen.visibility = View.VISIBLE
+//                binding.cardFather.setCardBackgroundColor(
+//                    ContextCompat.getColor(requireContext(), R.color.eyesColorGreen)
+//                )
             }
         }
     }
@@ -193,9 +191,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun displayChildColor(childColor: Triple<Double, Double, Double>) {
-        binding.cardBrown.visibility = View.GONE
-        binding.cardGrey.visibility = View.GONE
-        binding.cardGreen.visibility = View.GONE
+        binding.cardChildBrown.visibility = View.GONE
+        binding.cardChildGrey.visibility = View.GONE
+        binding.cardChildGreen.visibility = View.GONE
         binding.messageBrown.visibility = View.GONE
         binding.messageGrey.visibility = View.GONE
         binding.messageGreen.visibility = View.GONE
@@ -214,17 +212,17 @@ class HomeFragment : Fragment() {
         binding.cardExplainFolded.visibility = View.VISIBLE
 
         if (childColor.first != 0.0) {
-            binding.cardBrown.visibility = View.VISIBLE
+            binding.cardChildBrown.visibility = View.VISIBLE
             binding.messageBrown.visibility = View.VISIBLE
             binding.progressBarBrown.visibility = View.VISIBLE
         }
         if (childColor.second != 0.0) {
-            binding.cardGrey.visibility = View.VISIBLE
+            binding.cardChildGrey.visibility = View.VISIBLE
             binding.messageGrey.visibility = View.VISIBLE
             binding.progressBarGrey.visibility = View.VISIBLE
         }
         if (childColor.third != 0.0) {
-            binding.cardGreen.visibility = View.VISIBLE
+            binding.cardChildGreen.visibility = View.VISIBLE
             binding.messageGreen.visibility = View.VISIBLE
             binding.progressBarGreen.visibility = View.VISIBLE
         }

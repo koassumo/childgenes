@@ -60,7 +60,7 @@
 
         <TextView
             android:id="@+id/message_mother"
-            style="@style/heading_title_top"
+            style="@style/title_button_top"
             android:text="@string/mother"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
@@ -128,7 +128,7 @@
 
         <TextView
             android:id="@+id/message_father"
-            style="@style/heading_title_top"
+            style="@style/title_button_top"
             android:text="@string/father"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
@@ -218,7 +218,7 @@
 
         <TextView
             android:id="@+id/message_child"
-            style="@style/heading_title_top"
+            style="@style/title_button_top"
             android:text="@string/child"
             android:visibility="visible"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
@@ -244,7 +244,7 @@
 
         <TextView
             android:id="@+id/message_brown"
-            style="@style/heading_title_start"
+            style="@style/title_button_top_nostart"
             android:text=""
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/card_brown"
@@ -269,7 +269,7 @@
 
         <TextView
             android:id="@+id/message_grey"
-            style="@style/heading_title_start"
+            style="@style/title_button_top_nostart"
             android:text=""
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/card_grey"
@@ -295,7 +295,7 @@
 
         <TextView
             android:id="@+id/message_green"
-            style="@style/heading_title_start"
+            style="@style/title_button_top_nostart"
             android:text=""
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/card_green"

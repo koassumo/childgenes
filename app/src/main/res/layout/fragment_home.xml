@@ -120,7 +120,7 @@
 
         <TextView
             android:id="@+id/subtitle_message_mother"
-            style="@style/heading_title_top"
+            style="@style/title_button_top"
             android:text="@string/mother"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
             app:layout_constraintTop_toBottomOf="@id/banner_bottom_text" />
@@ -136,18 +136,32 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <ImageView
 
-                    android:id="@+id/iv_mother_eye"
-                    style="@style/style_image_inside_card_view"
+                <ImageView
+                    android:id="@+id/iv_mother_gradient_brown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_brown"
                     android:contentDescription="@string/no_description"
-                    android:src="@drawable/ic_eye_24"
-                    android:visibility="visible"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    />
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_mother_gradient_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_blue"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_mother_gradient_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="gone" />
+
+                <include layout="@layout/symbol_eye" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -160,9 +174,8 @@
             android:contentDescription="@string/no_description"
             android:src="@drawable/baseline_pan_tool_alt_24"
             android:visibility="visible"
-            app:layout_constraintTop_toTopOf="@id/card_mother"
             app:layout_constraintStart_toStartOf="@id/card_mother"
-            />
+            app:layout_constraintTop_toTopOf="@id/card_mother" />
 
         <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
         <!--        android:id="@+id/fab_brown_eyes"-->
@@ -192,7 +205,7 @@
 
         <TextView
             android:id="@+id/subtitle_message_father"
-            style="@style/heading_title_top"
+            style="@style/title_button_top"
             android:text="@string/father"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
             app:layout_constraintTop_toBottomOf="@id/banner_bottom_text" />
@@ -206,42 +219,178 @@
             app:layout_constraintTop_toBottomOf="@+id/subtitle_message_father">
 
             <ImageView
-                android:id="@+id/iv_father_eye"
-                style="@style/style_image_inside_card_view"
+                android:id="@+id/iv_father_gradient_brown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_brown"
                 android:contentDescription="@string/no_description"
-                android:src="@drawable/ic_eye_24"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <ImageView
-                android:id="@+id/iv_father_question"
-                style="@style/style_image_inside_card_view_question"
+                android:id="@+id/iv_father_gradient_blue"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/gradient_blue"
                 android:contentDescription="@string/no_description"
-                android:src="@drawable/baseline_pan_tool_alt_24"
-                android:visibility="visible" />
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_father_gradient_green"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_green"
+                android:contentDescription="@string/no_description"
+                android:visibility="gone" />
+
+            <include layout="@layout/symbol_eye" />
+
         </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/iv_father_question"
+            style="@style/style_image_inside_card_view_question"
+            android:contentDescription="@string/no_description"
+            android:src="@drawable/baseline_pan_tool_alt_24"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
+            app:layout_constraintTop_toTopOf="@+id/card_father" />
 
 
         <!--  Child  -->
 
         <TextView
             android:id="@+id/message_child"
-            style="@style/heading_title_top"
+            style="@style/title_button_top_center"
             android:text="@string/child"
             android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
             app:layout_constraintTop_toBottomOf="@+id/card_mother" />
+
+
+        <!-- 1 Brown-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_child_brown"
+            style="@style/style_card_view_end"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintStart_toStartOf="@id/guide_line_start"
+            app:layout_constraintTop_toBottomOf="@+id/message_child">
+
+            <ImageView
+                android:id="@+id/iv_child_gradient_brown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_brown"
+                android:contentDescription="@string/no_description" />
+
+            <include layout="@layout/symbol_eye" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_brown"
+            style="@style/my_progress_bar"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/card_child_brown"
+            app:layout_constraintEnd_toEndOf="@+id/guide_line_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
+            app:layout_constraintTop_toTopOf="@+id/card_child_brown" />
+
+        <TextView
+            android:id="@+id/message_brown"
+            style="@style/title_button_top_nostart"
+            android:text="40 %"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar_brown" />
+
+
+        <!-- 2 Blue/grey-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_child_grey"
+            style="@style/style_card_view_end"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintStart_toStartOf="@id/guide_line_start"
+            app:layout_constraintTop_toBottomOf="@+id/card_child_brown">
+
+            <ImageView
+                android:id="@+id/iv_child_gradient_blue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_blue"
+                android:contentDescription="@string/no_description" />
+
+            <include layout="@layout/symbol_eye" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_grey"
+            style="@style/my_progress_bar"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/card_child_grey"
+            app:layout_constraintEnd_toEndOf="@+id/guide_line_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
+            app:layout_constraintTop_toTopOf="@+id/card_child_grey" />
+
+        <TextView
+            android:id="@+id/message_grey"
+            style="@style/title_button_top_nostart"
+            android:text="40 %"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar_grey" />
+
+        <!-- 3 Green -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_child_green"
+            style="@style/style_card_view_end"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/eyesColorGreen"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintStart_toStartOf="@id/guide_line_start"
+            app:layout_constraintTop_toBottomOf="@+id/card_child_grey">
+
+            <ImageView
+                android:id="@+id/iv_child_gradient_green"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_green"
+                android:contentDescription="@string/no_description" />
+
+            <include layout="@layout/symbol_eye" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar_green"
+            style="@style/my_progress_bar"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/card_child_green"
+            app:layout_constraintEnd_toEndOf="@+id/guide_line_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
+            app:layout_constraintTop_toTopOf="@+id/card_child_green" />
+
+        <TextView
+            android:id="@+id/message_green"
+            style="@style/title_button_top_nostart"
+            android:text="40 %"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar_green" />
+
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_child_back"
             style="@style/style_card_view_long"
-            android:visibility="visible"
+            android:visibility="gone"
             app:cardBackgroundColor="@color/white_transparent"
             app:layout_constraintBottom_toBottomOf="@id/card_green"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
             app:layout_constraintTop_toBottomOf="@+id/message_child"
-            app:layout_constraintVertical_chainStyle="spread_inside" >
+            app:layout_constraintVertical_chainStyle="spread_inside">
 
 
             <ImageView
@@ -252,11 +401,10 @@
                 android:layout_marginTop="30dp"
                 android:contentDescription="@string/no_description"
                 android:src="@drawable/ic_eye_24"
+                app:layout_constraintBottom_toTopOf="@id/iv_brown_l"
                 app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/iv_brown_l"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/iv_brown_l"
@@ -274,110 +422,11 @@
         </com.google.android.material.card.MaterialCardView>
 
 
-        <!-- 1 Brown-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_brown"
-            style="@style/style_card_view_children_pure"
-            android:visibility="visible"
-            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-            app:layout_constraintStart_toStartOf="@id/guide_line_start"
-            app:layout_constraintTop_toTopOf="@+id/card_child_back">
-
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <ProgressBar
-            android:id="@+id/progress_bar_brown"
-            style="@style/my_progress_bar"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/card_brown"
-            app:layout_constraintEnd_toEndOf="@+id/card_child_back"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
-            app:layout_constraintTop_toTopOf="@+id/card_brown" />
-
-        <TextView
-            android:id="@+id/message_brown"
-            style="@style/heading_title_start"
-            android:text="40"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@+id/progress_bar_brown" />
-
-        <!-- 2 Blue/grey-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_grey"
-            style="@style/style_card_view_children_pure"
-            android:visibility="visible"
-            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-            app:layout_constraintStart_toStartOf="@id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/card_brown">
-
-            <ImageView
-                android:id="@+id/iv_grey"
-                style="@style/style_image_inside_card"
-                android:contentDescription="@string/no_description"
-                android:src="@drawable/ic_eye_24"
-                app:tint="@color/blue_grey_400" />
-        </com.google.android.material.card.MaterialCardView>
-
-        <ProgressBar
-            android:id="@+id/progress_bar_grey"
-            style="@style/my_progress_bar"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/card_grey"
-            app:layout_constraintEnd_toEndOf="@+id/card_child_back"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
-            app:layout_constraintTop_toTopOf="@+id/card_grey" />
-
-        <TextView
-            android:id="@+id/message_grey"
-            style="@style/heading_title_start"
-            android:text=""
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@+id/progress_bar_grey" />
-
-
-        <!-- 3 Green -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_green"
-            style="@style/style_card_view_children_pure"
-            android:visibility="visible"
-            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
-            app:layout_constraintStart_toStartOf="@id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/card_grey">
-
-            <ImageView
-                android:id="@+id/iv_green"
-                style="@style/style_image_inside_card"
-                android:contentDescription="@string/no_description"
-                android:src="@drawable/ic_eye_24" />
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <ProgressBar
-            android:id="@+id/progress_bar_green"
-            style="@style/my_progress_bar"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/card_green"
-            app:layout_constraintEnd_toEndOf="@+id/card_child_back"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"
-            app:layout_constraintTop_toTopOf="@+id/card_green" />
-
-        <TextView
-            android:id="@+id/message_green"
-            style="@style/heading_title_start"
-            android:text=""
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@+id/progress_bar_green" />
-
-
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_explain_folded"
             style="@style/style_card_view_back"
             android:layout_height="match_parent"
-            android:visibility="visible"
+            android:visibility="gone"
             app:cardBackgroundColor="@color/white_transparent"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
@@ -390,7 +439,7 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_arrow_down"
-                    style="@style/heading_title_top"
+                    style="@style/title_button_top"
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
                     android:layout_margin="@dimen/step_zero"
@@ -402,7 +451,7 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_arrow_up"
-                    style="@style/heading_title_top"
+                    style="@style/title_button_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/step_zero"
