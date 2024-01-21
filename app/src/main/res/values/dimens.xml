@@ -15,7 +15,7 @@
     <dimen name="step_xxx_large">140dp</dimen>
     <dimen name="step_xx_large">72dp</dimen>
     <dimen name="step_x_large">48dp</dimen>
-    <dimen name="step_large_plus">28dp</dimen>
+    <dimen name="step_large_plus">38dp</dimen>
     <dimen name="step_large">32dp</dimen>
     <dimen name="stroke_width_large">4dp</dimen>
 
@@ -63,7 +63,7 @@
     <dimen name="card_view_width_medium">100dp</dimen>
     <dimen name="card_view_width_small">76dp</dimen>
     <dimen name="card_view_height_small">68dp</dimen>
-    <dimen name="radius_small">36dp</dimen>
+    <dimen name="radius_small">24dp</dimen>
     <dimen name="radius_xx_small">8dp</dimen>
 
 
@@ -71,8 +71,8 @@
 
     <!-- Elevation -->
     <dimen name="elevation_large">0dp</dimen>
-    <dimen name="elevation_normal">0dp</dimen>
-    <dimen name="elevation_small">0dp</dimen>
+    <dimen name="elevation_normal">2dp</dimen>
+    <dimen name="elevation_small">1dp</dimen>
 
     <!--    -->
     <dimen name="heading_padding_top">22dp</dimen>
@@ -93,6 +93,7 @@
     <dimen name="blank_space">150dp</dimen>
     <dimen name="button_rounded_corner">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
     <dimen name="stroke_small">1dp</dimen>
     <dimen name="stroke_large">4dp</dimen>
 

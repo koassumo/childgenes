@@ -5,13 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/step_zero"
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/step_xxx_large">
 
         <!--  Grids / guide lines  -->
         <androidx.constraintlayout.widget.Guideline
@@ -120,15 +121,16 @@
 
         <TextView
             android:id="@+id/subtitle_message_mother"
-            style="@style/title_button_top"
+            style="@style/title_button_top_center"
             android:text="@string/mother"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
             app:layout_constraintTop_toBottomOf="@id/banner_bottom_text" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_mother"
-            style="@style/style_card_view"
-            app:cardBackgroundColor="@color/grey_500"
+            style="@style/style_card_view_elevation"
+            app:cardBackgroundColor="@color/grey_400"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
             app:layout_constraintTop_toBottomOf="@+id/subtitle_message_mother">
@@ -161,7 +163,18 @@
                     android:contentDescription="@string/no_description"
                     android:visibility="gone" />
 
-                <include layout="@layout/symbol_eye" />
+                <include
+                    layout="@layout/symbol_eye"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="13dp" />
+
+                <TextView
+                    android:id="@+id/tv_btn_mother_select"
+                    style="@style/title_button_bottom_start"
+                    android:text="@string/select_color"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -175,7 +188,8 @@
             android:src="@drawable/baseline_pan_tool_alt_24"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="@id/card_mother"
-            app:layout_constraintTop_toTopOf="@id/card_mother" />
+            app:layout_constraintTop_toTopOf="@id/card_mother"
+            />
 
         <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
         <!--        android:id="@+id/fab_brown_eyes"-->
@@ -205,45 +219,59 @@
 
         <TextView
             android:id="@+id/subtitle_message_father"
-            style="@style/title_button_top"
+            style="@style/title_button_top_center"
             android:text="@string/father"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
             app:layout_constraintTop_toBottomOf="@id/banner_bottom_text" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_father"
-            style="@style/style_card_view"
-            app:cardBackgroundColor="@color/grey_500"
+            style="@style/style_card_view_elevation"
+            app:cardBackgroundColor="@color/grey_400"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
             app:layout_constraintTop_toBottomOf="@+id/subtitle_message_father">
 
-            <ImageView
-                android:id="@+id/iv_father_gradient_brown"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient_brown"
-                android:contentDescription="@string/no_description"
-                android:visibility="gone" />
+                android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/iv_father_gradient_blue"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient_blue"
-                android:contentDescription="@string/no_description"
-                android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/iv_father_gradient_brown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_brown"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="gone" />
 
-            <ImageView
-                android:id="@+id/iv_father_gradient_green"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient_green"
-                android:contentDescription="@string/no_description"
-                android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/iv_father_gradient_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_blue"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="gone" />
 
-            <include layout="@layout/symbol_eye" />
+                <ImageView
+                    android:id="@+id/iv_father_gradient_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="gone" />
 
+                <include layout="@layout/symbol_eye" />
+
+                <TextView
+                    android:id="@+id/tv_btn_father_select"
+                    style="@style/title_button_bottom_start"
+                    android:text="@string/select_color"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <ImageView
@@ -272,37 +300,63 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_child_brown"
             style="@style/style_card_view_end"
-            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintEnd_toStartOf="@id/guide_line_end"
             app:layout_constraintStart_toStartOf="@id/guide_line_start"
             app:layout_constraintTop_toBottomOf="@+id/message_child">
 
-            <ImageView
-                android:id="@+id/iv_child_gradient_brown"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient_brown"
-                android:contentDescription="@string/no_description" />
+                android:layout_height="match_parent">
 
-            <include layout="@layout/symbol_eye" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_line_brown_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.47" />
 
+                <ImageView
+                    android:id="@+id/iv_child_gradient_brown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_brown"
+                    android:contentDescription="@string/no_description" />
+
+                <include
+                    android:id="@+id/include"
+                    layout="@layout/symbol_eye"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="12dp" />
+
+                <TextView
+                    style="@style/title_button_bottom_start"
+                    android:text="@string/brown"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_brown"
+                    style="@style/my_progress_bar"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guide_line_brown_center"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/message_brown"
+                    style="@style/title_button_top_nostart"
+                    android:text="40 %"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="@+id/guide_line_brown_center"
+                    app:layout_constraintTop_toBottomOf="@+id/progress_bar_brown" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <ProgressBar
-            android:id="@+id/progress_bar_brown"
-            style="@style/my_progress_bar"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/card_child_brown"
-            app:layout_constraintEnd_toEndOf="@+id/guide_line_end"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toTopOf="@+id/card_child_brown" />
 
-        <TextView
-            android:id="@+id/message_brown"
-            style="@style/title_button_top_nostart"
-            android:text="40 %"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@+id/progress_bar_brown" />
+
 
 
         <!-- 2 Blue/grey-->
@@ -310,36 +364,57 @@
             android:id="@+id/card_child_grey"
             style="@style/style_card_view_end"
             android:visibility="visible"
-            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@id/guide_line_start"
             app:layout_constraintTop_toBottomOf="@+id/card_child_brown">
 
-            <ImageView
-                android:id="@+id/iv_child_gradient_blue"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient_blue"
-                android:contentDescription="@string/no_description" />
+                android:layout_height="match_parent">
 
-            <include layout="@layout/symbol_eye" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_line_grey_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.47" />
+
+                <ImageView
+                    android:id="@+id/iv_child_gradient_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_blue"
+                    android:contentDescription="@string/no_description" />
+
+                <include layout="@layout/symbol_eye" />
+
+                <TextView
+                    style="@style/title_button_bottom_start"
+                    android:text="@string/blue_grey"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_grey"
+                    style="@style/my_progress_bar"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guide_line_grey_center"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/message_grey"
+                    style="@style/title_button_top_nostart"
+                    android:text="40 %"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="@+id/guide_line_grey_center"
+                    app:layout_constraintTop_toBottomOf="@+id/progress_bar_grey" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <ProgressBar
-            android:id="@+id/progress_bar_grey"
-            style="@style/my_progress_bar"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/card_child_grey"
-            app:layout_constraintEnd_toEndOf="@+id/guide_line_end"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toTopOf="@+id/card_child_grey" />
-
-        <TextView
-            android:id="@+id/message_grey"
-            style="@style/title_button_top_nostart"
-            android:text="40 %"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@+id/progress_bar_grey" />
 
         <!-- 3 Green -->
         <com.google.android.material.card.MaterialCardView
@@ -347,39 +422,57 @@
             style="@style/style_card_view_end"
             android:visibility="visible"
             app:cardBackgroundColor="@color/eyesColorGreen"
-            app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+            app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@id/guide_line_start"
             app:layout_constraintTop_toBottomOf="@+id/card_child_grey">
 
-            <ImageView
-                android:id="@+id/iv_child_gradient_green"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/gradient_green"
-                android:contentDescription="@string/no_description" />
+                android:layout_height="match_parent">
 
-            <include layout="@layout/symbol_eye" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_line_green_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.47" />
+
+                <ImageView
+                    android:id="@+id/iv_child_gradient_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green"
+                    android:contentDescription="@string/no_description" />
+
+                <include layout="@layout/symbol_eye" />
+
+                <TextView
+                    style="@style/title_button_bottom_start"
+                    android:text="@string/green"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_green"
+                    style="@style/my_progress_bar"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guide_line_green_center"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/message_green"
+                    style="@style/title_button_top_nostart"
+                    android:text="40 %"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="@id/guide_line_green_center"
+                    app:layout_constraintTop_toBottomOf="@+id/progress_bar_green" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
-
-
-        <ProgressBar
-            android:id="@+id/progress_bar_green"
-            style="@style/my_progress_bar"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/card_child_green"
-            app:layout_constraintEnd_toEndOf="@+id/guide_line_end"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toTopOf="@+id/card_child_green" />
-
-        <TextView
-            android:id="@+id/message_green"
-            style="@style/title_button_top_nostart"
-            android:text="40 %"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@+id/progress_bar_green" />
-
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_child_back"
@@ -424,18 +517,23 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_explain_folded"
-            style="@style/style_card_view_back"
+            style="@style/style_card_view_end"
             android:layout_height="match_parent"
-            android:visibility="gone"
-            app:cardBackgroundColor="@color/white_transparent"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/grey_400"
+            android:layout_marginTop="@dimen/step_large_plus"
             app:layout_constraintEnd_toStartOf="@+id/guide_line_end"
             app:layout_constraintStart_toStartOf="@+id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@id/card_child_back">
+            app:layout_constraintTop_toBottomOf="@id/card_child_green">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/step_normal_plus">
+                android:padding="@dimen/text_size_small"
+                android:paddingStart="@dimen/step_normal_plus">
+
+                <include layout="@layout/symbol_info"
+                    android:id="@+id/title_info"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_arrow_down"
@@ -446,7 +544,8 @@
                     android:layout_marginEnd="@dimen/step_large"
                     android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/title_info"
+                    app:layout_constraintBottom_toBottomOf="@id/title_info"
                     app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_36" />
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -455,44 +554,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/step_zero"
-                    android:layout_marginEnd="@dimen/step_large"
+                    android:layout_marginEnd="@dimen/step_xx_large"
                     android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/message_explain_unfolded"
                     app:srcCompat="@drawable/ic_baseline_keyboard_arrow_up_36" />
-
-                <TextView
-                    android:id="@+id/message_explain_folded"
-                    style="@style/heading_title_explanation"
-                    android:text="@string/how_to_explain"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/message_explain_unfolded"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/step_normal"
+
                     android:justificationMode="inter_word"
                     android:text="@string/explanation_eyes"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/message_explain_folded" />
+                    app:layout_constraintTop_toBottomOf="@+id/title_info" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/step_xx_large"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_explain_folded" />
-
 
         <!-- Lines -->
         <!--    <com.google.android.material.divider.MaterialDivider-->

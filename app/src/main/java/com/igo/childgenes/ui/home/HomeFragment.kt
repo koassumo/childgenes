@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -110,18 +111,13 @@ class HomeFragment : Fragment() {
             binding.ivMotherQuestion.visibility = View.VISIBLE
         } else {
             binding.ivMotherQuestion.visibility = View.GONE
+            binding.ivMotherGradientBrown.visibility = View.GONE
+            binding.ivMotherGradientBlue.visibility = View.GONE
+            binding.ivMotherGradientGreen.visibility = View.GONE
             when (eyesMotherColor) {
-                BROWN -> binding.cardMother.setCardBackgroundColor(
-                    ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
-                )
-
-                GREY -> binding.cardMother.setCardBackgroundColor(
-                    ContextCompat.getColor(requireContext(), R.color.eyesColorGrey)
-                )
-
-                GREEN -> binding.cardMother.setCardBackgroundColor(
-                    ContextCompat.getColor(requireContext(), R.color.eyesColorGreen)
-                )
+                BROWN -> binding.ivMotherGradientBrown.visibility = View.VISIBLE
+                GREY -> binding.ivMotherGradientBlue.visibility = View.VISIBLE
+                GREEN -> binding.ivMotherGradientGreen.visibility = View.VISIBLE
             }
         }
     }
@@ -132,9 +128,13 @@ class HomeFragment : Fragment() {
             binding.ivFatherQuestion.visibility = View.VISIBLE
         } else {
             binding.ivFatherQuestion.visibility = View.GONE
+            binding.ivFatherGradientBrown.visibility = View.GONE
+            binding.ivFatherGradientBlue.visibility = View.GONE
+            binding.ivFatherGradientGreen.visibility = View.GONE
             when (eyesFatherColor) {
-                BROWN -> {
-                    binding.ivFatherGradientBrown.visibility = View.VISIBLE
+                BROWN -> binding.ivFatherGradientBrown.visibility = View.VISIBLE
+                GREY -> binding.ivFatherGradientBlue.visibility = View.VISIBLE
+                GREEN -> binding.ivFatherGradientGreen.visibility = View.VISIBLE
 //                    binding.cardFather.setCardBackgroundColor(
 //                        ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
 //                    )
@@ -148,20 +148,6 @@ class HomeFragment : Fragment() {
 //                    binding.ivFatherEye.background = gradientDrawable
 //
 //                    binding.ivFatherEye.setColorFilter(ContextCompat.getColor(requireContext(), R.color.eyesColorBrown))
-
-                }
-
-                GREY ->
-                    binding.ivFatherGradientBlue.visibility = View.VISIBLE
-//                    binding.cardFather.setCardBackgroundColor(
-//                    ContextCompat.getColor(requireContext(), R.color.eyesColorGrey)
-//                )
-
-                GREEN ->
-                   binding.ivFatherGradientGreen.visibility = View.VISIBLE
-//                binding.cardFather.setCardBackgroundColor(
-//                    ContextCompat.getColor(requireContext(), R.color.eyesColorGreen)
-//                )
             }
         }
     }
@@ -173,7 +159,7 @@ class HomeFragment : Fragment() {
     private fun countColor() {
         val parentsColor = Pair(eyesMotherColor, eyesFatherColor)
         // if (parentsColor == BROWN to BROWN) {val sfdad: Int = 23}
-        //Toast.makeText(requireContext(), "Colors: $parentsColor", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "Colors: $parentsColor", Toast.LENGTH_SHORT).show()
 
         val childColor = when (parentsColor) {
             BROWN to BROWN -> Triple(75.0, 6.25, 18.75)

@@ -3,16 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/style_image_inside_card_view">
+
+    >
 
     <ImageView
-        android:id="@+id/left_eye"
-        android:layout_width="@dimen/step_x_large"
-        android:layout_height="@dimen/step_x_large"
+        android:id="@+id/iv_sign_info"
+        android:layout_width="@dimen/step_large_plus"
+        android:layout_height="@dimen/step_large_plus"
         android:contentDescription="@string/no_description"
-        android:src="@drawable/ic_eye_4"
+        android:src="@drawable/ic_info_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/step_zero"
+/>
+
+    <TextView
+        android:id="@+id/message_explain_folded"
+        style="@style/title_button_start"
+        android:text="@string/how_to_explain"
+        app:layout_constraintStart_toEndOf="@id/iv_sign_info"
+        app:layout_constraintTop_toTopOf="@id/iv_sign_info"
+        app:layout_constraintBottom_toBottomOf="@id/iv_sign_info"
+        />
 
 <!--    <ImageView-->
 <!--        android:layout_width="@dimen/step_x_large"-->
