@@ -73,13 +73,13 @@ class HomeFragment : Fragment() {
         //checkChildRenderNeeded()
 
 
-        binding.cardMother.setOnClickListener {
+        binding.eyeCardMother.setOnClickListener {
             findNavController().navigate(
                 R.id.action_navigation_home_to_select_eyes_fragment,
                 bundleOf(PARENT_PERSON to MOTHER)
             )
         }
-        binding.cardFather.setOnClickListener {
+        binding.eyeCardFather.setOnClickListener {
             findNavController().navigate(
                 R.id.action_navigation_home_to_select_eyes_fragment,
                 bundleOf(PARENT_PERSON to FATHER)
@@ -108,16 +108,16 @@ class HomeFragment : Fragment() {
 
     private fun fillCardMotherColor() {
         if (eyesMotherColor == NOT_SELECTED) {
-            binding.ivMotherQuestion.visibility = View.VISIBLE
+            binding.eyeIvMotherQuestion.visibility = View.VISIBLE
         } else {
-            binding.ivMotherQuestion.visibility = View.GONE
-            binding.ivMotherGradientBrown.visibility = View.GONE
-            binding.ivMotherGradientBlue.visibility = View.GONE
-            binding.ivMotherGradientGreen.visibility = View.GONE
+            binding.eyeIvMotherQuestion.visibility = View.GONE
+            binding.eyeIvMotherGradientBrown.visibility = View.GONE
+            binding.eyeIvMotherGradientBlue.visibility = View.GONE
+            binding.eyeIvMotherGradientGreen.visibility = View.GONE
             when (eyesMotherColor) {
-                BROWN -> binding.ivMotherGradientBrown.visibility = View.VISIBLE
-                GREY -> binding.ivMotherGradientBlue.visibility = View.VISIBLE
-                GREEN -> binding.ivMotherGradientGreen.visibility = View.VISIBLE
+                BROWN -> binding.eyeIvMotherGradientBrown.visibility = View.VISIBLE
+                GREY -> binding.eyeIvMotherGradientBlue.visibility = View.VISIBLE
+                GREEN -> binding.eyeIvMotherGradientGreen.visibility = View.VISIBLE
             }
         }
     }
@@ -125,16 +125,16 @@ class HomeFragment : Fragment() {
 
     private fun fillCardFatherColor() {
         if (eyesFatherColor == NOT_SELECTED) {
-            binding.ivFatherQuestion.visibility = View.VISIBLE
+            binding.eyeIvFatherQuestion.visibility = View.VISIBLE
         } else {
-            binding.ivFatherQuestion.visibility = View.GONE
-            binding.ivFatherGradientBrown.visibility = View.GONE
-            binding.ivFatherGradientBlue.visibility = View.GONE
-            binding.ivFatherGradientGreen.visibility = View.GONE
+            binding.eyeIvFatherQuestion.visibility = View.GONE
+            binding.eyeIvFatherGradientBrown.visibility = View.GONE
+            binding.eyeIvFatherGradientBlue.visibility = View.GONE
+            binding.eyeIvFatherGradientGreen.visibility = View.GONE
             when (eyesFatherColor) {
-                BROWN -> binding.ivFatherGradientBrown.visibility = View.VISIBLE
-                GREY -> binding.ivFatherGradientBlue.visibility = View.VISIBLE
-                GREEN -> binding.ivFatherGradientGreen.visibility = View.VISIBLE
+                BROWN -> binding.eyeIvFatherGradientBrown.visibility = View.VISIBLE
+                GREY -> binding.eyeIvFatherGradientBlue.visibility = View.VISIBLE
+                GREEN -> binding.eyeIvFatherGradientGreen.visibility = View.VISIBLE
 //                    binding.cardFather.setCardBackgroundColor(
 //                        ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
 //                    )
@@ -177,40 +177,39 @@ class HomeFragment : Fragment() {
     }
 
     private fun displayChildColor(childColor: Triple<Double, Double, Double>) {
-        binding.cardChildBrown.visibility = View.GONE
-        binding.cardChildGrey.visibility = View.GONE
-        binding.cardChildGreen.visibility = View.GONE
-        binding.messageBrown.visibility = View.GONE
-        binding.messageGrey.visibility = View.GONE
-        binding.messageGreen.visibility = View.GONE
-        binding.progressBarBrown.visibility = View.GONE
-        binding.progressBarGrey.visibility = View.GONE
-        binding.progressBarGreen.visibility = View.GONE
+        binding.eyeCardChildBrown.visibility = View.GONE
+        binding.eyeCardChildGrey.visibility = View.GONE
+        binding.eyeCardChildGreen.visibility = View.GONE
+        binding.eyeMessageBrown.visibility = View.GONE
+        binding.eyeMessageGrey.visibility = View.GONE
+        binding.eyeMessageGreen.visibility = View.GONE
+        binding.eyeProgressBarBrown.visibility = View.GONE
+        binding.eyeProgressBarGrey.visibility = View.GONE
+        binding.eyeProgressBarGreen.visibility = View.GONE
 
-        binding.cardChildBack.visibility = View.VISIBLE
-        binding.messageChild.visibility = View.VISIBLE
-        binding.messageBrown.text = "${childColor.first} %"
-        binding.progressBarBrown.setProgress(childColor.first.toInt(), true)
-        binding.messageGrey.text = "${childColor.second} %"
-        binding.progressBarGrey.setProgress(childColor.second.toInt(), true)
-        binding.messageGreen.text = "${childColor.third} %"
-        binding.progressBarGreen.setProgress(childColor.third.toInt(), true)
-        binding.cardExplainFolded.visibility = View.VISIBLE
+        binding.eyeMessageChild.visibility = View.VISIBLE
+        binding.eyeMessageBrown.text = "${childColor.first} %"
+        binding.eyeProgressBarBrown.setProgress(childColor.first.toInt(), true)
+        binding.eyeMessageGrey.text = "${childColor.second} %"
+        binding.eyeProgressBarGrey.setProgress(childColor.second.toInt(), true)
+        binding.eyeMessageGreen.text = "${childColor.third} %"
+        binding.eyeProgressBarGreen.setProgress(childColor.third.toInt(), true)
+        binding.eyeCardExplainFolded.visibility = View.VISIBLE
 
         if (childColor.first != 0.0) {
-            binding.cardChildBrown.visibility = View.VISIBLE
-            binding.messageBrown.visibility = View.VISIBLE
-            binding.progressBarBrown.visibility = View.VISIBLE
+            binding.eyeCardChildBrown.visibility = View.VISIBLE
+            binding.eyeMessageBrown.visibility = View.VISIBLE
+            binding.eyeProgressBarBrown.visibility = View.VISIBLE
         }
         if (childColor.second != 0.0) {
-            binding.cardChildGrey.visibility = View.VISIBLE
-            binding.messageGrey.visibility = View.VISIBLE
-            binding.progressBarGrey.visibility = View.VISIBLE
+            binding.eyeCardChildGrey.visibility = View.VISIBLE
+            binding.eyeMessageGrey.visibility = View.VISIBLE
+            binding.eyeProgressBarGrey.visibility = View.VISIBLE
         }
         if (childColor.third != 0.0) {
-            binding.cardChildGreen.visibility = View.VISIBLE
-            binding.messageGreen.visibility = View.VISIBLE
-            binding.progressBarGreen.visibility = View.VISIBLE
+            binding.eyeCardChildGreen.visibility = View.VISIBLE
+            binding.eyeMessageGreen.visibility = View.VISIBLE
+            binding.eyeProgressBarGreen.visibility = View.VISIBLE
         }
     }
 
