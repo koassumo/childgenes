@@ -120,7 +120,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginBottom="@dimen/step_normal"
                     android:elevation="@dimen/elevation_normal"
-                    android:text="@string/title_home"
+                    android:text="@string/title_blood"
                     android:textColor="@color/white"
                     android:textFontWeight="900"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -186,7 +186,7 @@
                 <TextView
                     android:id="@+id/blood_tv_btn_mother_select"
                     style="@style/title_button_bottom_start"
-                    android:text="@string/select_color"
+                    android:text="@string/select_type"
                     android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -280,7 +280,7 @@
                 <TextView
                     android:id="@+id/blood_tv_btn_father_select"
                     style="@style/title_button_bottom_start"
-                    android:text="@string/select_color"
+                    android:text="@string/select_type"
                     android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />

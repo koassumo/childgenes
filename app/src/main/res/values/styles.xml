@@ -40,6 +40,13 @@
     </style>
 
 
+    <!--   1.1.1. child style for title -->
+    <style name="title_button_top_small_center" parent="title_button_top">
+        <item name="android:layout_marginStart">@dimen/step_zero</item>
+        <item name="android:layout_marginTop">@dimen/step_small</item>
+    </style>
+
+
 
 
     <!--   1.1.2 child style for text -->
@@ -255,13 +262,27 @@
         <item name="android:contentDescription">@string/no_description</item>
     </style>
 
+
+
+
     <!--   4.0 line style for image inside card -->
     <style name="style_line">
         <item name="android:layout_width">@dimen/step_xxx_small</item>
         <item name="android:layout_height">@dimen/step_xxx_small</item>
         <item name="android:layout_margin">@dimen/step_zero</item>
-        <item name="android:background">@color/orange_500</item>
+        <item name="android:background">@color/brown_200</item>
     </style>
+
+    <style name="style_line_vertical" parent="style_line">
+        <item name="android:layout_height">@dimen/step_large</item>
+    </style>
+
+     <style name="style_line_horizontal" parent="style_line">
+        <item name="android:layout_width">@dimen/step_zero</item>
+    </style>
+
+
+
 
     <!--   -->
     <style name="my_progress_bar" parent="Widget.AppCompat.ProgressBar.Horizontal">

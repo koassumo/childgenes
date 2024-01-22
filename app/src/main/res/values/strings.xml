@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Сhild genes</string>
     <string name="title_home">Eyes color</string>
+    <string name="title_blood">Blood type</string>
     <string name="title_dashboard">Blood type</string>
     <string name="title_notifications">Height</string>
 
@@ -21,4 +22,5 @@
         It is known that up to 16 genes influence eye color. Green eye color dominates over blue but is recessive to brown. Even if both parents have blue eyes, there is a chance of the child having brown eyes, although this occurrence is not common. \n\n
         A child\'s eye color can change during the first year of life due to the gradual development of pigments that affect color. In most cases, the final eye color is established by the age of one, but for some children, this process can continue until the age of three or even into adulthood.</string>
     <string name="select_color">Select color</string>
+    <string name="select_type">Select type</string>
 </resources>
