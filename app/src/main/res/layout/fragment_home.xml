@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.48"
+            app:layout_constraintGuide_percent="0.45"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.52"
+            app:layout_constraintGuide_percent="0.55"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.45"
+            app:layout_constraintGuide_percent="0.48"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.55"
+            app:layout_constraintGuide_percent="0.52"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -150,24 +150,141 @@
         </com.google.android.material.card.MaterialCardView>
 
 
+        <!--MotherGranny-->
+        <TextView
+            android:id="@+id/eye_subtitle_message_mother_granny"
+            style="@style/title_button_top_center"
+            android:text="@string/granny"
+            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_left_inner"
+            app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+            app:layout_constraintTop_toBottomOf="@id/eye_banner_eyes" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/eye_card_mother_granny"
+            style="@style/style_card_view_elevation"
+            app:cardBackgroundColor="@color/grey_400"
+            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_left_inner"
+            app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
+            app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_mother_granny">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/eye_iv_mother_granny_gradient_brown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_brown"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/eye_iv_mother_granny_gradient_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_blue"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/eye_iv_mother_granny_gradient_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="invisible" />
+
+                <include
+                    layout="@layout/symbol_eye"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="13dp" />
+
+                <TextView
+                    android:id="@+id/eye_tv_btn_mother_granny_select"
+                    style="@style/title_button_bottom_start"
+                    android:text="@string/select_color"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--MotherGrandpa-->
+        <TextView
+            android:id="@+id/eye_subtitle_message_mother_grandpa"
+            style="@style/title_button_top_center"
+            android:text="@string/granny"
+            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_left_inner"
+            app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+            app:layout_constraintTop_toBottomOf="@id/eye_card_mother_granny" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/eye_card_mother_grandpa"
+            style="@style/style_card_view_elevation"
+            app:cardBackgroundColor="@color/grey_400"
+            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_left_inner"
+            app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
+            app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_mother_grandpa">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/eye_iv_mother_grandpa_gradient_brown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_brown"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/eye_iv_mother_grandpa_gradient_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_blue"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/eye_iv_mother_grandpa_gradient_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green"
+                    android:contentDescription="@string/no_description"
+                    android:visibility="invisible" />
+
+                <include
+                    layout="@layout/symbol_eye"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="13dp" />
+
+                <TextView
+                    android:id="@+id/eye_tv_btn_mother_grandpa_select"
+                    style="@style/title_button_bottom_start"
+                    android:text="@string/select_color"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
         <!--Mother-->
-
-        <!--        <com.google.android.material.card.MaterialCardView-->
-        <!--            android:id="@+id/eye_card_mother_back"-->
-        <!--            style="@style/style_card_view_back"-->
-        <!--            app:cardBackgroundColor="@color/white_transparent"-->
-        <!--            app:layout_constraintBottom_toBottomOf="@id/eye_card_mother"-->
-        <!--            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_vertical"-->
-        <!--            app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/eye_banner_bottom_text" />-->
-
         <TextView
             android:id="@+id/eye_subtitle_message_mother"
             style="@style/title_button_top_center"
             android:text="@string/mother"
             app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_left"
             app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
-            app:layout_constraintTop_toBottomOf="@id/eye_banner_eyes" />
+            app:layout_constraintTop_toBottomOf="@id/eye_card_mother_grandpa" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/eye_card_mother"
@@ -258,6 +375,7 @@
         <!--            app:layout_constraintTop_toBottomOf="@id/eye_banner_bottom_text" />-->
 
 
+        <!--Father-->
         <TextView
             android:id="@+id/eye_subtitle_message_father"
             style="@style/title_button_top_center"
