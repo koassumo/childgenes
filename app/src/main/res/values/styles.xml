@@ -22,7 +22,7 @@
     <style name="title_button_top" parent="p_title">
         <item name="android:layout_marginTop">@dimen/step_large_plus</item>
         <item name="android:layout_marginStart">@dimen/step_large</item>
-        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
         <item name="android:textColor">@color/grey_title_dark</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -110,7 +110,7 @@
         <item name="cardCornerRadius">@dimen/radius_small</item>
         <item name="cardElevation">@dimen/elevation_small</item>
         <item name="strokeWidth">@dimen/step_zero</item>
-        <item name="android:layout_marginTop">@dimen/step_normal</item>
+        <item name="android:layout_marginTop">@dimen/step_normal_too</item>
     </style>
 
     <style name="style_card_view_elevation" parent="style_card_view">
@@ -149,7 +149,6 @@
 
     <!--   2.2. child style for select -->
     <style name="style_card_view_end" parent="style_card_view">
-        <item name="android:layout_marginTop">@dimen/step_normal</item>
         <item name="android:layout_marginEnd">@dimen/step_zero</item>
     </style>
 
@@ -276,6 +275,10 @@
     <style name="style_line_vertical" parent="style_line">
         <item name="android:layout_height">@dimen/step_large</item>
     </style>
+    <style name="style_line_vertical_long" parent="style_line">
+        <item name="android:layout_height">@dimen/step_line_long</item>
+    </style>
+
 
      <style name="style_line_horizontal" parent="style_line">
         <item name="android:layout_width">@dimen/step_zero</item>
