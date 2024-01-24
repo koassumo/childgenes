@@ -1,367 +1,985 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/step_zero"
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <!--  Grids / guide lines  -->
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/eye_guide_line_start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/eye_guide_line_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/eye_guide_line_start_inner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.09"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/eye_guide_line_end_inner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.91"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/eye_guide_line_centre_left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.48"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/eye_guide_line_centre_right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.52"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/eye_guide_line_centre_left_inner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.45"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/eye_guide_line_centre_right_inner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.55"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <!--Banner-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/eye_banner_eyes"
-            style="@style/style_card_view_bottom"
-            android:layout_height="270dp"
-            android:layout_marginBottom="@dimen/step_x_large"
-            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
-            app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/eye_guide_line_title_bottom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.76" />
-
-                <ImageView
-                    android:id="@+id/eye_iv_eyes"
-                    style="@style/style_image_banner"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/eyes"
-                    android:visibility="visible" />
-
-                <ImageView
-                    android:id="@+id/eye_iv_line_title_bottom"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:alpha="0.1"
-                    android:background="@color/black"
-                    android:contentDescription="@string/no_description"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/eye_guide_line_title_bottom" />
-
-                <TextView
-                    style="@style/banner_text"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="@dimen/step_normal"
-                    android:elevation="@dimen/elevation_normal"
-                    android:text="@string/title_home"
-                    android:textColor="@color/white"
-                    android:textFontWeight="900"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <View
-            android:id="@+id/space_after_banner"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/step_large"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/eye_banner_eyes">
-
-        </View>
-
-
-        <!--Segment grandparents-->
-        <FrameLayout
-            android:id="@+id/eye_segment_grandparents"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
-            app:layout_constraintTop_toBottomOf="@+id/space_after_banner">
+            android:paddingBottom="@dimen/step_xxx_large">
 
-            <include
-                android:id="@+id/eye_include_grandparents"
-                layout="@layout/eye_segment_grandparents"/>
+            <!--  Grids / guide lines  -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05"
+                app:layout_constraintTop_toTopOf="parent" />
 
-<!--            <include-->
-<!--                android:id="@+id/tmptt"-->
-<!--                layout="@layout/tmp_t"-->
-/>
-        </FrameLayout>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_start_inner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.09"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_end_inner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.91"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-        <!--Mother-->
-        <TextView
-            android:id="@+id/eye_subtitle_message_mother"
-            style="@style/title_button_top_small_center"
-            android:text="@string/mother"
-            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_left"
-            app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
-            app:layout_constraintTop_toBottomOf="@id/eye_segment_grandparents" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_centre_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.48"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/eye_card_mother"
-            style="@style/style_card_view_elevation"
-            app:cardBackgroundColor="@color/grey_400"
-            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_left"
-            app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
-            app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_mother">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_centre_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_centre_left_inner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_centre_right_inner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.55"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_middle_card_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.28"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_middle_card_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.72"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--Banner-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_banner_eyes"
+                style="@style/style_card_view_bottom"
+                android:layout_height="270dp"
+                android:layout_marginBottom="@dimen/step_x_large"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eye_guide_line_title_bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.76" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_eyes"
+                        style="@style/style_image_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/eyes"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_line_title_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:alpha="0.1"
+                        android:background="@color/black"
+                        android:contentDescription="@string/no_description"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/eye_guide_line_title_bottom" />
+
+                    <TextView
+                        style="@style/banner_text"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/step_normal"
+                        android:elevation="@dimen/elevation_normal"
+                        android:text="@string/title_home"
+                        android:textColor="@color/white"
+                        android:textFontWeight="900"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:id="@+id/space_after_banner"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="@dimen/step_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eye_banner_eyes">
 
-                <ImageView
-                    android:id="@+id/eye_iv_mother_gradient_brown"
+            </View>
+
+
+            <!--        &lt;!&ndash;Segment grandparents&ndash;&gt;-->
+            <!--        <FrameLayout-->
+            <!--            android:id="@+id/eye_segment_grandparents"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:visibility="visible"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/space_after_banner">-->
+
+            <!--            <include-->
+            <!--                android:id="@+id/eye_include_grandparents"-->
+            <!--                layout="@layout/eye_segment_grandparents"/>-->
+
+            <!--&lt;!&ndash;            <include&ndash;&gt;-->
+            <!--&lt;!&ndash;                android:id="@+id/tmptt"&ndash;&gt;-->
+            <!--&lt;!&ndash;                layout="@layout/tmp_t"&ndash;&gt;-->
+            <!--/>-->
+            <!--        </FrameLayout>-->
+
+
+            <!--MotherGranny-->
+            <TextView
+                android:id="@+id/eye_subtitle_message_mother_granny"
+                style="@style/title_button_top_small_center"
+                android:text="@string/granny"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_centre_left"
+                app:layout_constraintStart_toStartOf="@+id/eye_guide_line_start_inner"
+                app:layout_constraintTop_toBottomOf="@id/space_after_banner" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_card_mother_granny"
+                style="@style/style_card_view_elevation"
+                app:cardBackgroundColor="@color/grey_400"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_centre_left"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
+                app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_mother_granny">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_brown"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="invisible" />
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/eye_iv_mother_gradient_blue"
+                    <ImageView
+                        android:id="@+id/eye_iv_mother_granny_gradient_brown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_brown"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_mother_granny_gradient_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_blue"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_mother_granny_gradient_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_green"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <include
+                        layout="@layout/symbol_eye"
+                        tools:layout_editor_absoluteX="20dp"
+                        tools:layout_editor_absoluteY="13dp" />
+
+                    <TextView
+                        android:id="@+id/eye_tv_btn_mother_granny_select"
+                        style="@style/title_button_bottom_start"
+                        android:text="@string/select_color"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--MotherGrandpa-->
+            <TextView
+                android:id="@+id/eye_subtitle_message_mother_grandpa"
+                style="@style/title_button_top_center"
+                android:text="@string/grandpa"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_centre_left"
+                app:layout_constraintStart_toStartOf="@+id/eye_guide_line_start_inner"
+                app:layout_constraintTop_toBottomOf="@id/eye_card_mother_granny" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_card_mother_grandpa"
+                style="@style/style_card_view_elevation"
+                app:cardBackgroundColor="@color/grey_400"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_centre_left"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
+                app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_mother_grandpa">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_blue"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="invisible" />
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/eye_iv_mother_gradient_green"
+                    <ImageView
+                        android:id="@+id/eye_iv_mother_grandpa_gradient_brown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_brown"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_mother_grandpa_gradient_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_blue"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_mother_grandpa_gradient_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_green"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <include
+                        layout="@layout/symbol_eye"
+                        tools:layout_editor_absoluteX="20dp"
+                        tools:layout_editor_absoluteY="13dp" />
+
+                    <TextView
+                        android:id="@+id/eye_tv_btn_mother_grandpa_select"
+                        style="@style/title_button_bottom_start"
+                        android:text="@string/select_color"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--FatherGranny-->
+            <TextView
+                android:id="@+id/eye_subtitle_message_father_granny"
+                style="@style/title_button_top_center"
+                android:text="@string/granny"
+                app:layout_constraintBottom_toBottomOf="@+id/eye_subtitle_message_mother_granny"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_end_inner"
+                app:layout_constraintStart_toStartOf="@+id/eye_guide_line_centre_right" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_card_father_granny"
+                style="@style/style_card_view_elevation"
+                app:cardBackgroundColor="@color/grey_400"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_end_inner"
+                app:layout_constraintStart_toStartOf="@+id/eye_guide_line_centre_right"
+                app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_mother_granny">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_green"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="invisible" />
+                    android:layout_height="match_parent">
 
-                <include
-                    layout="@layout/symbol_eye"
-                    tools:layout_editor_absoluteX="20dp"
-                    tools:layout_editor_absoluteY="13dp" />
+                    <ImageView
+                        android:id="@+id/eye_iv_father_granny_gradient_brown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_brown"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
 
-                <TextView
-                    android:id="@+id/eye_tv_btn_mother_select"
-                    style="@style/title_button_bottom_start"
-                    android:text="@string/select_color"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <ImageView
+                        android:id="@+id/eye_iv_father_granny_gradient_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_blue"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <ImageView
+                        android:id="@+id/eye_iv_father_granny_gradient_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_green"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
 
-        </com.google.android.material.card.MaterialCardView>
+                    <include
+                        layout="@layout/symbol_eye"
+                        tools:layout_editor_absoluteX="20dp"
+                        tools:layout_editor_absoluteY="13dp" />
 
+                    <TextView
+                        android:id="@+id/eye_tv_btn_father_granny_select"
+                        style="@style/title_button_bottom_start"
+                        android:text="@string/select_color"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/eye_iv_mother_question"
-            style="@style/style_image_inside_card_view_question"
-            android:contentDescription="@string/no_description"
-            android:src="@drawable/baseline_pan_tool_alt_24"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@id/eye_card_mother"
-            app:layout_constraintTop_toTopOf="@id/eye_card_mother" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-        <!--        android:id="@+id/eye_fab_brown_eyes"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:backgroundTint="@color/eyesColorBrown"-->
-        <!--        android:elevation="@dimen/step_small"-->
-        <!--        android:textAllCaps="false"-->
-        <!--        android:contentDescription="@string/no_description"-->
+            </com.google.android.material.card.MaterialCardView>
 
-        <!--        android:textAlignment="center"-->
-        <!--        app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_vertical_second"-->
-        <!--        app:layout_constraintStart_toStartOf="@id/eye_card_mother"-->
-        <!--        app:layout_constraintTop_toTopOf="@id/eye_card_mother" />-->
+            <!--FatherGrandpa-->
+            <TextView
+                android:id="@+id/eye_subtitle_message_father_grandpa"
+                style="@style/title_button_top_center"
+                android:text="@string/grandpa"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_end_inner"
+                app:layout_constraintStart_toStartOf="@+id/eye_guide_line_centre_right"
+                app:layout_constraintTop_toBottomOf="@id/eye_card_mother_granny" />
 
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_card_father_grandpa"
+                style="@style/style_card_view_elevation"
+                app:cardBackgroundColor="@color/grey_400"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_end_inner"
+                app:layout_constraintStart_toStartOf="@+id/eye_guide_line_centre_right"
+                app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_mother_grandpa">
 
-        <!--  Father  -->
-        <!--        <com.google.android.material.card.MaterialCardView-->
-        <!--            android:id="@+id/eye_card_father_back"-->
-        <!--            style="@style/style_card_view_back"-->
-        <!--            app:cardBackgroundColor="@color/white_transparent"-->
-        <!--            app:layout_constraintBottom_toBottomOf="@id/eye_card_father"-->
-        <!--            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"-->
-        <!--            app:layout_constraintStart_toStartOf="@id/eye_guide_line_centre_vertical_second"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/eye_banner_bottom_text" />-->
-
-
-        <!--Father-->
-        <TextView
-            android:id="@+id/eye_subtitle_message_father"
-            style="@style/title_button_top_small_center"
-            android:text="@string/father"
-            app:layout_constraintBottom_toBottomOf="@+id/eye_subtitle_message_mother"
-            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end_inner"
-            app:layout_constraintStart_toStartOf="@id/eye_guide_line_centre_right"
-            app:layout_constraintTop_toBottomOf="@id/eye_segment_grandparents" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/eye_card_father"
-            style="@style/style_card_view_elevation"
-            app:cardBackgroundColor="@color/grey_400"
-            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end_inner"
-            app:layout_constraintStart_toStartOf="@id/eye_guide_line_centre_right"
-            app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_father">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/eye_iv_father_gradient_brown"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_brown"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="invisible" />
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/eye_iv_father_gradient_blue"
+                    <ImageView
+                        android:id="@+id/eye_iv_father_grandpa_gradient_brown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_brown"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_father_grandpa_gradient_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_blue"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_father_grandpa_gradient_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_green"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <include
+                        layout="@layout/symbol_eye"
+                        tools:layout_editor_absoluteX="20dp"
+                        tools:layout_editor_absoluteY="13dp" />
+
+                    <TextView
+                        android:id="@+id/eye_tv_btn_father_grandpa_select"
+                        style="@style/title_button_bottom_start"
+                        android:text="@string/select_color"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--         Lines to mother & to father-->
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_1"
+                style="@style/style_line_horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/eye_card_father_granny"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_start_inner"
+                app:layout_constraintStart_toStartOf="@+id/eye_guide_line_start"
+                app:layout_constraintTop_toTopOf="@id/eye_card_father_granny" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_2"
+                style="@style/style_line_horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/eye_card_father_grandpa"
+                app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_start_inner"
+                app:layout_constraintStart_toStartOf="@+id/eye_guide_line_start"
+                app:layout_constraintTop_toTopOf="@id/eye_card_father_grandpa" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_3"
+                style="@style/style_line_horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/eye_card_father_granny"
+                app:layout_constraintEnd_toEndOf="@id/eye_guide_line_end"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_end_inner"
+                app:layout_constraintTop_toTopOf="@id/eye_card_father_granny" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_4"
+                style="@style/style_line_horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/eye_card_father_grandpa"
+                app:layout_constraintEnd_toEndOf="@id/eye_guide_line_end"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_end_inner"
+                app:layout_constraintTop_toTopOf="@id/eye_card_father_grandpa" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_5"
+                style="@style/style_line_vertical_long"
+                app:layout_constraintEnd_toEndOf="@id/eye_guide_line_start"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_f_1" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_6"
+                style="@style/style_line_vertical_long"
+                app:layout_constraintEnd_toEndOf="@id/eye_guide_line_end"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_end"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_f_1" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_7"
+                style="@style/style_line_horizontal"
+                app:layout_constraintEnd_toEndOf="@id/eye_guide_line_middle_card_left"
+                app:layout_constraintStart_toStartOf="@id/eye_material_divider_f_5"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_f_5" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_8"
+                style="@style/style_line_horizontal"
+                app:layout_constraintEnd_toEndOf="@id/eye_material_divider_f_6"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_middle_card_right"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_f_6" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_9"
+                style="@style/style_line_vertical"
+                app:layout_constraintStart_toEndOf="@id/eye_material_divider_f_7"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_f_7" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_f_10"
+                style="@style/style_line_vertical"
+                app:layout_constraintStart_toStartOf="@id/eye_material_divider_f_8"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_f_8" />
+
+
+            <!--Mother-->
+            <TextView
+                android:id="@+id/eye_subtitle_message_mother"
+                style="@style/title_button_top_small_center"
+                android:text="@string/mother"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_left"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_f_10" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_card_mother"
+                style="@style/style_card_view_elevation"
+                app:cardBackgroundColor="@color/grey_400"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_left"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
+                app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_mother">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_blue"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="invisible" />
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/eye_iv_father_gradient_green"
+                    <ImageView
+                        android:id="@+id/eye_iv_mother_gradient_brown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_brown"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_mother_gradient_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_blue"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_mother_gradient_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_green"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
+
+                    <include
+                        layout="@layout/symbol_eye"
+                        tools:layout_editor_absoluteX="20dp"
+                        tools:layout_editor_absoluteY="13dp" />
+
+                    <TextView
+                        android:id="@+id/eye_tv_btn_mother_select"
+                        style="@style/title_button_bottom_start"
+                        android:text="@string/select_color"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <ImageView
+                android:id="@+id/eye_iv_mother_question"
+                style="@style/style_image_inside_card_view_question"
+                android:contentDescription="@string/no_description"
+                android:src="@drawable/baseline_pan_tool_alt_24"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/eye_card_mother"
+                app:layout_constraintTop_toTopOf="@id/eye_card_mother" />
+
+            <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+            <!--        android:id="@+id/eye_fab_brown_eyes"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:backgroundTint="@color/eyesColorBrown"-->
+            <!--        android:elevation="@dimen/step_small"-->
+            <!--        android:textAllCaps="false"-->
+            <!--        android:contentDescription="@string/no_description"-->
+
+            <!--        android:textAlignment="center"-->
+            <!--        app:layout_constraintEnd_toStartOf="@id/eye_guide_line_centre_vertical_second"-->
+            <!--        app:layout_constraintStart_toStartOf="@id/eye_card_mother"-->
+            <!--        app:layout_constraintTop_toTopOf="@id/eye_card_mother" />-->
+
+
+            <!--  Father  -->
+            <!--        <com.google.android.material.card.MaterialCardView-->
+            <!--            android:id="@+id/eye_card_father_back"-->
+            <!--            style="@style/style_card_view_back"-->
+            <!--            app:cardBackgroundColor="@color/white_transparent"-->
+            <!--            app:layout_constraintBottom_toBottomOf="@id/eye_card_father"-->
+            <!--            app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"-->
+            <!--            app:layout_constraintStart_toStartOf="@id/eye_guide_line_centre_vertical_second"-->
+            <!--            app:layout_constraintTop_toBottomOf="@id/eye_banner_bottom_text" />-->
+
+
+            <!--Father-->
+            <TextView
+                android:id="@+id/eye_subtitle_message_father"
+                style="@style/title_button_top_small_center"
+                android:text="@string/father"
+                app:layout_constraintBottom_toBottomOf="@+id/eye_subtitle_message_mother"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end_inner"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_centre_right" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_card_father"
+                style="@style/style_card_view_elevation"
+                app:cardBackgroundColor="@color/grey_400"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end_inner"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_centre_right"
+                app:layout_constraintTop_toBottomOf="@id/eye_subtitle_message_father">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_green"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="invisible" />
+                    android:layout_height="match_parent">
 
-                <include
-                    layout="@layout/symbol_eye"
-                    tools:layout_editor_absoluteX="20dp"
-                    tools:layout_editor_absoluteY="12dp" />
+                    <ImageView
+                        android:id="@+id/eye_iv_father_gradient_brown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_brown"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
 
-                <TextView
-                    android:id="@+id/eye_tv_btn_father_select"
-                    style="@style/title_button_bottom_start"
-                    android:text="@string/select_color"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    <ImageView
+                        android:id="@+id/eye_iv_father_gradient_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_blue"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    <ImageView
+                        android:id="@+id/eye_iv_father_gradient_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_green"
+                        android:contentDescription="@string/no_description"
+                        android:visibility="invisible" />
 
-        <ImageView
-            android:id="@+id/eye_iv_father_question"
-            style="@style/style_image_inside_card_view_question"
-            android:contentDescription="@string/no_description"
-            android:src="@drawable/baseline_pan_tool_alt_24"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@id/eye_guide_line_centre_right"
-            app:layout_constraintTop_toTopOf="@id/eye_card_father" />
+                    <include
+                        layout="@layout/symbol_eye"
+                        tools:layout_editor_absoluteX="20dp"
+                        tools:layout_editor_absoluteY="12dp" />
+
+                    <TextView
+                        android:id="@+id/eye_tv_btn_father_select"
+                        style="@style/title_button_bottom_start"
+                        android:text="@string/select_color"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/eye_iv_father_question"
+                style="@style/style_image_inside_card_view_question"
+                android:contentDescription="@string/no_description"
+                android:src="@drawable/baseline_pan_tool_alt_24"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_centre_right"
+                app:layout_constraintTop_toTopOf="@id/eye_card_father" />
 
 
-        <!--Segment child-->
-        <FrameLayout
-            android:id="@+id/eye_segment_child"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="visible"
-            app:layout_constraintTop_toBottomOf="@+id/eye_card_father"
-            >
+            <!--Segment child-->
+            <!--        <FrameLayout-->
+            <!--            android:id="@+id/eye_segment_child"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:visibility="visible"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/eye_card_father"-->
+            <!--            >-->
 
-            <include
-                layout="@layout/eye_segment_kinder"/>
-        </FrameLayout>
+            <!--            <include-->
+            <!--                layout="@layout/eye_segment_kinder"/>-->
+            <!--        </FrameLayout>-->
 
-        <View
-            android:id="@+id/space_footer"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/step_xxx_large"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/eye_segment_child">
 
-        </View>
+            <!--         Lines to child-->
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_1"
+                style="@style/style_line_vertical"
+                app:layout_constraintEnd_toEndOf="@id/eye_guide_line_middle_card_left"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_middle_card_left"
+                app:layout_constraintTop_toBottomOf="@id/eye_card_mother" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_2"
+                style="@style/style_line_vertical"
+                app:layout_constraintBottom_toBottomOf="@id/eye_material_divider_1"
+                app:layout_constraintEnd_toEndOf="@id/eye_guide_line_middle_card_right"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_middle_card_right" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_3"
+                style="@style/style_line_horizontal"
+                app:layout_constraintEnd_toEndOf="@id/eye_material_divider_2"
+                app:layout_constraintStart_toStartOf="@id/eye_material_divider_1"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_1" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/eye_material_divider_4"
+                style="@style/style_line_vertical"
+                app:layout_constraintEnd_toEndOf="@id/eye_material_divider_2"
+                app:layout_constraintStart_toStartOf="@id/eye_material_divider_1"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_3" />
+
+
+            <!--  Child  -->
+            <TextView
+                android:id="@+id/eye_message_child"
+                style="@style/title_button_top_small_center"
+                android:text="@string/child"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+                app:layout_constraintTop_toBottomOf="@id/eye_material_divider_4" />
+
+            <!-- 1 Brown-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_card_child_brown"
+                style="@style/style_card_view_end"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+                app:layout_constraintTop_toBottomOf="@id/eye_message_child">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eye_guide_line_brown_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.47" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_child_gradient_brown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_brown"
+                        android:contentDescription="@string/no_description" />
+
+                    <include
+                        android:id="@+id/eye_include"
+                        layout="@layout/symbol_eye"
+                        tools:layout_editor_absoluteX="20dp"
+                        tools:layout_editor_absoluteY="12dp" />
+
+                    <TextView
+                        style="@style/title_button_bottom_start"
+                        android:text="@string/brown"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/eye_progress_bar_brown"
+                        style="@style/my_progress_bar"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/eye_guide_line_brown_center"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/eye_message_brown"
+                        style="@style/title_button_top_nostart"
+                        android:text=""
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="@id/eye_guide_line_brown_center"
+                        app:layout_constraintTop_toBottomOf="@id/eye_progress_bar_brown" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- 2 Blue/grey-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_card_child_grey"
+                style="@style/style_card_view_end"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+                app:layout_constraintTop_toBottomOf="@id/eye_card_child_brown">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eye_guide_line_grey_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.47" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_child_gradient_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_blue"
+                        android:contentDescription="@string/no_description" />
+
+                    <include layout="@layout/symbol_eye" />
+
+                    <TextView
+                        style="@style/title_button_bottom_start"
+                        android:text="@string/blue_grey"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/eye_progress_bar_grey"
+                        style="@style/my_progress_bar"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/eye_guide_line_grey_center"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/eye_message_grey"
+                        style="@style/title_button_top_nostart"
+                        android:text=""
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="@id/eye_guide_line_grey_center"
+                        app:layout_constraintTop_toBottomOf="@id/eye_progress_bar_grey" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- 3 Green -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_card_child_green"
+                style="@style/style_card_view_end"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/eyesColorGreen"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+                app:layout_constraintTop_toBottomOf="@id/eye_card_child_grey">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eye_guide_line_green_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.47" />
+
+                    <ImageView
+                        android:id="@+id/eye_iv_child_gradient_green"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient_green"
+                        android:contentDescription="@string/no_description" />
+
+                    <include layout="@layout/symbol_eye" />
+
+                    <TextView
+                        style="@style/title_button_bottom_start"
+                        android:text="@string/green"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/eye_progress_bar_green"
+                        style="@style/my_progress_bar"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/eye_guide_line_green_center"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/eye_message_green"
+                        style="@style/title_button_top_nostart"
+                        android:text=""
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="@id/eye_guide_line_green_center"
+                        app:layout_constraintTop_toBottomOf="@id/eye_progress_bar_green" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 3 Green -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/eye_btn_add_grandparents"
+                style="@style/style_card_view_end_info"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/grey_400"
+                app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+                app:layout_constraintTop_toBottomOf="@id/eye_card_child_green">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/eye_guide_line_btn_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.05" />
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/eye_guide_line_btn_left"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <include layout="@layout/symbol_plus" />
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:id="@+id/eye_txt_add_grandparents"
+                        style="@style/title_button_top_nostart"
+                        android:text="Add grandparents"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--        -->
+            <!--        -->
+            <!--        <View-->
+            <!--            android:id="@+id/space_footer"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="@dimen/step_xxx_large"-->
+            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@id/eye_card_child_green">-->
+
+            <!--        </View>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

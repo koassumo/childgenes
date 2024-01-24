@@ -1,21 +1,15 @@
 package com.igo.childgenes.ui.home
 
-import android.graphics.Color
-import android.graphics.PorterDuff
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
-import com.igo.childgenes.databinding.EyeSegmentKinderBinding
 import com.igo.childgenes.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -43,14 +37,11 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    private var _bindingSegKinder: EyeSegmentKinderBinding? = null
-    private val bindingSegKinder get() = _bindingSegKinder!!
 
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-        _bindingSegKinder = null
     }
 
     override fun onCreateView(
@@ -62,7 +53,6 @@ class HomeFragment : Fragment() {
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        _bindingSegKinder = EyeSegmentKinderBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
 
@@ -76,23 +66,12 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Toast.makeText(requireContext(), "I am here!!!", Toast.LENGTH_SHORT).show()
+        hideSegmentGrandparents()
+        hideSegmentChild()
         fillCardMotherColor()
         fillCardFatherColor()
         //checkChildRenderNeeded()
-
-        bindingSegKinder.eyeMessageBrown.text = "%"
-        binding.eyeSubtitleMessageFather.text= "lfdskj"
-
-        val ffff =
-        // Получение ссылки на вложенную TextView
-
-
-
-        // Теперь вы можете работать с textViewInOtherLayout
-        //textViewInOtherLayout.text = "Updated text"
-
-
-
 
         binding.eyeCardMother.setOnClickListener {
             findNavController().navigate(
@@ -125,9 +104,16 @@ class HomeFragment : Fragment() {
             }
             checkChildRenderNeeded()
         }
+
+        binding.eyeBtnAddGrandparents.setOnClickListener {
+            scrollUp()
+        }
     }
 
+
     private fun fillCardMotherColor() {
+        Toast.makeText(requireContext(), "fillCardMotherColor", Toast.LENGTH_SHORT).show()
+
         if (eyesMotherColor == NOT_SELECTED) {
             binding.eyeIvMotherQuestion.visibility = View.VISIBLE
         } else {
@@ -174,7 +160,10 @@ class HomeFragment : Fragment() {
     }
 
     private fun checkChildRenderNeeded() {
-        if (eyesMotherColor != NOT_SELECTED && eyesFatherColor != NOT_SELECTED) countColor()
+        if (eyesMotherColor != NOT_SELECTED && eyesFatherColor != NOT_SELECTED) {
+            countColor()
+            scrollDown()
+        }
     }
 
     private fun countColor() {
@@ -198,43 +187,131 @@ class HomeFragment : Fragment() {
     }
 
     private fun displayChildColor(childColor: Triple<Double, Double, Double>) {
-        bindingSegKinder.eyeCardChildBrown.visibility = View.GONE
-        bindingSegKinder.eyeCardChildGrey.visibility = View.GONE
-        bindingSegKinder.eyeCardChildGreen.visibility = View.GONE
-        bindingSegKinder.eyeMessageBrown.visibility = View.GONE
-        bindingSegKinder.eyeMessageGrey.visibility = View.GONE
-        bindingSegKinder.eyeMessageGreen.visibility = View.GONE
-        bindingSegKinder.eyeProgressBarBrown.visibility = View.GONE
-        bindingSegKinder.eyeProgressBarGrey.visibility = View.GONE
-        bindingSegKinder.eyeProgressBarGreen.visibility = View.GONE
 
-        binding.eyeSegmentGrandparents.visibility = View.VISIBLE
-        binding.eyeSegmentChild.visibility = View.VISIBLE
+        hideChildColorsCards()
 
-        bindingSegKinder.eyeMessageChild.visibility = View.VISIBLE
-        bindingSegKinder.eyeMessageBrown.text = "${childColor.first} %"
-        bindingSegKinder.eyeProgressBarBrown.setProgress(childColor.first.toInt(), true)
-        bindingSegKinder.eyeMessageGrey.text = "${childColor.second} %"
-        bindingSegKinder.eyeProgressBarGrey.setProgress(childColor.second.toInt(), true)
-        bindingSegKinder.eyeMessageGreen.text = "${childColor.third} %"
-        bindingSegKinder.eyeProgressBarGreen.setProgress(childColor.third.toInt(), true)
-        //bindingSegKinder.eyeCardExplainFolded.visibility = View.VISIBLE
+        unHideSegmentChildExceptColorsCards()
+
+        binding.eyeMessageBrown.text = "${childColor.first} %"
+        binding.eyeProgressBarBrown.setProgress(childColor.first.toInt(), true)
+        binding.eyeMessageGrey.text = "${childColor.second} %"
+        binding.eyeProgressBarGrey.setProgress(childColor.second.toInt(), true)
+        binding.eyeMessageGreen.text = "${childColor.third} %"
+        binding.eyeProgressBarGreen.setProgress(childColor.third.toInt(), true)
+
 
         if (childColor.first != 0.0) {
-            bindingSegKinder.eyeCardChildBrown.visibility = View.GONE
-            bindingSegKinder.eyeMessageBrown.visibility = View.GONE
-            bindingSegKinder.eyeProgressBarBrown.visibility = View.GONE
+            binding.eyeCardChildBrown.visibility = View.VISIBLE
+//            binding.eyeMessageBrown.visibility = View.VISIBLE
+//            binding.eyeProgressBarBrown.visibility = View.VISIBLE
         }
         if (childColor.second != 0.0) {
-            bindingSegKinder.eyeCardChildGrey.visibility = View.VISIBLE
-            bindingSegKinder.eyeMessageGrey.visibility = View.VISIBLE
-            bindingSegKinder.eyeProgressBarGrey.visibility = View.VISIBLE
+            binding.eyeCardChildGrey.visibility = View.VISIBLE
+//            binding.eyeMessageGrey.visibility = View.VISIBLE
+//            binding.eyeProgressBarGrey.visibility = View.VISIBLE
         }
         if (childColor.third != 0.0) {
-            bindingSegKinder.eyeCardChildGreen.visibility = View.VISIBLE
-            bindingSegKinder.eyeMessageGreen.visibility = View.VISIBLE
-            bindingSegKinder.eyeProgressBarGreen.visibility = View.VISIBLE
+            binding.eyeCardChildGreen.visibility = View.VISIBLE
+//            binding.eyeMessageGreen.visibility = View.VISIBLE
+//            binding.eyeProgressBarGreen.visibility = View.VISIBLE
         }
     }
+
+
+
+
+    private fun hideSegmentChild() {
+        // segment 'child'
+        binding.eyeMaterialDivider1.visibility = View.GONE
+        binding.eyeMaterialDivider2.visibility = View.GONE
+        binding.eyeMaterialDivider3.visibility = View.GONE
+        binding.eyeMaterialDivider4.visibility = View.GONE
+        binding.eyeMessageChild.visibility = View.GONE
+        binding.eyeCardChildBrown.visibility = View.GONE
+        binding.eyeCardChildGrey.visibility = View.GONE
+        binding.eyeCardChildGreen.visibility = View.GONE
+    }
+
+    private fun hideSegmentGrandparents() {
+        // segment 'grandparents'
+        binding.eyeSubtitleMessageMotherGranny.visibility = View.GONE
+        binding.eyeCardMotherGranny.visibility = View.GONE
+        binding.eyeSubtitleMessageMotherGrandpa.visibility = View.GONE
+        binding.eyeCardMotherGrandpa.visibility = View.GONE
+        binding.eyeSubtitleMessageFatherGranny.visibility = View.GONE
+        binding.eyeCardFatherGranny.visibility = View.GONE
+        binding.eyeSubtitleMessageFatherGrandpa.visibility = View.GONE
+        binding.eyeCardFatherGrandpa.visibility = View.GONE
+        binding.eyeMaterialDividerF1.visibility = View.GONE
+        binding.eyeMaterialDividerF2.visibility = View.GONE
+        binding.eyeMaterialDividerF3.visibility = View.GONE
+        binding.eyeMaterialDividerF4.visibility = View.GONE
+        binding.eyeMaterialDividerF5.visibility = View.GONE
+        binding.eyeMaterialDividerF6.visibility = View.GONE
+        binding.eyeMaterialDividerF7.visibility = View.GONE
+        binding.eyeMaterialDividerF8.visibility = View.GONE
+        binding.eyeMaterialDividerF9.visibility = View.GONE
+        binding.eyeMaterialDividerF10.visibility = View.GONE
+    }
+
+
+    private fun hideChildColorsCards() {
+        binding.eyeCardChildBrown.visibility = View.GONE
+        binding.eyeCardChildGrey.visibility = View.GONE
+        binding.eyeCardChildGreen.visibility = View.GONE
+//        binding.eyeMessageBrown.visibility = View.GONE
+//        binding.eyeMessageGrey.visibility = View.GONE
+//        binding.eyeMessageGreen.visibility = View.GONE
+//        binding.eyeProgressBarBrown.visibility = View.GONE
+//        binding.eyeProgressBarGrey.visibility = View.GONE
+//        binding.eyeProgressBarGreen.visibility = View.GONE
+    }
+
+
+    private fun unHideSegmentChildExceptColorsCards() {
+        // segment 'child'
+        binding.eyeMaterialDivider1.visibility = View.VISIBLE
+        binding.eyeMaterialDivider2.visibility = View.VISIBLE
+        binding.eyeMaterialDivider3.visibility = View.VISIBLE
+        binding.eyeMaterialDivider4.visibility = View.VISIBLE
+        binding.eyeMessageChild.visibility = View.VISIBLE
+//        binding.eyeCardChildBrown.visibility = View.VISIBLE
+//        binding.eyeCardChildGrey.visibility = View.VISIBLE
+//        binding.eyeCardChildGreen.visibility = View.VISIBLE
+
+        //binding.eyeCardExplainFolded.visibility = View.VISIBLE
+
+    }
+
+    private fun unHideSegmentGrandparents() {
+        // segment 'grandparents'
+        binding.eyeSubtitleMessageMotherGranny.visibility = View.VISIBLE
+        binding.eyeCardMotherGranny.visibility = View.VISIBLE
+        binding.eyeSubtitleMessageMotherGrandpa.visibility = View.VISIBLE
+        binding.eyeCardMotherGrandpa.visibility = View.VISIBLE
+        binding.eyeSubtitleMessageFatherGranny.visibility = View.VISIBLE
+        binding.eyeCardFatherGranny.visibility = View.VISIBLE
+        binding.eyeSubtitleMessageFatherGrandpa.visibility = View.VISIBLE
+        binding.eyeCardFatherGrandpa.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF1.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF2.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF3.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF4.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF5.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF6.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF7.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF8.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF9.visibility = View.VISIBLE
+        binding.eyeMaterialDividerF10.visibility = View.VISIBLE
+    }
+
+    private fun scrollUp() {
+        binding.nestedMain.fling(-5000);
+    }
+
+    private fun scrollDown() {
+        binding.nestedMain.fling(5000);
+    }
+
 
 }
