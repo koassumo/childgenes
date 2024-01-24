@@ -148,6 +148,13 @@
     </style>
 
     <!--   2.2. child style for select -->
+    <style name="style_card_view_bottom" parent="style_card_view">
+        <item name="android:layout_marginEnd">@dimen/step_zero</item>
+        <item name="android:layout_marginBottom">@dimen/step_x_large</item>
+        <item name="android:paddingBottom">@dimen/step_normal</item>
+    </style>
+
+    <!--   2.2. child style for select -->
     <style name="style_card_view_end" parent="style_card_view">
         <item name="android:layout_marginEnd">@dimen/step_zero</item>
     </style>
@@ -273,7 +280,7 @@
     </style>
 
     <style name="style_line_vertical" parent="style_line">
-        <item name="android:layout_height">@dimen/step_large</item>
+        <item name="android:layout_height">@dimen/step_line_short</item>
     </style>
     <style name="style_line_vertical_long" parent="style_line">
         <item name="android:layout_height">@dimen/step_line_long</item>

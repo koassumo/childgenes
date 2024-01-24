@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--  Grids / guide lines  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_start_inner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.09"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_end_inner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.91"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_centre_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.48"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_centre_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.52"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_centre_left_inner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_centre_right_inner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_middle_card_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.28"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/eye_guide_line_middle_card_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <!--         Lines to child-->
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/eye_material_divider_1"
+        style="@style/style_line_vertical"
+        app:layout_constraintEnd_toEndOf="@id/eye_guide_line_middle_card_left"
+        app:layout_constraintStart_toStartOf="@id/eye_guide_line_middle_card_left"
+        app:layout_constraintTop_toBottomOf="@id/eye_guide_line_middle_card_left" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/eye_material_divider_2"
+        style="@style/style_line_vertical"
+        app:layout_constraintEnd_toEndOf="@id/eye_guide_line_middle_card_right"
+        app:layout_constraintStart_toStartOf="@id/eye_guide_line_middle_card_right"
+        app:layout_constraintTop_toBottomOf="@id/eye_guide_line_middle_card_right" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/eye_material_divider_3"
+        style="@style/style_line_horizontal"
+        app:layout_constraintEnd_toEndOf="@id/eye_material_divider_2"
+        app:layout_constraintStart_toStartOf="@id/eye_material_divider_1"
+        app:layout_constraintTop_toBottomOf="@id/eye_material_divider_1" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/eye_material_divider_4"
+        style="@style/style_line_vertical"
+        app:layout_constraintEnd_toEndOf="@id/eye_material_divider_2"
+        app:layout_constraintStart_toStartOf="@id/eye_material_divider_1"
+        app:layout_constraintTop_toBottomOf="@id/eye_material_divider_3" />
+
+
+    <!--  Child  -->
+    <TextView
+        android:id="@+id/eye_message_child"
+        style="@style/title_button_top_small_center"
+        android:text="@string/child"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+        app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+        app:layout_constraintTop_toBottomOf="@id/eye_material_divider_4" />
+
+    <!-- 1 Brown-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/eye_card_child_brown"
+        style="@style/style_card_view_end"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+        app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+        app:layout_constraintTop_toBottomOf="@id/eye_message_child">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_brown_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.47" />
+
+            <ImageView
+                android:id="@+id/eye_iv_child_gradient_brown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_brown"
+                android:contentDescription="@string/no_description" />
+
+            <include
+                android:id="@+id/eye_include"
+                layout="@layout/symbol_eye"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="12dp" />
+
+            <TextView
+                style="@style/title_button_bottom_start"
+                android:text="@string/brown"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/eye_progress_bar_brown"
+                style="@style/my_progress_bar"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_brown_center"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/eye_message_brown"
+                style="@style/title_button_top_nostart"
+                android:text=""
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_brown_center"
+                app:layout_constraintTop_toBottomOf="@id/eye_progress_bar_brown" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- 2 Blue/grey-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/eye_card_child_grey"
+        style="@style/style_card_view_end"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+        app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+        app:layout_constraintTop_toBottomOf="@id/eye_card_child_brown">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_grey_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.47" />
+
+            <ImageView
+                android:id="@+id/eye_iv_child_gradient_blue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_blue"
+                android:contentDescription="@string/no_description" />
+
+            <include layout="@layout/symbol_eye" />
+
+            <TextView
+                style="@style/title_button_bottom_start"
+                android:text="@string/blue_grey"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/eye_progress_bar_grey"
+                style="@style/my_progress_bar"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_grey_center"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/eye_message_grey"
+                style="@style/title_button_top_nostart"
+                android:text=""
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_grey_center"
+                app:layout_constraintTop_toBottomOf="@id/eye_progress_bar_grey" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- 3 Green -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/eye_card_child_green"
+        style="@style/style_card_view_end"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/eyesColorGreen"
+        app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"
+        app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
+        app:layout_constraintTop_toBottomOf="@id/eye_card_child_grey">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/eye_guide_line_green_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.47" />
+
+            <ImageView
+                android:id="@+id/eye_iv_child_gradient_green"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_green"
+                android:contentDescription="@string/no_description" />
+
+            <include layout="@layout/symbol_eye" />
+
+            <TextView
+                style="@style/title_button_bottom_start"
+                android:text="@string/green"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/eye_progress_bar_green"
+                style="@style/my_progress_bar"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_green_center"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/eye_message_green"
+                style="@style/title_button_top_nostart"
+                android:text=""
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/eye_guide_line_green_center"
+                app:layout_constraintTop_toBottomOf="@id/eye_progress_bar_green" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/eye_card_explain_folded"-->
+<!--        style="@style/style_card_view_end"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="@dimen/step_large_plus"-->
+<!--        android:visibility="visible"-->
+<!--        app:cardBackgroundColor="@color/grey_400"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/eye_guide_line_end"-->
+<!--        app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/eye_card_child_green">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/text_size_small"-->
+<!--            android:paddingStart="@dimen/step_normal_plus">-->
+
+<!--            <include-->
+<!--                android:id="@+id/eye_title_info"-->
+<!--                layout="@layout/symbol_info" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/eye_iv_arrow_down"-->
+<!--                style="@style/title_button_top"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:layout_margin="@dimen/step_zero"-->
+<!--                android:layout_marginEnd="@dimen/step_large"-->
+<!--                android:visibility="visible"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/eye_title_info"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@id/eye_title_info"-->
+<!--                app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_36" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/eye_iv_arrow_up"-->
+<!--                style="@style/title_button_top"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="@dimen/step_zero"-->
+<!--                android:layout_marginEnd="@dimen/step_xx_large"-->
+<!--                android:visibility="visible"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/eye_message_explain_unfolded"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:srcCompat="@drawable/ic_baseline_keyboard_arrow_up_36" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/eye_message_explain_unfolded"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:justificationMode="inter_word"-->
+<!--                android:text="@string/explanation_eyes"-->
+<!--                android:visibility="visible"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/eye_title_info" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </com.google.android.material.card.MaterialCardView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

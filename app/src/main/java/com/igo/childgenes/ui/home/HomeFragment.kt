@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
@@ -14,6 +15,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
+import com.igo.childgenes.databinding.EyeSegmentKinderBinding
 import com.igo.childgenes.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -37,14 +39,18 @@ class HomeFragment : Fragment() {
 
 
     private var _binding: FragmentHomeBinding? = null
-
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private var _bindingSegKinder: EyeSegmentKinderBinding? = null
+    private val bindingSegKinder get() = _bindingSegKinder!!
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        _bindingSegKinder = null
     }
 
     override fun onCreateView(
@@ -56,7 +62,9 @@ class HomeFragment : Fragment() {
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _bindingSegKinder = EyeSegmentKinderBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
 
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner) {
@@ -71,6 +79,19 @@ class HomeFragment : Fragment() {
         fillCardMotherColor()
         fillCardFatherColor()
         //checkChildRenderNeeded()
+
+        bindingSegKinder.eyeMessageBrown.text = "%"
+        binding.eyeSubtitleMessageFather.text= "lfdskj"
+
+        val ffff =
+        // Получение ссылки на вложенную TextView
+
+
+
+        // Теперь вы можете работать с textViewInOtherLayout
+        //textViewInOtherLayout.text = "Updated text"
+
+
 
 
         binding.eyeCardMother.setOnClickListener {
@@ -177,39 +198,42 @@ class HomeFragment : Fragment() {
     }
 
     private fun displayChildColor(childColor: Triple<Double, Double, Double>) {
-        binding.eyeCardChildBrown.visibility = View.GONE
-        binding.eyeCardChildGrey.visibility = View.GONE
-        binding.eyeCardChildGreen.visibility = View.GONE
-        binding.eyeMessageBrown.visibility = View.GONE
-        binding.eyeMessageGrey.visibility = View.GONE
-        binding.eyeMessageGreen.visibility = View.GONE
-        binding.eyeProgressBarBrown.visibility = View.GONE
-        binding.eyeProgressBarGrey.visibility = View.GONE
-        binding.eyeProgressBarGreen.visibility = View.GONE
+        bindingSegKinder.eyeCardChildBrown.visibility = View.GONE
+        bindingSegKinder.eyeCardChildGrey.visibility = View.GONE
+        bindingSegKinder.eyeCardChildGreen.visibility = View.GONE
+        bindingSegKinder.eyeMessageBrown.visibility = View.GONE
+        bindingSegKinder.eyeMessageGrey.visibility = View.GONE
+        bindingSegKinder.eyeMessageGreen.visibility = View.GONE
+        bindingSegKinder.eyeProgressBarBrown.visibility = View.GONE
+        bindingSegKinder.eyeProgressBarGrey.visibility = View.GONE
+        bindingSegKinder.eyeProgressBarGreen.visibility = View.GONE
 
-        binding.eyeMessageChild.visibility = View.VISIBLE
-        binding.eyeMessageBrown.text = "${childColor.first} %"
-        binding.eyeProgressBarBrown.setProgress(childColor.first.toInt(), true)
-        binding.eyeMessageGrey.text = "${childColor.second} %"
-        binding.eyeProgressBarGrey.setProgress(childColor.second.toInt(), true)
-        binding.eyeMessageGreen.text = "${childColor.third} %"
-        binding.eyeProgressBarGreen.setProgress(childColor.third.toInt(), true)
-        binding.eyeCardExplainFolded.visibility = View.VISIBLE
+        binding.eyeSegmentGrandparents.visibility = View.VISIBLE
+        binding.eyeSegmentChild.visibility = View.VISIBLE
+
+        bindingSegKinder.eyeMessageChild.visibility = View.VISIBLE
+        bindingSegKinder.eyeMessageBrown.text = "${childColor.first} %"
+        bindingSegKinder.eyeProgressBarBrown.setProgress(childColor.first.toInt(), true)
+        bindingSegKinder.eyeMessageGrey.text = "${childColor.second} %"
+        bindingSegKinder.eyeProgressBarGrey.setProgress(childColor.second.toInt(), true)
+        bindingSegKinder.eyeMessageGreen.text = "${childColor.third} %"
+        bindingSegKinder.eyeProgressBarGreen.setProgress(childColor.third.toInt(), true)
+        //bindingSegKinder.eyeCardExplainFolded.visibility = View.VISIBLE
 
         if (childColor.first != 0.0) {
-            binding.eyeCardChildBrown.visibility = View.VISIBLE
-            binding.eyeMessageBrown.visibility = View.VISIBLE
-            binding.eyeProgressBarBrown.visibility = View.VISIBLE
+            bindingSegKinder.eyeCardChildBrown.visibility = View.GONE
+            bindingSegKinder.eyeMessageBrown.visibility = View.GONE
+            bindingSegKinder.eyeProgressBarBrown.visibility = View.GONE
         }
         if (childColor.second != 0.0) {
-            binding.eyeCardChildGrey.visibility = View.VISIBLE
-            binding.eyeMessageGrey.visibility = View.VISIBLE
-            binding.eyeProgressBarGrey.visibility = View.VISIBLE
+            bindingSegKinder.eyeCardChildGrey.visibility = View.VISIBLE
+            bindingSegKinder.eyeMessageGrey.visibility = View.VISIBLE
+            bindingSegKinder.eyeProgressBarGrey.visibility = View.VISIBLE
         }
         if (childColor.third != 0.0) {
-            binding.eyeCardChildGreen.visibility = View.VISIBLE
-            binding.eyeMessageGreen.visibility = View.VISIBLE
-            binding.eyeProgressBarGreen.visibility = View.VISIBLE
+            bindingSegKinder.eyeCardChildGreen.visibility = View.VISIBLE
+            bindingSegKinder.eyeMessageGreen.visibility = View.VISIBLE
+            bindingSegKinder.eyeProgressBarGreen.visibility = View.VISIBLE
         }
     }
 
