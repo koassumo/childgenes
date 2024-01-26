@@ -13,581 +13,581 @@
         android:layout_height="match_parent"
         android:paddingBottom="@dimen/step_xxx_large">
 
-        <!--  Grids / guide lines  -->
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/blood_guide_line_start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/blood_guide_line_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/blood_guide_line_centre_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.48"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/blood_guide_line_centre_vertical_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.52"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/blood_guide_line_start_banner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.03"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/blood_guide_line_end_banner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.97"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <!--Banner-->
-        <!--        <com.google.android.material.card.MaterialCardView-->
-        <!--            android:id="@+id/blood_banner_bottom_text"-->
-        <!--            style="@style/style_card_view_end"-->
-        <!--            android:layout_height="270dp"-->
-        <!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
-        <!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"-->
-        <!--            app:layout_constraintTop_toTopOf="@id/banner_eyes" />-->
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/blood_banner_eyes"
-            style="@style/style_card_view_end"
-            android:layout_height="270dp"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"
-            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/blood_guide_line_title_bottom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.76" />
-
-                <ImageView
-                    android:id="@+id/blood_iv_eyes"
-                    style="@style/style_image_banner"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/eyes"
-                    android:visibility="visible" />
-
-                <ImageView
-                    android:id="@+id/blood_iv_line_title_bottom"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:contentDescription="@string/no_description"
-                    app:layout_constraintTop_toTopOf="@id/blood_guide_line_title_bottom"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:background="@color/black"
-                    android:alpha="0.1" />
-
-                <TextView
-                    style="@style/banner_text"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="@dimen/step_normal"
-                    android:elevation="@dimen/elevation_normal"
-                    android:text="@string/title_blood"
-                    android:textColor="@color/white"
-                    android:textFontWeight="900"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <!--Mother-->
-        <TextView
-            android:id="@+id/blood_subtitle_message_mother"
-            style="@style/title_button_top_center"
-            android:text="@string/mother"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_centre_vertical"
-            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/blood_banner_eyes" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/blood_card_mother"
-            style="@style/style_card_view_elevation"
-            app:cardBackgroundColor="@color/grey_400"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_centre_vertical"
-            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/blood_subtitle_message_mother">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/blood_iv_mother_gradient_brown"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_brown"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="gone" />
-
-                <ImageView
-                    android:id="@+id/blood_iv_mother_gradient_blue"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_blue"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="gone" />
-
-                <ImageView
-                    android:id="@+id/blood_iv_mother_gradient_green"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_green"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="gone" />
-
-                <include
-                    layout="@layout/symbol_eye"
-                    tools:layout_editor_absoluteX="20dp"
-                    tools:layout_editor_absoluteY="13dp" />
-
-                <TextView
-                    android:id="@+id/blood_tv_btn_mother_select"
-                    style="@style/title_button_bottom_start"
-                    android:text="@string/select_type"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <ImageView
-            android:id="@+id/blood_iv_mother_question"
-            style="@style/style_image_inside_card_view_question"
-            android:contentDescription="@string/no_description"
-            android:src="@drawable/baseline_pan_tool_alt_24"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/blood_card_mother"
-            app:layout_constraintTop_toTopOf="@+id/blood_card_mother" />
-
-        <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-        <!--        android:id="@+id/blood_fab_brown_eyes"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:backgroundTint="@color/eyesColorBrown"-->
-        <!--        android:elevation="@dimen/step_small"-->
-        <!--        android:textAllCaps="false"-->
-        <!--        android:contentDescription="@string/no_description"-->
-
-        <!--        android:textAlignment="center"-->
-        <!--        app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_centre_vertical_second"-->
-        <!--        app:layout_constraintStart_toStartOf="@+id/blood_card_mother"-->
-        <!--        app:layout_constraintTop_toTopOf="@+id/blood_card_mother" />-->
-
-
-        <!--  Father  -->
-        <!--        <com.google.android.material.card.MaterialCardView-->
-        <!--            android:id="@+id/blood_card_father_back"-->
-        <!--            style="@style/style_card_view_back"-->
-        <!--            app:cardBackgroundColor="@color/white_transparent"-->
-        <!--            app:layout_constraintBottom_toBottomOf="@+id/blood_card_father"-->
-        <!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
-        <!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_centre_vertical_second"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/blood_banner_bottom_text" />-->
-
-
-        <TextView
-            android:id="@+id/blood_subtitle_message_father"
-            style="@style/title_button_top_center"
-            android:text="@string/father"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"
-            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@+id/blood_banner_eyes" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/blood_card_father"
-            style="@style/style_card_view_elevation"
-            app:cardBackgroundColor="@color/grey_400"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"
-            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_centre_vertical_second"
-            app:layout_constraintTop_toBottomOf="@+id/blood_subtitle_message_father">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/blood_iv_father_gradient_brown"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_brown"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="gone" />
-
-                <ImageView
-                    android:id="@+id/blood_iv_father_gradient_blue"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_blue"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="gone" />
-
-                <ImageView
-                    android:id="@+id/blood_iv_father_gradient_green"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_green"
-                    android:contentDescription="@string/no_description"
-                    android:visibility="gone" />
-
-                <include layout="@layout/symbol_eye" />
-
-                <TextView
-                    android:id="@+id/blood_tv_btn_father_select"
-                    style="@style/title_button_bottom_start"
-                    android:text="@string/select_type"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <ImageView
-            android:id="@+id/blood_iv_father_question"
-            style="@style/style_image_inside_card_view_question"
-            android:contentDescription="@string/no_description"
-            android:src="@drawable/baseline_pan_tool_alt_24"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_centre_vertical_second"
-            app:layout_constraintTop_toTopOf="@+id/blood_card_father" />
-
-
-        <!--  Child  -->
-
-        <TextView
-            android:id="@+id/blood_message_child"
-            style="@style/title_button_top_center"
-            android:text="@string/child"
-            android:visibility="gone"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"
-            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/blood_card_mother" />
-
-
-        <!-- 1 Brown-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/blood_card_child_brown"
-            style="@style/style_card_view_end"
-            android:visibility="gone"
-            app:layout_constraintEnd_toStartOf="@id/guide_line_end"
-            app:layout_constraintStart_toStartOf="@id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/blood_message_child">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/blood_guide_line_brown_center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.47" />
-
-                <ImageView
-                    android:id="@+id/blood_iv_child_gradient_brown"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_brown"
-                    android:contentDescription="@string/no_description" />
-
-                <include
-                    android:id="@+id/blood_include"
-                    layout="@layout/symbol_eye"
-                    tools:layout_editor_absoluteX="20dp"
-                    tools:layout_editor_absoluteY="12dp" />
-
-                <TextView
-                    style="@style/title_button_bottom_start"
-                    android:text="@string/brown"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <ProgressBar
-                    android:id="@+id/blood_progress_bar_brown"
-                    style="@style/my_progress_bar"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/blood_guide_line_brown_center"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/blood_message_brown"
-                    style="@style/title_button_top_nostart"
-                    android:text=""
-                    android:visibility="visible"
-                    app:layout_constraintStart_toStartOf="@+id/blood_guide_line_brown_center"
-                    app:layout_constraintTop_toBottomOf="@+id/blood_progress_bar_brown" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <!-- 2 Blue/grey-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/blood_card_child_grey"
-            style="@style/style_card_view_end"
-            android:visibility="gone"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"
-            app:layout_constraintStart_toStartOf="@id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/blood_card_child_brown">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/blood_guide_line_grey_center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.47" />
-
-                <ImageView
-                    android:id="@+id/blood_iv_child_gradient_blue"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_blue"
-                    android:contentDescription="@string/no_description" />
-
-                <include layout="@layout/symbol_eye" />
-
-                <TextView
-                    style="@style/title_button_bottom_start"
-                    android:text="@string/blue_grey"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <ProgressBar
-                    android:id="@+id/blood_progress_bar_grey"
-                    style="@style/my_progress_bar"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/blood_guide_line_grey_center"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/blood_message_grey"
-                    style="@style/title_button_top_nostart"
-                    android:text=""
-                    android:visibility="visible"
-                    app:layout_constraintStart_toStartOf="@+id/blood_guide_line_grey_center"
-                    app:layout_constraintTop_toBottomOf="@+id/blood_progress_bar_grey" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <!-- 3 Green -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/blood_card_child_green"
-            style="@style/style_card_view_end"
-            android:visibility="gone"
-            app:cardBackgroundColor="@color/eyesColorGreen"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"
-            app:layout_constraintStart_toStartOf="@id/guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/blood_card_child_grey">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/blood_guide_line_green_center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.47" />
-
-                <ImageView
-                    android:id="@+id/blood_iv_child_gradient_green"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_green"
-                    android:contentDescription="@string/no_description" />
-
-                <include layout="@layout/symbol_eye" />
-
-                <TextView
-                    style="@style/title_button_bottom_start"
-                    android:text="@string/green"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <ProgressBar
-                    android:id="@+id/blood_progress_bar_green"
-                    style="@style/my_progress_bar"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/blood_guide_line_green_center"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/blood_message_green"
-                    style="@style/title_button_top_nostart"
-                    android:text=""
-                    android:visibility="visible"
-                    app:layout_constraintStart_toStartOf="@id/blood_guide_line_green_center"
-                    app:layout_constraintTop_toBottomOf="@+id/blood_progress_bar_green" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/blood_card_child_back"
-            style="@style/style_card_view_long"
-            android:visibility="gone"
-            app:cardBackgroundColor="@color/white_transparent"
-            app:layout_constraintBottom_toBottomOf="@id/card_green"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"
-            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"
-            app:layout_constraintTop_toBottomOf="@+id/blood_message_child"
-            app:layout_constraintVertical_chainStyle="spread_inside">
-
-
-            <ImageView
-                android:id="@+id/blood_iv_brown"
-                style="@style/style_image_inside_card"
-                android:layout_width="120dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
-                android:contentDescription="@string/no_description"
-                android:src="@drawable/ic_eye_24"
-                app:layout_constraintBottom_toTopOf="@id/blood_iv_brown_l"
-                app:layout_constraintEnd_toStartOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/blood_iv_brown_l"
-                style="@style/style_image_inside_card"
-                android:layout_width="120dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="0dp"
-                android:contentDescription="@string/no_description"
-                android:src="@drawable/ic_eye_24"
-                app:layout_constraintEnd_toStartOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iv_brown" />
-
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/blood_card_explain_folded"
-            style="@style/style_card_view_end"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/step_large_plus"
-            android:visibility="gone"
-            app:cardBackgroundColor="@color/grey_400"
-            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"
-            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"
-            app:layout_constraintTop_toBottomOf="@id/blood_card_child_green">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="@dimen/text_size_small"
-                android:paddingStart="@dimen/step_normal_plus">
-
-                <include
-                    android:id="@+id/blood_title_info"
-                    layout="@layout/symbol_info" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/blood_iv_arrow_down"
-                    style="@style/title_button_top"
-                    android:layout_width="wrap_content"
-                    android:layout_height="28dp"
-                    android:layout_margin="@dimen/step_zero"
-                    android:layout_marginEnd="@dimen/step_large"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="@+id/blood_title_info"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/blood_title_info"
-                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_36" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/blood_iv_arrow_up"
-                    style="@style/title_button_top"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/step_zero"
-                    android:layout_marginEnd="@dimen/step_xx_large"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toTopOf="@+id/blood_message_explain_unfolded"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_up_36" />
-
-                <TextView
-                    android:id="@+id/blood_message_explain_unfolded"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:justificationMode="inter_word"
-                    android:text="@string/explanation_eyes"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/blood_title_info" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
+<!--        &lt;!&ndash;  Grids / guide lines  &ndash;&gt;-->
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/blood_guide_line_start"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintGuide_percent="0.05"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/blood_guide_line_end"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintGuide_percent="0.95"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/blood_guide_line_centre_vertical"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintGuide_percent="0.48"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/blood_guide_line_centre_vertical_second"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintGuide_percent="0.52"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/blood_guide_line_start_banner"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintGuide_percent="0.03"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/blood_guide_line_end_banner"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintGuide_percent="0.97"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--        &lt;!&ndash;Banner&ndash;&gt;-->
+<!--        &lt;!&ndash;        <com.google.android.material.card.MaterialCardView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/blood_banner_bottom_text"&ndash;&gt;-->
+<!--        &lt;!&ndash;            style="@style/style_card_view_end"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="270dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toTopOf="@id/banner_eyes" />&ndash;&gt;-->
+
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/blood_banner_eyes"-->
+<!--            style="@style/card_child"-->
+<!--            android:layout_height="270dp"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <androidx.constraintlayout.widget.Guideline-->
+<!--                    android:id="@+id/blood_guide_line_title_bottom"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    app:layout_constraintGuide_percent="0.76" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_eyes"-->
+<!--                    style="@style/style_image_banner"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/eyes"-->
+<!--                    android:visibility="visible" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_line_title_bottom"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:contentDescription="@string/no_description"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/blood_guide_line_title_bottom"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    android:background="@color/black"-->
+<!--                    android:alpha="0.1" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/banner_text"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginBottom="@dimen/step_normal"-->
+<!--                    android:elevation="@dimen/elevation_normal"-->
+<!--                    android:text="@string/title_blood"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textFontWeight="900"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+<!--        &lt;!&ndash;Mother&ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/blood_subtitle_message_mother"-->
+<!--            style="@style/title_button_top_center"-->
+<!--            android:text="@string/mother"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_centre_vertical"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/blood_banner_eyes" />-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/blood_card_mother"-->
+<!--            style="@style/style_card_view_elevation"-->
+<!--            app:cardBackgroundColor="@color/grey_400"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_centre_vertical"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/blood_subtitle_message_mother">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_mother_gradient_brown"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/gradient_brown"-->
+<!--                    android:contentDescription="@string/no_description"-->
+<!--                    android:visibility="gone" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_mother_gradient_blue"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/gradient_blue"-->
+<!--                    android:contentDescription="@string/no_description"-->
+<!--                    android:visibility="gone" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_mother_gradient_green"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/gradient_green"-->
+<!--                    android:contentDescription="@string/no_description"-->
+<!--                    android:visibility="gone" />-->
+
+<!--                <include-->
+<!--                    layout="@layout/symbol_eye"-->
+<!--                    tools:layout_editor_absoluteX="20dp"-->
+<!--                    tools:layout_editor_absoluteY="13dp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/blood_tv_btn_mother_select"-->
+<!--                    style="@style/txt_hint_inner"-->
+<!--                    android:text="@string/select_type"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/blood_iv_mother_question"-->
+<!--            style="@style/style_image_inside_card_view_question"-->
+<!--            android:contentDescription="@string/no_description"-->
+<!--            android:src="@drawable/baseline_pan_tool_alt_24"-->
+<!--            android:visibility="visible"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_card_mother"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/blood_card_mother" />-->
+
+<!--        &lt;!&ndash;    <com.google.android.material.floatingactionbutton.FloatingActionButton&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:id="@+id/blood_fab_brown_eyes"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:backgroundTint="@color/eyesColorBrown"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:elevation="@dimen/step_small"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:textAllCaps="false"&ndash;&gt;-->
+<!--        &lt;!&ndash;        android:contentDescription="@string/no_description"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        android:textAlignment="center"&ndash;&gt;-->
+<!--        &lt;!&ndash;        app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_centre_vertical_second"&ndash;&gt;-->
+<!--        &lt;!&ndash;        app:layout_constraintStart_toStartOf="@+id/blood_card_mother"&ndash;&gt;-->
+<!--        &lt;!&ndash;        app:layout_constraintTop_toTopOf="@+id/blood_card_mother" />&ndash;&gt;-->
+
+
+<!--        &lt;!&ndash;  Father  &ndash;&gt;-->
+<!--        &lt;!&ndash;        <com.google.android.material.card.MaterialCardView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/blood_card_father_back"&ndash;&gt;-->
+<!--        &lt;!&ndash;            style="@style/style_card_view_back"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:cardBackgroundColor="@color/white_transparent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintBottom_toBottomOf="@+id/blood_card_father"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_centre_vertical_second"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/blood_banner_bottom_text" />&ndash;&gt;-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/blood_subtitle_message_father"-->
+<!--            style="@style/title_button_top_center"-->
+<!--            android:text="@string/father"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_centre_vertical_second"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/blood_banner_eyes" />-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/blood_card_father"-->
+<!--            style="@style/style_card_view_elevation"-->
+<!--            app:cardBackgroundColor="@color/grey_400"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_centre_vertical_second"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/blood_subtitle_message_father">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_father_gradient_brown"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/gradient_brown"-->
+<!--                    android:contentDescription="@string/no_description"-->
+<!--                    android:visibility="gone" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_father_gradient_blue"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/gradient_blue"-->
+<!--                    android:contentDescription="@string/no_description"-->
+<!--                    android:visibility="gone" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_father_gradient_green"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/gradient_green"-->
+<!--                    android:contentDescription="@string/no_description"-->
+<!--                    android:visibility="gone" />-->
+
+<!--                <include layout="@layout/symbol_eye" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/blood_tv_btn_father_select"-->
+<!--                    style="@style/txt_hint_inner"-->
+<!--                    android:text="@string/select_type"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/blood_iv_father_question"-->
+<!--            style="@style/style_image_inside_card_view_question"-->
+<!--            android:contentDescription="@string/no_description"-->
+<!--            android:src="@drawable/baseline_pan_tool_alt_24"-->
+<!--            android:visibility="visible"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_centre_vertical_second"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/blood_card_father" />-->
+
+
+<!--        &lt;!&ndash;  Child  &ndash;&gt;-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/blood_message_child"-->
+<!--            style="@style/title_button_top_center"-->
+<!--            android:text="@string/child"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/blood_card_mother" />-->
+
+
+<!--        &lt;!&ndash; 1 Brown&ndash;&gt;-->
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/blood_card_child_brown"-->
+<!--            style="@style/card_child"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/guide_line_end"-->
+<!--            app:layout_constraintStart_toStartOf="@id/guide_line_start"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/blood_message_child">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <androidx.constraintlayout.widget.Guideline-->
+<!--                    android:id="@+id/blood_guide_line_brown_center"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintGuide_percent="0.47" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_child_gradient_brown"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/gradient_brown"-->
+<!--                    android:contentDescription="@string/no_description" />-->
+
+<!--                <include-->
+<!--                    android:id="@+id/blood_include"-->
+<!--                    layout="@layout/symbol_eye"-->
+<!--                    tools:layout_editor_absoluteX="20dp"-->
+<!--                    tools:layout_editor_absoluteY="12dp" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/txt_hint_inner"-->
+<!--                    android:text="@string/brown"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--                <ProgressBar-->
+<!--                    android:id="@+id/blood_progress_bar_brown"-->
+<!--                    style="@style/my_progress_bar"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/blood_guide_line_brown_center"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/blood_message_brown"-->
+<!--                    style="@style/title_button_top_nostart"-->
+<!--                    android:text=""-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/blood_guide_line_brown_center"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/blood_progress_bar_brown" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+<!--        &lt;!&ndash; 2 Blue/grey&ndash;&gt;-->
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/blood_card_child_grey"-->
+<!--            style="@style/card_child"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
+<!--            app:layout_constraintStart_toStartOf="@id/guide_line_start"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/blood_card_child_brown">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <androidx.constraintlayout.widget.Guideline-->
+<!--                    android:id="@+id/blood_guide_line_grey_center"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintGuide_percent="0.47" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_child_gradient_blue"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/gradient_blue"-->
+<!--                    android:contentDescription="@string/no_description" />-->
+
+<!--                <include layout="@layout/symbol_eye" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/txt_hint_inner"-->
+<!--                    android:text="@string/blue_grey"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--                <ProgressBar-->
+<!--                    android:id="@+id/blood_progress_bar_grey"-->
+<!--                    style="@style/my_progress_bar"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/blood_guide_line_grey_center"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/blood_message_grey"-->
+<!--                    style="@style/title_button_top_nostart"-->
+<!--                    android:text=""-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/blood_guide_line_grey_center"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/blood_progress_bar_grey" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+<!--        &lt;!&ndash; 3 Green &ndash;&gt;-->
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/blood_card_child_green"-->
+<!--            style="@style/card_child"-->
+<!--            android:visibility="gone"-->
+<!--            app:cardBackgroundColor="@color/eyesColorGreen"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
+<!--            app:layout_constraintStart_toStartOf="@id/guide_line_start"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/blood_card_child_grey">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <androidx.constraintlayout.widget.Guideline-->
+<!--                    android:id="@+id/blood_guide_line_green_center"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintGuide_percent="0.47" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/blood_iv_child_gradient_green"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/gradient_green"-->
+<!--                    android:contentDescription="@string/no_description" />-->
+
+<!--                <include layout="@layout/symbol_eye" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/txt_hint_inner"-->
+<!--                    android:text="@string/green"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--                <ProgressBar-->
+<!--                    android:id="@+id/blood_progress_bar_green"-->
+<!--                    style="@style/my_progress_bar"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/blood_guide_line_green_center"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/blood_message_green"-->
+<!--                    style="@style/title_button_top_nostart"-->
+<!--                    android:text=""-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/blood_guide_line_green_center"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/blood_progress_bar_green" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/blood_card_child_back"-->
+<!--            style="@style/style_card_view_long"-->
+<!--            android:visibility="gone"-->
+<!--            app:cardBackgroundColor="@color/white_transparent"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/card_green"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/blood_message_child"-->
+<!--            app:layout_constraintVertical_chainStyle="spread_inside">-->
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/blood_iv_brown"-->
+<!--                style="@style/style_image_inside_card"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:contentDescription="@string/no_description"-->
+<!--                android:src="@drawable/ic_eye_24"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/blood_iv_brown_l"-->
+<!--                app:layout_constraintEnd_toStartOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/blood_iv_brown_l"-->
+<!--                style="@style/style_image_inside_card"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                android:contentDescription="@string/no_description"-->
+<!--                android:src="@drawable/ic_eye_24"-->
+<!--                app:layout_constraintEnd_toStartOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@id/iv_brown" />-->
+
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:id="@+id/blood_card_explain_folded"-->
+<!--            style="@style/card_child"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="@dimen/step_large_plus"-->
+<!--            android:visibility="gone"-->
+<!--            app:cardBackgroundColor="@color/grey_400"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/blood_guide_line_end"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/blood_guide_line_start"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/blood_card_child_green">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:padding="@dimen/text_size_small"-->
+<!--                android:paddingStart="@dimen/step_normal_plus">-->
+
+<!--                <include-->
+<!--                    android:id="@+id/blood_title_info"-->
+<!--                    layout="@layout/symbol_info" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/blood_iv_arrow_down"-->
+<!--                    style="@style/title_button_top"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="28dp"-->
+<!--                    android:layout_margin="@dimen/step_zero"-->
+<!--                    android:layout_marginEnd="@dimen/step_large"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/blood_title_info"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/blood_title_info"-->
+<!--                    app:srcCompat="@drawable/ic_arrow_down_24" />-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/blood_iv_arrow_up"-->
+<!--                    style="@style/title_button_top"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="@dimen/step_zero"-->
+<!--                    android:layout_marginEnd="@dimen/step_xx_large"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/blood_message_explain_unfolded"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:srcCompat="@drawable/ic_arrow_up_24" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/blood_message_explain_unfolded"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+
+<!--                    android:justificationMode="inter_word"-->
+<!--                    android:text="@string/explanation_eyes"-->
+<!--                    android:visibility="gone"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/blood_title_info" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </com.google.android.material.card.MaterialCardView>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

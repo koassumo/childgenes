@@ -57,16 +57,12 @@
     <!-- 1 Brown-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_brown"
-        style="@style/style_card_view_end"
+        style="@style/card_parent"
         android:layout_marginTop="@dimen/step_normal_plus"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
         app:layout_constraintTop_toBottomOf="@+id/message_select">
         <!--        app:cardBackgroundColor="@color/eyesColorBrown"-->
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/iv_empty_gradient_brown"
@@ -77,38 +73,38 @@
         <!--        empty pic is not requied to use-->
         <!--        android:src="@drawable/emp_24" />-->
 
-        <include layout="@layout/symbol_eye" />
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
+
+            <include
+                android:id="@+id/select_eye_brown_icon"
+                layout="@layout/symbol_eye" />
 
             <TextView
-                style="@style/title_button_bottom_start"
+                style="@style/txt_hint_inner"
                 android:text="@string/brown"
                 android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/select_eye_brown_icon"
                 app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-<!--    <TextView-->
-<!--        android:id="@+id/message_brown"-->
-<!--        style="@style/title_button_top_start"-->
-<!--        android:text="@string/brown"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/card_brown"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/card_brown" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/message_brown"-->
+    <!--        style="@style/title_button_top_start"-->
+    <!--        android:text="@string/brown"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/card_brown"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/card_brown" />-->
 
     <!-- 2 Blue/grey-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_grey"
-        style="@style/style_card_view_end"
-        android:visibility="visible"
+        style="@style/card_parent"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
         app:layout_constraintTop_toBottomOf="@+id/card_brown">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
         <ImageView
             android:id="@+id/iv_empty_gradient_blue"
             android:layout_width="match_parent"
@@ -116,40 +112,40 @@
             android:background="@drawable/gradient_blue"
             android:contentDescription="@string/no_description" />
 
-        <include layout="@layout/symbol_eye" />
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
+
+            <include
+                android:id="@+id/select_eye_blue_icon"
+                layout="@layout/symbol_eye" />
 
             <TextView
-                style="@style/title_button_bottom_start"
+                style="@style/txt_hint_inner"
                 android:text="@string/blue_grey"
                 android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/select_eye_blue_icon"
                 app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-<!--    <TextView-->
-<!--        android:id="@+id/message_grey"-->
-<!--        style="@style/title_button_top_start"-->
-<!--        android:text="@string/blue_grey"-->
-<!--        android:visibility="visible"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/card_grey"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/card_grey" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/message_grey"-->
+    <!--        style="@style/title_button_top_start"-->
+    <!--        android:text="@string/blue_grey"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/card_grey"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/card_grey" />-->
 
     <!-- 3 Green -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_green"
-        style="@style/style_card_view_end"
+        style="@style/card_parent"
         android:visibility="visible"
-        app:cardBackgroundColor="@color/eyesColorGreen"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
         app:layout_constraintTop_toBottomOf="@+id/card_grey">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
         <ImageView
             android:id="@+id/iv_empty_gradient_green"
             android:layout_width="match_parent"
@@ -157,25 +153,28 @@
             android:background="@drawable/gradient_green"
             android:contentDescription="@string/no_description" />
 
-        <include layout="@layout/symbol_eye" />
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
+
+            <include
+                android:id="@+id/select_eye_green_icon"
+                layout="@layout/symbol_eye" />
 
             <TextView
-                style="@style/title_button_bottom_start"
+                style="@style/txt_hint_inner"
                 android:text="@string/green"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/select_eye_green_icon"
                 app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-<!--    <TextView-->
-<!--        android:id="@+id/message_green"-->
-<!--        style="@style/title_button_top_start"-->
-<!--        android:text="@string/green"-->
-<!--        android:visibility="visible"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/card_green"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/card_green" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/message_green"-->
+    <!--        style="@style/title_button_top_start"-->
+    <!--        android:text="@string/green"-->
+    <!--        android:visibility="visible"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/card_green"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guide_line_centre_vertical"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/card_green" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

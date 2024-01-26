@@ -261,6 +261,9 @@
     <color name="amber_A400">#ffc400</color>
     <color name="amber_A700">#ffab00</color>
 
+    <color name="amber_normal">#EDC811</color>
+
+
     <color name="orange_50">#fff3e0</color>
     <color name="orange_100">#ffe0b2</color>
     <color name="orange_200">#ffcc80</color>
@@ -347,4 +350,5 @@
     <color name="brown_background_x_light">#f0eddd</color>
     <color name="brown_background_light">#e6e4bf</color>
     <color name="brown_background_dark">#afad93</color>
+    <color name="brown_background_dark_plus">#BFBCAF</color>
 </resources>

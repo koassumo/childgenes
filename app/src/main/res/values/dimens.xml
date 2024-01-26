@@ -16,12 +16,16 @@
 
 
     <!--large-->
-    <dimen name="step_xxxx_large">250dp</dimen>
-    <dimen name="step_xxx_large">140dp</dimen>
-    <dimen name="step_xx_large">72dp</dimen>
-    <dimen name="step_x_large">48dp</dimen>
-    <dimen name="step_large_plus">38dp</dimen>
-    <dimen name="step_large">32dp</dimen>
+    <dimen name="step_huge_xx">320dp</dimen>
+    <dimen name="step_huge_x">180dp</dimen>
+    <dimen name="step_huge">100dp</dimen>
+
+    <dimen name="step_xxx_large">72dp</dimen>
+    <dimen name="step_xx_large">48dp</dimen>
+    <dimen name="step_x_large">32dp</dimen>
+    <dimen name="step_large_plus">28dp</dimen>
+    <dimen name="step_large">24dp</dimen>
+
     <dimen name="stroke_width_large">4dp</dimen>
 
     <!--normal-->
@@ -38,14 +42,44 @@
     <dimen name="step_xx_small">2dp</dimen>
     <dimen name="step_xxx_small">1dp</dimen>
 
-    <!--negative-->
+
+    <!--negative                               -->
     <dimen name="step_minus_large">-32dp</dimen>
     <dimen name="step_minus_normal">-24dp</dimen>
     <dimen name="step_minus_small">-14dp</dimen>
     <dimen name="step_negative">-10dp</dimen>
 
 
+    <!--     5     -->
+    <!-- ********************************  Card  ********************************  -->
+    <dimen name="card_radius_large">@dimen/step_large</dimen>
+    <dimen name="card_radius_normal">@dimen/step_normal_plus</dimen>
+    <dimen name="card_radius_small">@dimen/step_normal</dimen>
 
+    <dimen name="card_icon_normal">@dimen/step_xx_large</dimen>
+    <dimen name="card_icon_small">@dimen/step_normal_plus</dimen>
+    <dimen name="indent_icon_normal">@dimen/step_large</dimen>
+    <dimen name="indent_icon_small">@dimen/step_xx_large</dimen>
+
+    <dimen name="card_height_long">100dp</dimen>
+    <dimen name="card_height_normal">100dp</dimen>
+    <dimen name="card_height_short">@dimen/step_x_large</dimen>
+
+    <dimen name="card_width">108dp</dimen>
+
+    <dimen name="card_width_medium">100dp</dimen>
+    <dimen name="card_width_small">76dp</dimen>
+    <dimen name="card_height_small">68dp</dimen>
+
+    <dimen name="stroke_width_normal">1dp</dimen>
+
+    <!--     5     -->
+    <!-- ********************************  Margin top  ********************************  -->
+    <dimen name="margin_top_large">@dimen/step_x_large</dimen>
+    <dimen name="margin_top_normal">@dimen/step_normal_plus</dimen>
+    <dimen name="margin_top_small">@dimen/step_small</dimen>
+
+    <!--     5     -->
     <!-- ********************************  Text  ********************************  -->
     <dimen name="text_size_banner">32sp</dimen>
     <dimen name="text_size_appbar">20sp</dimen>
@@ -56,31 +90,24 @@
     <dimen name="text_size_small">6sp</dimen>
 
 
+
+
     <!-- ********************************  Particular  ********************************  -->
-    <!--  Card view  -->
-    <dimen name="card_view_width">108dp</dimen>
-    <dimen name="card_view_height">100dp</dimen>
-    <dimen name="card_view_height_short">52dp</dimen>
-    <dimen name="card_view_height_long">200dp</dimen>
-
-    <dimen name="stroke_width_normal">1dp</dimen>
-
-    <dimen name="card_view_width_medium">100dp</dimen>
-    <dimen name="card_view_width_small">76dp</dimen>
-    <dimen name="card_view_height_small">68dp</dimen>
 
     <dimen name="radius_large">68dp</dimen>
     <dimen name="radius_normal">36dp</dimen>
     <dimen name="radius_small">20dp</dimen>
     <dimen name="radius_x_small">12dp</dimen>
-    <dimen name="radius_xx_small">8dp</dimen>
+    <dimen name="radius_xx_small">4dp</dimen>
+
+
 
 
 
 
     <!-- Elevation -->
-    <dimen name="elevation_large">0dp</dimen>
-    <dimen name="elevation_normal">2dp</dimen>
+    <dimen name="elevation_large">4dp</dimen>
+    <dimen name="elevation_normal">1dp</dimen>
     <dimen name="elevation_small">1dp</dimen>
 
     <!--    -->

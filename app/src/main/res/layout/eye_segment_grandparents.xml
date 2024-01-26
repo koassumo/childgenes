@@ -100,7 +100,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/eye_card_mother_granny"
-        style="@style/style_card_view_elevation"
+        style="@style/card_parent"
         app:cardBackgroundColor="@color/grey_400"
         app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_centre_left"
         app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
@@ -141,7 +141,7 @@
 
             <TextView
                 android:id="@+id/eye_tv_btn_mother_granny_select"
-                style="@style/title_button_bottom_start"
+                style="@style/txt_hint_inner"
                 android:text="@string/select_color"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -162,7 +162,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/eye_card_mother_grandpa"
-        style="@style/style_card_view_elevation"
+        style="@style/card_parent"
         app:cardBackgroundColor="@color/grey_400"
         app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_centre_left"
         app:layout_constraintStart_toStartOf="@id/eye_guide_line_start_inner"
@@ -203,7 +203,7 @@
 
             <TextView
                 android:id="@+id/eye_tv_btn_mother_grandpa_select"
-                style="@style/title_button_bottom_start"
+                style="@style/txt_hint_inner"
                 android:text="@string/select_color"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -225,7 +225,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/eye_card_father_granny"
-        style="@style/style_card_view_elevation"
+        style="@style/card_parent"
         app:cardBackgroundColor="@color/grey_400"
         app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_end_inner"
         app:layout_constraintStart_toStartOf="@+id/eye_guide_line_centre_right"
@@ -266,7 +266,7 @@
 
             <TextView
                 android:id="@+id/eye_tv_btn_father_granny_select"
-                style="@style/title_button_bottom_start"
+                style="@style/txt_hint_inner"
                 android:text="@string/select_color"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -287,7 +287,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/eye_card_father_grandpa"
-        style="@style/style_card_view_elevation"
+        style="@style/card_parent"
         app:cardBackgroundColor="@color/grey_400"
         app:layout_constraintEnd_toStartOf="@+id/eye_guide_line_end_inner"
         app:layout_constraintStart_toStartOf="@+id/eye_guide_line_centre_right"
@@ -328,7 +328,7 @@
 
             <TextView
                 android:id="@+id/eye_tv_btn_father_grandpa_select"
-                style="@style/title_button_bottom_start"
+                style="@style/txt_hint_inner"
                 android:text="@string/select_color"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -105,6 +105,17 @@ class HomeFragment : Fragment() {
             checkChildRenderNeeded()
         }
 
+        binding.eyeInfo1ArrowDown.setOnClickListener {
+            binding.eyeInfo1Content.visibility = View.VISIBLE
+            binding.eyeInfo1ArrowDown.visibility = View.INVISIBLE
+            binding.eyeInfo1ArrowUp.visibility = View.VISIBLE
+        }
+        binding.eyeInfo1ArrowUp.setOnClickListener {
+            binding.eyeInfo1Content.visibility = View.GONE
+            binding.eyeInfo1ArrowUp.visibility = View.INVISIBLE
+            binding.eyeInfo1ArrowDown.visibility = View.VISIBLE
+        }
+
         binding.eyeBtnAddGrandparents.setOnClickListener {
             scrollUp()
         }
@@ -163,6 +174,7 @@ class HomeFragment : Fragment() {
         if (eyesMotherColor != NOT_SELECTED && eyesFatherColor != NOT_SELECTED) {
             countColor()
             scrollDown()
+            unHideSegmentGrandparents()
         }
     }
 
