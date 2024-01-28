@@ -164,16 +164,32 @@ class HomeFragment : Fragment() {
             checkChildRenderNeeded()
         }
 
-        binding.eyeInfo1ArrowDown.setOnClickListener {
-            binding.eyeInfo1Content.visibility = View.VISIBLE
-            binding.eyeInfo1ArrowDown.visibility = View.INVISIBLE
-            binding.eyeInfo1ArrowUp.visibility = View.VISIBLE
+//        binding.eyeInfo1ArrowDown.setOnClickListener {
+//            binding.eyeInfo1Content.visibility = View.VISIBLE
+//            binding.eyeInfo1ArrowDown.visibility = View.INVISIBLE
+//            binding.eyeInfo1ArrowUp.visibility = View.VISIBLE
+//        }
+//        binding.eyeInfo1ArrowUp.setOnClickListener {
+//            binding.eyeInfo1Content.visibility = View.GONE
+//            binding.eyeInfo1ArrowUp.visibility = View.INVISIBLE
+//            binding.eyeInfo1ArrowDown.visibility = View.VISIBLE
+//        }
+//
+
+        binding.eyesInfo1Btn.setOnClickListener {
+            if (binding.eyeInfo1ArrowUp.visibility == View.INVISIBLE) {
+                binding.eyeInfo1Content.visibility = View.VISIBLE
+                binding.eyeInfo1ArrowDown.visibility = View.INVISIBLE
+                binding.eyeInfo1ArrowUp.visibility = View.VISIBLE
+            } else {
+                binding.eyeInfo1Content.visibility = View.GONE
+                binding.eyeInfo1ArrowUp.visibility = View.INVISIBLE
+                binding.eyeInfo1ArrowDown.visibility = View.VISIBLE
+            }
         }
-        binding.eyeInfo1ArrowUp.setOnClickListener {
-            binding.eyeInfo1Content.visibility = View.GONE
-            binding.eyeInfo1ArrowUp.visibility = View.INVISIBLE
-            binding.eyeInfo1ArrowDown.visibility = View.VISIBLE
-        }
+
+
+
 
         binding.eyeBtnAddGrandparents.setOnClickListener {
             scrollUp()

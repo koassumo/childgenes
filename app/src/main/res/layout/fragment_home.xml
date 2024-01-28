@@ -890,6 +890,12 @@
                 app:layout_constraintStart_toStartOf="@id/eye_guide_line_start"
                 app:layout_constraintTop_toBottomOf="@id/eye_card_child_green">
 
+                <View
+                    android:id="@+id/eyes_info_1_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="@dimen/elevation_large" />
+
                 <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
 
@@ -907,6 +913,15 @@
                     <!--                        android:orientation="horizontal"-->
                     <!--                        app:layout_constraintGuide_begin="@dimen/card_radius_normal"/>-->
 
+<!--                    <View-->
+<!--                        android:id="@+id/eyes_info_1_btn"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:elevation="@dimen/elevation_large"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" -->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/eye_info_1_content"/>-->
 
                     <ImageView
                         android:id="@+id/eye_info_1_icon"
@@ -976,9 +991,9 @@
                         android:orientation="vertical"
                         app:layout_constraintGuide_percent="0.05" />
 
-                        <include
-                            android:id="@+id/eye_btn_add_grandparents_icon"
-                             layout="@layout/symbol_plus" />
+                    <include
+                        android:id="@+id/eye_btn_add_grandparents_icon"
+                        layout="@layout/symbol_plus" />
 
                     <TextView
                         android:id="@+id/eye_txt_add_grandparents"
@@ -1000,8 +1015,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/step_xxx_large"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/eye_btn_add_grandparents">
-            </View>
+                app:layout_constraintTop_toBottomOf="@id/eye_btn_add_grandparents"></View>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
