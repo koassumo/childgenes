@@ -11,6 +11,32 @@ import com.igo.childgenes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val PARENT_PERSON = "com.igo.childgenes.ui.PARENT_PERSON"
+        const val MOTHER = "Mother"
+        const val FATHER = "Father"
+        const val MOTHER_GRANNY = "MotherGranny"
+        const val MOTHER_GRANDPA = "MotherGrandpa"
+        const val FATHER_GRANNY = "FatherGranny"
+        const val FATHER_GRANDPA = "FatherGrandpa"
+
+        const val RESPOND = "com.igo.childgenes.ui.RESPOND"
+        const val EYES_COLOR = "com.igo.childgenes.ui.EYES_COLOR"
+
+        const val BROWN = "com.igo.childgenes.ui.BROWN"
+        const val GREY = "com.igo.childgenes.ui.GREY"
+        const val GREEN = "com.igo.childgenes.ui.GREEN"
+        const val NOT_SELECTED = "com.igo.childgenes.ui.NOT_SELECTED"
+
+        var eyesMotherColor = NOT_SELECTED
+        var eyesFatherColor = NOT_SELECTED
+        var eyesMotherGrannyColor = NOT_SELECTED
+        var eyesMotherGrandpaColor = NOT_SELECTED
+        var eyesFatherGrannyColor = NOT_SELECTED
+        var eyesFatherGrandpaColor = NOT_SELECTED
+    }
+
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

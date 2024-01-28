@@ -10,6 +10,7 @@ import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
 import com.igo.childgenes.databinding.FragmentSelectEyesBinding
+import com.igo.childgenes.ui.home.HomeFragment.Companion
 
 class SelectEyesFragment : Fragment() {
 
@@ -35,8 +36,7 @@ class SelectEyesFragment : Fragment() {
         // get data from bundle
         val parentPerson = requireArguments().getString(HomeFragment.PARENT_PERSON)
         // binding.messageSelect.text = "Select $parentPerson's Eyes Color"
-        Toast.makeText(context, "Ваш текст сообщения $parentPerson ", Toast.LENGTH_SHORT).show()
-
+        //Toast.makeText(context, "Ваш текст сообщения $parentPerson ", Toast.LENGTH_SHORT).show()
 
         // transfer data back to mainFragment
         binding.cardBrown.setOnClickListener{
