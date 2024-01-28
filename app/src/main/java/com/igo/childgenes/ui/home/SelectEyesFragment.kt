@@ -39,20 +39,20 @@ class SelectEyesFragment : Fragment() {
         //Toast.makeText(context, "Ваш текст сообщения $parentPerson ", Toast.LENGTH_SHORT).show()
 
         // transfer data back to mainFragment
-        binding.cardBrown.setOnClickListener{
+        binding.eyeSelectCardBrown.setOnClickListener{
             parentFragmentManager.setFragmentResult(HomeFragment.RESPOND, bundleOf(
                 HomeFragment.PARENT_PERSON to parentPerson,
                 HomeFragment.EYES_COLOR to HomeFragment.BROWN)
             )
             findNavController().popBackStack()
         }
-        binding.cardGrey.setOnClickListener{
+        binding.eyeSelectCardGrey.setOnClickListener{
             parentFragmentManager.setFragmentResult(HomeFragment.RESPOND, bundleOf(
                 HomeFragment.PARENT_PERSON to parentPerson,
                 HomeFragment.EYES_COLOR to HomeFragment.GREY))
             findNavController().popBackStack()
         }
-        binding.cardGreen.setOnClickListener{
+        binding.eyeSelectCardGreen.setOnClickListener{
             parentFragmentManager.setFragmentResult(HomeFragment.RESPOND, bundleOf(
                 HomeFragment.PARENT_PERSON to parentPerson,
                 HomeFragment.EYES_COLOR to HomeFragment.GREEN))

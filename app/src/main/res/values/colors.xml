@@ -261,7 +261,8 @@
     <color name="amber_A400">#ffc400</color>
     <color name="amber_A700">#ffab00</color>
 
-    <color name="amber_normal">#EDC811</color>
+    <color name="amber_normal_1">#EDC811</color>
+    <color name="amber_normal">#F5D607</color>
 
 
     <color name="orange_50">#fff3e0</color>
@@ -349,6 +350,7 @@
 
     <color name="brown_background_x_light">#f0eddd</color>
     <color name="brown_background_light">#e6e4bf</color>
-    <color name="brown_background_dark">#afad93</color>
-    <color name="brown_background_dark_plus">#BFBCAF</color>
+    <color name="brown_background_dark">#DAD3A6</color>
+    <color name="brown_background_dark_2">#afad93</color>
+    <color name="brown_background_dark_1">#BFBCAF</color>
 </resources>

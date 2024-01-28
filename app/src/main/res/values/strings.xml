@@ -17,6 +17,13 @@
     <string name="blue_grey">Blue / Grey</string>
     <string name="green">Green</string>
 
+    <string name="blood_1">Type I (O)</string>
+    <string name="blood_2">Type II (A)</string>
+    <string name="blood_3">Type III (B)</string>
+    <string name="blood_4">Type IV (AB)</string>
+
+
+
     <string name="how_to_explain">How to explain</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_long">111</string>

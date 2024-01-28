@@ -42,10 +42,10 @@ class HomeFragment : Fragment() {
 
 
     private var _binding: FragmentHomeBinding? = null
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-
 
 
     override fun onDestroyView() {
@@ -74,12 +74,17 @@ class HomeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        if (eyesMotherColor == NOT_SELECTED || eyesFatherColor == NOT_SELECTED) {
+            hideSegmentGrandparents()
+            hideSegmentChild()
+        }
         fillCardMotherColor()
         fillCardFatherColor()
         fillCardMotherGrannyColor()
         fillCardMotherGrandpaColor()
         fillCardFatherGrannyColor()
         fillCardFatherGrandpaColor()
+        checkBtnGrandHide()
     }
 
 
@@ -140,22 +145,27 @@ class HomeFragment : Fragment() {
                     eyesMotherColor = eyesColor
                     fillCardMotherColor()
                 }
+
                 MOTHER_GRANNY -> {
                     eyesMotherGrannyColor = eyesColor
                     fillCardMotherGrannyColor()
                 }
+
                 MOTHER_GRANDPA -> {
                     eyesMotherGrandpaColor = eyesColor
                     fillCardMotherGrandpaColor()
                 }
+
                 FATHER -> {
                     eyesFatherColor = eyesColor
                     fillCardFatherColor()
                 }
+
                 FATHER_GRANNY -> {
                     eyesFatherGrannyColor = eyesColor
                     fillCardFatherGrannyColor()
                 }
+
                 FATHER_GRANDPA -> {
                     eyesFatherGrandpaColor = eyesColor
                     fillCardFatherGrandpaColor()
@@ -176,7 +186,7 @@ class HomeFragment : Fragment() {
 //        }
 //
 
-        binding.eyesInfo1Btn.setOnClickListener {
+        binding.eyeInfo1Btn.setOnClickListener {
             if (binding.eyeInfo1ArrowUp.visibility == View.INVISIBLE) {
                 binding.eyeInfo1Content.visibility = View.VISIBLE
                 binding.eyeInfo1ArrowDown.visibility = View.INVISIBLE
@@ -199,7 +209,7 @@ class HomeFragment : Fragment() {
 
     private fun fillCardMotherColor() {
         if (eyesMotherColor == NOT_SELECTED) {
-            binding.eyeIvMotherQuestion.visibility = View.VISIBLE
+            //binding.eyeIvMotherQuestion.visibility = View.VISIBLE
         } else {
             binding.eyeIvMotherQuestion.visibility = View.GONE
             binding.eyeIvMotherGradientBrown.visibility = View.GONE
@@ -214,13 +224,10 @@ class HomeFragment : Fragment() {
     }
 
 
-
-
-
     private fun fillCardFatherColor() {
         Toast.makeText(requireContext(), "fillCardFatherColor", Toast.LENGTH_SHORT).show()
         if (eyesFatherColor == NOT_SELECTED) {
-            binding.eyeIvFatherQuestion.visibility = View.VISIBLE
+            //binding.eyeIvFatherQuestion.visibility = View.VISIBLE
         } else {
             binding.eyeIvFatherQuestion.visibility = View.GONE
             binding.eyeIvFatherGradientBrown.visibility = View.GONE
@@ -260,6 +267,7 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
     private fun fillCardMotherGrandpaColor() {
         if (eyesMotherGrandpaColor != NOT_SELECTED) {
             binding.eyeIvMotherGrandpaGradientBrown.visibility = View.GONE
@@ -301,19 +309,23 @@ class HomeFragment : Fragment() {
     }
 
 
-
-
-
-
-
-
-
-
     private fun checkChildRenderNeeded() {
         if (eyesMotherColor != NOT_SELECTED && eyesFatherColor != NOT_SELECTED) {
             countColor()
+            checkBtnGrandHide()
             scrollDown()
             unHideSegmentGrandparents()
+        }
+    }
+
+    private fun checkBtnGrandHide() {
+        if ((eyesMotherColor != NOT_SELECTED && eyesFatherColor != NOT_SELECTED) &&
+            (eyesMotherGrannyColor == NOT_SELECTED || eyesMotherGrandpaColor == NOT_SELECTED ||
+            eyesFatherGrannyColor == NOT_SELECTED || eyesFatherGrannyColor == NOT_SELECTED
+                    )) {
+            binding.eyeBtnAddGrandparents.visibility = View.VISIBLE
+        } else {
+            binding.eyeBtnAddGrandparents.visibility = View.GONE
         }
     }
 
@@ -326,19 +338,20 @@ class HomeFragment : Fragment() {
         val motherColor = proportionForHeir(Pair(eyesMotherGrannyColor, eyesMotherGrandpaColor))
         val fatherColor = proportionForHeir(Pair(eyesFatherGrannyColor, eyesFatherGrandpaColor))
 
-        val averageParentsColor = Triple (
+        val averageParentsColor = Triple(
             (motherColor.first + fatherColor.first) / 2,
             (motherColor.second + fatherColor.second) / 2,
             (motherColor.third + fatherColor.third) / 2,
         )
 
-        var childColorConsideringParents = Triple (
-            childColor.first * (1 + averageParentsColor.first/100),
-            childColor.second * (1 + averageParentsColor.second/100),
-            childColor.third * (1 + averageParentsColor.third/100)
+        var childColorConsideringParents = Triple(
+            childColor.first * (1 + averageParentsColor.first / 100),
+            childColor.second * (1 + averageParentsColor.second / 100),
+            childColor.third * (1 + averageParentsColor.third / 100)
         )
 
-        val onePercent = (childColorConsideringParents.first + childColorConsideringParents.second + childColorConsideringParents.third)/100
+        val onePercent =
+            (childColorConsideringParents.first + childColorConsideringParents.second + childColorConsideringParents.third) / 100
 
 //        childColorConsideringParents = Triple (
 //            childColorConsideringParents.first / onePercent,
@@ -352,13 +365,14 @@ class HomeFragment : Fragment() {
 //            "%.2f".format(childColorConsideringParents.third / onePercent).replace(',', '.').toDouble(),
 //        )
 
-        childColorConsideringParents = Triple (
+        childColorConsideringParents = Triple(
             (childColorConsideringParents.first / onePercent).roundToInt().toDouble(),
             (childColorConsideringParents.second / onePercent).roundToInt().toDouble(),
             (childColorConsideringParents.third / onePercent).roundToInt().toDouble(),
         )
 
-        val newThirdValue = 100 - childColorConsideringParents.first - childColorConsideringParents.second
+        val newThirdValue =
+            100 - childColorConsideringParents.first - childColorConsideringParents.second
         childColorConsideringParents = Triple(
             childColorConsideringParents.first,
             childColorConsideringParents.second,
@@ -369,7 +383,7 @@ class HomeFragment : Fragment() {
         displayChildColor(childColorConsideringParents)
     }
 
-    private fun proportionForHeir (parentsColor: Pair<String, String>): Triple<Double, Double, Double> {
+    private fun proportionForHeir(parentsColor: Pair<String, String>): Triple<Double, Double, Double> {
         val personColor = when (parentsColor) {
             BROWN to BROWN -> Triple(75.0, 6.0, 19.0)
             GREEN to BROWN -> Triple(50.0, 13.0, 37.0)
@@ -393,9 +407,11 @@ class HomeFragment : Fragment() {
 
     private fun displayChildColor(childColor: Triple<Double, Double, Double>) {
 
-        hideChildColorsCards()
+        //hideChildColorsCards()
 
-        unHideSegmentChildExceptColorsCards()
+        unHideSegmentChild()
+        unHideSegmentGrandparents()
+
         binding.eyeCardChildBrown.visibility = View.VISIBLE
         binding.eyeCardChildGrey.visibility = View.VISIBLE
         binding.eyeCardChildGreen.visibility = View.VISIBLE
@@ -406,7 +422,6 @@ class HomeFragment : Fragment() {
         binding.eyeProgressBarGrey.setProgress(childColor.second.toInt(), true)
         binding.eyeMessageGreen.text = "${childColor.third} %"
         binding.eyeProgressBarGreen.setProgress(childColor.third.toInt(), true)
-
 
 
 //        if (childColor.first != 0.0) {
@@ -427,8 +442,6 @@ class HomeFragment : Fragment() {
     }
 
 
-
-
     private fun hideSegmentChild() {
         // segment 'child'
         binding.eyeMaterialDivider1.visibility = View.GONE
@@ -439,6 +452,12 @@ class HomeFragment : Fragment() {
         binding.eyeCardChildBrown.visibility = View.GONE
         binding.eyeCardChildGrey.visibility = View.GONE
         binding.eyeCardChildGreen.visibility = View.GONE
+
+        binding.eyeIvMotherQuestion.visibility = View.GONE
+        binding.eyeIvFatherQuestion.visibility = View.GONE
+
+        binding.eyeCardInfo1.visibility = View.GONE
+        binding.eyeBtnAddGrandparents.visibility = View.GONE
     }
 
     private fun hideSegmentGrandparents() {
@@ -477,16 +496,16 @@ class HomeFragment : Fragment() {
     }
 
 
-    private fun unHideSegmentChildExceptColorsCards() {
+    private fun unHideSegmentChild() {
         // segment 'child'
         binding.eyeMaterialDivider1.visibility = View.VISIBLE
         binding.eyeMaterialDivider2.visibility = View.VISIBLE
         binding.eyeMaterialDivider3.visibility = View.VISIBLE
         binding.eyeMaterialDivider4.visibility = View.VISIBLE
         binding.eyeMessageChild.visibility = View.VISIBLE
-//        binding.eyeCardChildBrown.visibility = View.VISIBLE
-//        binding.eyeCardChildGrey.visibility = View.VISIBLE
-//        binding.eyeCardChildGreen.visibility = View.VISIBLE
+        binding.eyeCardChildBrown.visibility = View.VISIBLE
+        binding.eyeCardChildGrey.visibility = View.VISIBLE
+        binding.eyeCardChildGreen.visibility = View.VISIBLE
 
         //binding.eyeCardExplainFolded.visibility = View.VISIBLE
 
@@ -515,11 +534,11 @@ class HomeFragment : Fragment() {
     }
 
     private fun scrollUp() {
-        //binding.nestedMain.fling(-5000);
+        binding.nestedMain.fling(-5000);
     }
 
     private fun scrollDown() {
-        //binding.nestedMain.fling(5000);
+        binding.nestedMain.fling(5000);
     }
 
 
