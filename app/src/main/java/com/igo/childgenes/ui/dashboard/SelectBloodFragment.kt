@@ -5,56 +5,63 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
+import com.igo.childgenes.databinding.FragmentSelectBloodBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SelectBloodFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class SelectBloodFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private var _binding: FragmentSelectBloodBinding? = null
+    private val binding get() = _binding!!
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_select_blood, container, false)
+        val view = inflater.inflate(R.layout.fragment_select_blood, container, false)
+        _binding = FragmentSelectBloodBinding.bind(view)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SelectBloodFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SelectBloodFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // get data from bundle
+        val parentPerson = requireArguments().getString(DashboardFragment.PARENT_PERSON)
+        // binding.messageSelect.text = "Select $parentPerson's Eyes Color"
+        //Toast.makeText(context, "Ваш текст сообщения $parentPerson ", Toast.LENGTH_SHORT).show()
+
+        // transfer data back to mainFragment
+        binding.bloodSelectCard1.setOnClickListener{
+            parentFragmentManager.setFragmentResult(DashboardFragment.RESPOND, bundleOf(
+                DashboardFragment.PARENT_PERSON to parentPerson,
+                DashboardFragment.BLOOD_TYPE to DashboardFragment.GROUP_1)
+            )
+            findNavController().popBackStack()
+        }
+        binding.bloodSelectCard2.setOnClickListener{
+            parentFragmentManager.setFragmentResult(DashboardFragment.RESPOND, bundleOf(
+                DashboardFragment.PARENT_PERSON to parentPerson,
+                DashboardFragment.BLOOD_TYPE to DashboardFragment.GROUP_2))
+            findNavController().popBackStack()
+        }
+        binding.bloodSelectCard3.setOnClickListener{
+            parentFragmentManager.setFragmentResult(DashboardFragment.RESPOND, bundleOf(
+                DashboardFragment.PARENT_PERSON to parentPerson,
+                DashboardFragment.BLOOD_TYPE to DashboardFragment.GROUP_3))
+            findNavController().popBackStack()
+        }
+         binding.bloodSelectCard4.setOnClickListener{
+            parentFragmentManager.setFragmentResult(DashboardFragment.RESPOND, bundleOf(
+                DashboardFragment.PARENT_PERSON to parentPerson,
+                DashboardFragment.BLOOD_TYPE to DashboardFragment.GROUP_4))
+            findNavController().popBackStack()
+        }
     }
 }

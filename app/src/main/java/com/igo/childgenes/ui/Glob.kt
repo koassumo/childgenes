@@ -1,4 +1,4 @@
-import com.igo.childgenes.ui.NOT_SELECTED
+//import com.igo.childgenes.ui.NOT_SELECTED
 
 //package com.igo.childgenes.ui
 //const val com.igo.childgenes.ui.PARENT_PERSON: String = "com.igo.childgenes.ui.PARENT_PERSON",
@@ -16,14 +16,14 @@ import com.igo.childgenes.ui.NOT_SELECTED
 //const val com.igo.childgenes.ui.GREY: String = "com.igo.childgenes.ui.GREY",
 //const val com.igo.childgenes.ui.GREEN: String = "com.igo.childgenes.ui.GREEN",
 //const val com.igo.childgenes.ui.NOT_SELECTED: String = "com.igo.childgenes.ui.NOT_SELECTED",
-data class Glob(
-
-    var eyesMotherColor: String = NOT_SELECTED,
-    var eyesFatherColor: String = NOT_SELECTED,
-    var eyesMotherGrannyColor: String = NOT_SELECTED,
-    var eyesMotherGrandpaColor: String = NOT_SELECTED,
-    var eyesFatherGrannyColor: String = NOT_SELECTED,
-    var eyesFatherGrandpaColor: String = NOT_SELECTED
-
-
-)
+//data class Glob(
+//
+//    var eyesMotherColor: String = NOT_SELECTED,
+//    var eyesFatherColor: String = NOT_SELECTED,
+//    var eyesMotherGrannyColor: String = NOT_SELECTED,
+//    var eyesMotherGrandpaColor: String = NOT_SELECTED,
+//    var eyesFatherGrannyColor: String = NOT_SELECTED,
+//    var eyesFatherGrandpaColor: String = NOT_SELECTED
+//
+//
+//)
