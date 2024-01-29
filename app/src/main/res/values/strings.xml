@@ -14,7 +14,7 @@
     <string name="probability_chance_50_percent">50 %</string>
     <string name="select_eyes_color">Please select</string>
     <string name="brown">Brown</string>
-    <string name="blue_grey">Blue / Grey</string>
+    <string name="blue_grey">Blue /\nGrey</string>
     <string name="green">Green</string>
 
     <string name="blood_1">Type I (O)</string>
@@ -30,7 +30,14 @@
     <string name="explanation_eyes">Determining a child\'s eye color precisely is a complex task, but it is possible to estimate the likelihood based on genetic information passed down from the parents. \n\n
         It is known that up to 16 genes influence eye color. Green eye color dominates over blue but is recessive to brown. Even if both parents have blue eyes, there is a chance of the child having brown eyes, although this occurrence is not common. \n\n
         A child\'s eye color can change during the first year of life due to the gradual development of pigments that affect color. In most cases, the final eye color is established by the age of one, but for some children, this process can continue until the age of three or even into adulthood.</string>
-    <string name="select_color">Select color</string>
-    <string name="select_type">Select type</string>
+    <string name="select_color">Select\ncolor</string>
+    <string name="select_type">Select\ntype</string>
+
+
+    <string name="O">Type I\n(O)</string>
+    <string name="A">Type II\n(A)</string>
+    <string name="B">Type III\n(B)</string>
+    <string name="AB">Type IV\n(AB)</string>
+
 
 </resources>

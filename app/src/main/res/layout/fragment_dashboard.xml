@@ -244,16 +244,21 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-                        <include
+                        <ImageView
                             android:id="@+id/blood_mother_granny_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                         <TextView
-                            android:id="@+id/blood_tv_btn_mother_granny_select"
-                            style="@style/txt_hint_inner"
-                            android:text="@string/select_color"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_mother_granny_icon" />
+                            android:id="@+id/blood_mother_granny_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/O"
+                            app:layout_constraintStart_toEndOf="@+id/blood_mother_granny_icon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -310,16 +315,21 @@
                     <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
 
-                        <include
+                        <ImageView
                             android:id="@+id/blood_mother_grandpa_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                         <TextView
-                            android:id="@+id/blood_tv_btn_mother_grandpa_select"
-                            style="@style/txt_hint_inner"
-                            android:text="@string/select_color"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_mother_grandpa_icon" />
+                            android:id="@+id/blood_mother_grandpa_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/O"
+                            app:layout_constraintStart_toEndOf="@+id/blood_mother_grandpa_icon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -376,16 +386,21 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-                        <include
+                        <ImageView
                             android:id="@+id/blood_father_granny_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                         <TextView
-                            android:id="@+id/blood_tv_btn_father_granny_select"
-                            style="@style/txt_hint_inner"
-                            android:text="@string/select_color"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_father_granny_icon" />
+                            android:id="@+id/blood_father_granny_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/O"
+                            app:layout_constraintStart_toEndOf="@+id/blood_father_granny_icon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -442,17 +457,21 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-                        <include
+                        <ImageView
                             android:id="@+id/blood_father_grandpa_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                         <TextView
-                            android:id="@+id/blood_tv_btn_father_grandpa_select"
-                            style="@style/txt_hint_inner"
-                            android:text="@string/select_color"
-                            android:visibility="visible"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_father_grandpa_icon" />
+                            android:id="@+id/blood_father_grandpa_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/O"
+                            app:layout_constraintStart_toEndOf="@+id/blood_father_grandpa_icon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -583,16 +602,22 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-                        <include
+                        <ImageView
                             android:id="@+id/blood_mother_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                         <TextView
-                            android:id="@+id/blood_tv_btn_mother_select"
-                            style="@style/txt_hint_inner"
-                            android:text="@string/select_color"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_mother_icon" />
+                            android:id="@+id/blood_mother_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/select_type"
+                            app:layout_constraintStart_toEndOf="@+id/blood_mother_icon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -659,17 +684,21 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-
-                        <include
+                        <ImageView
                             android:id="@+id/blood_father_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                         <TextView
-                            android:id="@+id/blood_tv_btn_father_select"
-                            style="@style/txt_hint_inner"
-                            android:text="@string/select_color"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_father_icon" />
+                            android:id="@+id/blood_father_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/select_type"
+                            app:layout_constraintStart_toEndOf="@+id/blood_father_icon"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -763,30 +792,34 @@
                             android:orientation="vertical"
                             app:layout_constraintGuide_percent="0.47" />
 
-                        <include
+                        <ImageView
                             android:id="@+id/blood_child_1_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            style="@style/txt_hint_inner"
-                            android:text="@string/blood_1"
-                            android:visibility="visible"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_child_1_icon" />
+                            android:id="@+id/blood_child_1_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/O"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/blood_child_1_icon"
+                            app:layout_constraintTop_toTopOf="parent" />
+
 
                         <ProgressBar
                             android:id="@+id/blood_progress_bar_1"
                             style="@style/my_progress_bar"
-                            android:visibility="visible"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@id/blood_guide_line_1_center"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="@+id/blood_child_1_icon" />
 
                         <TextView
                             android:id="@+id/blood_message_1"
                             style="@style/txt_hint_inner"
-                            android:text=""
+                            android:text="500%"
                             app:layout_constraintStart_toStartOf="@id/blood_guide_line_1_center"
                             app:layout_constraintTop_toBottomOf="@id/blood_progress_bar_1" />
 
@@ -818,29 +851,35 @@
                             android:orientation="vertical"
                             app:layout_constraintGuide_percent="0.47" />
 
-                        <include
+
+                        <ImageView
                             android:id="@+id/blood_child_2_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            style="@style/txt_hint_inner"
-                            android:text="@string/blood_2"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_child_2_icon" />
+                            android:id="@+id/blood_child_2_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/A"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/blood_child_2_icon"
+                            app:layout_constraintTop_toTopOf="parent" />
+
 
                         <ProgressBar
                             android:id="@+id/blood_progress_bar_2"
                             style="@style/my_progress_bar"
-                            android:visibility="visible"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@id/blood_guide_line_2_center"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="@+id/blood_child_2_icon" />
 
                         <TextView
                             android:id="@+id/blood_message_2"
                             style="@style/txt_hint_inner"
-                            android:text=""
+                            android:text="500%"
                             app:layout_constraintStart_toStartOf="@id/blood_guide_line_2_center"
                             app:layout_constraintTop_toBottomOf="@id/blood_progress_bar_2" />
 
@@ -871,29 +910,35 @@
                             android:orientation="vertical"
                             app:layout_constraintGuide_percent="0.47" />
 
-                        <include
+
+                        <ImageView
                             android:id="@+id/blood_child_3_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            style="@style/txt_hint_inner"
-                            android:text="@string/blood_3"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_child_3_icon" />
+                            android:id="@+id/blood_child_3_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/B"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/blood_child_3_icon"
+                            app:layout_constraintTop_toTopOf="parent" />
+
 
                         <ProgressBar
                             android:id="@+id/blood_progress_bar_3"
                             style="@style/my_progress_bar"
-                            android:visibility="visible"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@id/blood_guide_line_3_center"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="@+id/blood_child_3_icon" />
 
                         <TextView
                             android:id="@+id/blood_message_3"
                             style="@style/txt_hint_inner"
-                            android:text=""
+                            android:text="500%"
                             app:layout_constraintStart_toStartOf="@id/blood_guide_line_3_center"
                             app:layout_constraintTop_toBottomOf="@id/blood_progress_bar_3" />
 
@@ -925,24 +970,30 @@
                             android:orientation="vertical"
                             app:layout_constraintGuide_percent="0.47" />
 
-                        <include
+
+                        <ImageView
                             android:id="@+id/blood_child_4_icon"
-                            layout="@layout/symbol_blood" />
+                            style="@style/iv_icon"
+                            android:src="@drawable/baseline_blood_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            style="@style/txt_hint_inner"
-                            android:text="@string/blood_4"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/blood_child_4_icon" />
+                            android:id="@+id/blood_child_4_icon_hint"
+                            style="@style/txt_hint_inner_right"
+                            android:text="@string/AB"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/blood_child_4_icon"
+                            app:layout_constraintTop_toTopOf="parent" />
+
 
                         <ProgressBar
                             android:id="@+id/blood_progress_bar_4"
                             style="@style/my_progress_bar"
-                            android:visibility="visible"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@id/blood_guide_4_center"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="@+id/blood_child_4_icon" />
 
                         <TextView
                             android:id="@+id/blood_message_4"

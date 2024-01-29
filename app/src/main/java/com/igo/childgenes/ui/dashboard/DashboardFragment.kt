@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
 import com.igo.childgenes.databinding.FragmentDashboardBinding
+import com.igo.childgenes.ui.home.HomeFragment
 
 
 class DashboardFragment : Fragment() {
@@ -83,6 +85,7 @@ class DashboardFragment : Fragment() {
         }
         fillCardMother()
         fillCardFather()
+        checkChildRenderNeeded()
 //        fillCardMotherGranny()
 //        fillCardMotherGrandpa()
 //        fillCardFatherGranny()
@@ -204,6 +207,7 @@ class DashboardFragment : Fragment() {
             binding.bloodIvMotherGradient2.visibility = View.GONE
             binding.bloodIvMotherGradient3.visibility = View.GONE
             binding.bloodIvMotherGradient4.visibility = View.GONE
+            changeCardHint(binding.bloodMotherIconHint, bloodMother)
             when (bloodMother) {
                 GROUP_1 -> binding.bloodIvMotherGradient1.visibility = View.VISIBLE
                 GROUP_2 -> binding.bloodIvMotherGradient2.visibility = View.VISIBLE
@@ -219,7 +223,8 @@ class DashboardFragment : Fragment() {
             binding.bloodIvFatherGradient2.visibility = View.GONE
             binding.bloodIvFatherGradient3.visibility = View.GONE
             binding.bloodIvFatherGradient4.visibility = View.GONE
-            when (bloodMother) {
+            changeCardHint(binding.bloodFatherIconHint, bloodFather)
+            when (bloodFather) {
                 GROUP_1 -> binding.bloodIvFatherGradient1.visibility = View.VISIBLE
                 GROUP_2 -> binding.bloodIvFatherGradient2.visibility = View.VISIBLE
                 GROUP_3 -> binding.bloodIvFatherGradient3.visibility = View.VISIBLE
@@ -318,11 +323,9 @@ class DashboardFragment : Fragment() {
 
     }
 
-
     private fun scrollDown() {
         binding.nestedMain.fling(5000);
     }
-
 
     private fun hideSegmentGrandparents() {
         // segment 'grandparents'
@@ -344,6 +347,15 @@ class DashboardFragment : Fragment() {
         binding.bloodMaterialDividerF8.visibility = View.GONE
         binding.bloodMaterialDividerF9.visibility = View.GONE
         binding.bloodMaterialDividerF10.visibility = View.GONE
+    }
+
+    private fun changeCardHint(textView: TextView, personProperty: String) {
+        when (personProperty) {
+            GROUP_1 -> textView.text = getString(R.string.O)
+            GROUP_2 -> textView.text = getString(R.string.A)
+            GROUP_3 -> textView.text = getString(R.string.B)
+            GROUP_4 -> textView.text = getString(R.string.AB)
+        }
     }
 
 }

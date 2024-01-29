@@ -236,16 +236,21 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-                    <include
+                    <ImageView
                         android:id="@+id/eye_mother_granny_icon"
-                        layout="@layout/symbol_eye" />
+                        style="@style/iv_icon"
+                        android:src="@drawable/ic_eye_4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <TextView
-                        android:id="@+id/eye_tv_btn_mother_granny_select"
-                        style="@style/txt_hint_inner"
+                        android:id="@+id/eye_mother_granny_icon_hint"
+                        style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/eye_mother_granny_icon" />
+                        app:layout_constraintStart_toEndOf="@+id/eye_mother_granny_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -293,17 +298,21 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-
-                    <include
+                    <ImageView
                         android:id="@+id/eye_mother_grandpa_icon"
-                        layout="@layout/symbol_eye" />
+                        style="@style/iv_icon"
+                        android:src="@drawable/ic_eye_4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <TextView
-                        android:id="@+id/eye_tv_btn_mother_grandpa_select"
-                        style="@style/txt_hint_inner"
+                        android:id="@+id/eye_mother_grandpa_icon_hint"
+                        style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/eye_mother_grandpa_icon" />
+                        app:layout_constraintStart_toEndOf="@+id/eye_mother_grandpa_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -352,16 +361,22 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-                    <include
+                    <ImageView
                         android:id="@+id/eye_father_granny_icon"
-                        layout="@layout/symbol_eye" />
+                        style="@style/iv_icon"
+                        android:src="@drawable/ic_eye_4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <TextView
-                        android:id="@+id/eye_tv_btn_father_granny_select"
-                        style="@style/txt_hint_inner"
+                        android:id="@+id/eye_father_granny_icon_hint"
+                        style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/eye_father_granny_icon" />
+                        app:layout_constraintStart_toEndOf="@+id/eye_father_granny_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -409,17 +424,21 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-                    <include
+                    <ImageView
                         android:id="@+id/eye_father_grandpa_icon"
-                        layout="@layout/symbol_eye" />
+                        style="@style/iv_icon"
+                        android:src="@drawable/ic_eye_4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <TextView
-                        android:id="@+id/eye_tv_btn_father_grandpa_select"
-                        style="@style/txt_hint_inner"
+                        android:id="@+id/eye_father_grandpa_icon_hint"
+                        style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
-                        android:visibility="visible"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/eye_father_grandpa_icon" />
+                        app:layout_constraintStart_toEndOf="@+id/eye_father_grandpa_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -542,16 +561,23 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-                    <include
+                    <ImageView
                         android:id="@+id/eye_mother_icon"
-                        layout="@layout/symbol_eye" />
+                        style="@style/iv_icon"
+                        android:src="@drawable/ic_eye_4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <TextView
-                        android:id="@+id/eye_tv_btn_mother_select"
-                        style="@style/txt_hint_inner"
+                        android:id="@+id/eye_mother_icon_hint"
+                        style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/eye_mother_icon" />
+                        app:layout_constraintStart_toEndOf="@+id/eye_mother_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -636,17 +662,22 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
 
-
-                    <include
+                    <ImageView
                         android:id="@+id/eye_father_icon"
-                        layout="@layout/symbol_eye" />
+                        style="@style/iv_icon"
+                        android:src="@drawable/ic_eye_4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <TextView
-                        android:id="@+id/eye_tv_btn_father_select"
-                        style="@style/txt_hint_inner"
+                        android:id="@+id/eye_father_icon_hint"
+                        style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/eye_father_icon" />
+                        app:layout_constraintStart_toEndOf="@+id/eye_father_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -740,22 +771,26 @@
                         android:orientation="vertical"
                         app:layout_constraintGuide_percent="0.47" />
 
-                    <include
-                        android:id="@+id/eye_child_brown_icon"
-                        layout="@layout/symbol_eye" />
+                    <ImageView
+                        android:id="@+id/eye_child_1_icon"
+                        style="@style/iv_icon"
+                        android:src="@drawable/ic_eye_4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        style="@style/txt_hint_inner"
+                        android:id="@+id/eye_child_1_icon_hint"
+                        style="@style/txt_hint_inner_right"
                         android:text="@string/brown"
-                        android:visibility="visible"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/eye_child_brown_icon" />
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/eye_child_1_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ProgressBar
                         android:id="@+id/eye_progress_bar_brown"
                         style="@style/my_progress_bar"
                         android:visibility="visible"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@id/eye_guide_line_brown_center"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -763,7 +798,7 @@
                     <TextView
                         android:id="@+id/eye_message_brown"
                         style="@style/txt_hint_inner"
-                        android:text=""
+                        android:text="500%"
                         app:layout_constraintStart_toStartOf="@id/eye_guide_line_brown_center"
                         app:layout_constraintTop_toBottomOf="@id/eye_progress_bar_brown" />
 
@@ -795,29 +830,34 @@
                         android:orientation="vertical"
                         app:layout_constraintGuide_percent="0.47" />
 
-                    <include
-                        android:id="@+id/eye_child_blue_icon"
-                        layout="@layout/symbol_eye" />
+                    <ImageView
+                        android:id="@+id/eye_child_2_icon"
+                        style="@style/iv_icon"
+                        android:src="@drawable/ic_eye_4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        style="@style/txt_hint_inner"
+                        android:id="@+id/eye_child_2_icon_hint"
+                        style="@style/txt_hint_inner_right"
                         android:text="@string/blue_grey"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/eye_child_blue_icon" />
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/eye_child_2_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ProgressBar
                         android:id="@+id/eye_progress_bar_grey"
                         style="@style/my_progress_bar"
                         android:visibility="visible"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@id/eye_guide_line_grey_center"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="@+id/eye_child_2_icon" />
 
                     <TextView
                         android:id="@+id/eye_message_grey"
                         style="@style/txt_hint_inner"
-                        android:text=""
+                        android:text="500%"
                         app:layout_constraintStart_toStartOf="@id/eye_guide_line_grey_center"
                         app:layout_constraintTop_toBottomOf="@id/eye_progress_bar_grey" />
 
@@ -849,29 +889,34 @@
                         android:orientation="vertical"
                         app:layout_constraintGuide_percent="0.47" />
 
-                    <include
-                        android:id="@+id/eye_child_green_icon"
-                        layout="@layout/symbol_eye" />
+                    <ImageView
+                        android:id="@+id/eye_child_3_icon"
+                        style="@style/iv_icon"
+                        android:src="@drawable/ic_eye_4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        style="@style/txt_hint_inner"
+                        android:id="@+id/eye_child_3_icon_hint"
+                        style="@style/txt_hint_inner_right"
                         android:text="@string/green"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/eye_child_green_icon" />
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/eye_child_3_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ProgressBar
                         android:id="@+id/eye_progress_bar_green"
                         style="@style/my_progress_bar"
                         android:visibility="visible"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@id/eye_guide_green_center"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="@+id/eye_child_3_icon" />
 
                     <TextView
                         android:id="@+id/eye_message_green"
                         style="@style/txt_hint_inner"
-                        android:text="50%"
+                        android:text="500%"
                         app:layout_constraintStart_toStartOf="@id/eye_guide_green_center"
                         app:layout_constraintTop_toBottomOf="@id/eye_progress_bar_green" />
 
@@ -913,15 +958,15 @@
                     <!--                        android:orientation="horizontal"-->
                     <!--                        app:layout_constraintGuide_begin="@dimen/card_radius_normal"/>-->
 
-<!--                    <View-->
-<!--                        android:id="@+id/eyes_info_1_btn"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:elevation="@dimen/elevation_large"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent" -->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintBottom_toTopOf="@id/eye_info_1_content"/>-->
+                    <!--                    <View-->
+                    <!--                        android:id="@+id/eyes_info_1_btn"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="match_parent"-->
+                    <!--                        android:elevation="@dimen/elevation_large"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintTop_toTopOf="parent" -->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintBottom_toTopOf="@id/eye_info_1_content"/>-->
 
                     <ImageView
                         android:id="@+id/eye_info_1_icon"

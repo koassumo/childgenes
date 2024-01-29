@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -84,6 +85,7 @@ class HomeFragment : Fragment() {
         fillCardMotherGrandpaColor()
         fillCardFatherGrannyColor()
         fillCardFatherGrandpaColor()
+        checkChildRenderNeeded()
         checkBtnGrandHide()
     }
 
@@ -215,6 +217,7 @@ class HomeFragment : Fragment() {
             binding.eyeIvMotherGradientBrown.visibility = View.GONE
             binding.eyeIvMotherGradientBlue.visibility = View.GONE
             binding.eyeIvMotherGradientGreen.visibility = View.GONE
+            changeCardHint(binding.eyeMotherIconHint, eyesMotherColor)
             when (eyesMotherColor) {
                 BROWN -> binding.eyeIvMotherGradientBrown.visibility = View.VISIBLE
                 GREY -> binding.eyeIvMotherGradientBlue.visibility = View.VISIBLE
@@ -233,10 +236,14 @@ class HomeFragment : Fragment() {
             binding.eyeIvFatherGradientBrown.visibility = View.GONE
             binding.eyeIvFatherGradientBlue.visibility = View.GONE
             binding.eyeIvFatherGradientGreen.visibility = View.GONE
+            changeCardHint(binding.eyeFatherIconHint, eyesFatherColor)
             when (eyesFatherColor) {
                 BROWN -> binding.eyeIvFatherGradientBrown.visibility = View.VISIBLE
                 GREY -> binding.eyeIvFatherGradientBlue.visibility = View.VISIBLE
                 GREEN -> binding.eyeIvFatherGradientGreen.visibility = View.VISIBLE
+            }
+        }
+    }
 //                    binding.cardFather.setCardBackgroundColor(
 //                        ContextCompat.getColor(requireContext(), R.color.eyesColorBrown)
 //                    )
@@ -250,16 +257,13 @@ class HomeFragment : Fragment() {
 //                    binding.ivFatherEye.background = gradientDrawable
 //
 //                    binding.ivFatherEye.setColorFilter(ContextCompat.getColor(requireContext(), R.color.eyesColorBrown))
-            }
-        }
-    }
-
 
     private fun fillCardMotherGrannyColor() {
         if (eyesMotherGrannyColor != NOT_SELECTED) {
             binding.eyeIvMotherGrannyGradientBrown.visibility = View.GONE
             binding.eyeIvMotherGrannyGradientBlue.visibility = View.GONE
             binding.eyeIvMotherGrannyGradientGreen.visibility = View.GONE
+            changeCardHint(binding.eyeMotherGrannyIconHint, eyesMotherGrannyColor)
             when (eyesMotherGrannyColor) {
                 BROWN -> binding.eyeIvMotherGrannyGradientBrown.visibility = View.VISIBLE
                 GREY -> binding.eyeIvMotherGrannyGradientBlue.visibility = View.VISIBLE
@@ -273,6 +277,7 @@ class HomeFragment : Fragment() {
             binding.eyeIvMotherGrandpaGradientBrown.visibility = View.GONE
             binding.eyeIvMotherGrandpaGradientBlue.visibility = View.GONE
             binding.eyeIvMotherGrandpaGradientGreen.visibility = View.GONE
+            changeCardHint(binding.eyeMotherGrandpaIconHint, eyesMotherGrandpaColor)
             when (eyesMotherGrandpaColor) {
                 BROWN -> binding.eyeIvMotherGrandpaGradientBrown.visibility = View.VISIBLE
                 GREY -> binding.eyeIvMotherGrandpaGradientBlue.visibility = View.VISIBLE
@@ -286,6 +291,7 @@ class HomeFragment : Fragment() {
             binding.eyeIvFatherGrannyGradientBrown.visibility = View.GONE
             binding.eyeIvFatherGrannyGradientBlue.visibility = View.GONE
             binding.eyeIvFatherGrannyGradientGreen.visibility = View.GONE
+            changeCardHint(binding.eyeFatherGrannyIconHint, eyesFatherGrannyColor)
             when (eyesFatherGrannyColor) {
                 BROWN -> binding.eyeIvFatherGrannyGradientBrown.visibility = View.VISIBLE
                 GREY -> binding.eyeIvFatherGrannyGradientBlue.visibility = View.VISIBLE
@@ -294,12 +300,12 @@ class HomeFragment : Fragment() {
         }
     }
 
-
     private fun fillCardFatherGrandpaColor() {
         if (eyesFatherGrandpaColor != NOT_SELECTED) {
             binding.eyeIvFatherGrandpaGradientBrown.visibility = View.GONE
             binding.eyeIvFatherGrandpaGradientBlue.visibility = View.GONE
             binding.eyeIvFatherGrandpaGradientGreen.visibility = View.GONE
+            changeCardHint(binding.eyeFatherGrandpaIconHint, eyesFatherGrandpaColor)
             when (eyesFatherGrandpaColor) {
                 BROWN -> binding.eyeIvFatherGrandpaGradientBrown.visibility = View.VISIBLE
                 GREY -> binding.eyeIvFatherGrandpaGradientBlue.visibility = View.VISIBLE
@@ -307,7 +313,6 @@ class HomeFragment : Fragment() {
             }
         }
     }
-
 
     private fun checkChildRenderNeeded() {
         if (eyesMotherColor != NOT_SELECTED && eyesFatherColor != NOT_SELECTED) {
@@ -321,8 +326,9 @@ class HomeFragment : Fragment() {
     private fun checkBtnGrandHide() {
         if ((eyesMotherColor != NOT_SELECTED && eyesFatherColor != NOT_SELECTED) &&
             (eyesMotherGrannyColor == NOT_SELECTED || eyesMotherGrandpaColor == NOT_SELECTED ||
-            eyesFatherGrannyColor == NOT_SELECTED || eyesFatherGrannyColor == NOT_SELECTED
-                    )) {
+                    eyesFatherGrannyColor == NOT_SELECTED || eyesFatherGrannyColor == NOT_SELECTED
+                    )
+        ) {
             binding.eyeBtnAddGrandparents.visibility = View.VISIBLE
         } else {
             binding.eyeBtnAddGrandparents.visibility = View.GONE
@@ -533,6 +539,14 @@ class HomeFragment : Fragment() {
         binding.eyeMaterialDividerF10.visibility = View.VISIBLE
     }
 
+    private fun changeCardHint(textView: TextView, eyeColor: String) {
+        when (eyeColor) {
+            BROWN -> textView.text = getString(R.string.brown)
+            GREY -> textView.text = getString(R.string.blue_grey)
+            GREEN -> textView.text = getString(R.string.green)
+        }
+    }
+
     private fun scrollUp() {
         binding.nestedMain.fling(-5000);
     }
@@ -540,6 +554,5 @@ class HomeFragment : Fragment() {
     private fun scrollDown() {
         binding.nestedMain.fling(5000);
     }
-
 
 }

@@ -11,8 +11,8 @@
     <dimen name="step_start_heading">12dp</dimen>
 
     <!--lines-->
-    <dimen name="step_line_long">260dp</dimen>
-    <dimen name="step_line_short">16dp</dimen>
+    <dimen name="step_line_long">200dp</dimen>
+    <dimen name="step_line_short">20dp</dimen>
 
 
     <!--large-->
@@ -22,7 +22,7 @@
 
     <dimen name="step_xxx_large">72dp</dimen>
     <dimen name="step_xx_large">48dp</dimen>
-    <dimen name="step_x_large">32dp</dimen>
+    <dimen name="step_x_large">40dp</dimen>
     <dimen name="step_large_plus">28dp</dimen>
     <dimen name="step_large">24dp</dimen>
 
@@ -54,9 +54,10 @@
     <!-- ********************************  Card  ********************************  -->
     <dimen name="card_radius_large">@dimen/step_large</dimen>
     <dimen name="card_radius_normal">@dimen/step_normal_plus</dimen>
+    <dimen name="card_radius_normal_for_top">@dimen/step_normal_pl</dimen>
     <dimen name="card_radius_small">@dimen/step_normal</dimen>
 
-    <dimen name="card_icon_normal">@dimen/step_xx_large</dimen>
+    <dimen name="card_icon_normal">@dimen/step_x_large</dimen>
     <dimen name="card_icon_small">@dimen/step_normal_plus</dimen>
     <dimen name="indent_icon_normal">@dimen/step_large</dimen>
     <dimen name="indent_icon_small">@dimen/step_xx_large</dimen>
@@ -90,7 +91,8 @@
     <dimen name="text_size_small">6sp</dimen>
 
 
-
+    <dimen name="percent_icon">0.35</dimen>
+    <dimen name="percent_icon_long_view">0.11</dimen>
 
     <!-- ********************************  Particular  ********************************  -->
 

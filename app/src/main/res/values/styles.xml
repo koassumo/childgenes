@@ -11,7 +11,18 @@
 
 
     <!--  5   -->
-    <!--  1. text-->
+    <!-- ******************************** Image ********************************-->
+    <style name="iv_icon">
+        <item name="android:layout_width">@dimen/card_icon_normal</item>
+        <item name="android:layout_height">@dimen/card_icon_normal</item>
+        <item name="android:contentDescription">@string/no_description</item>
+        <item name="android:src">@drawable/baseline_blood_24</item>
+    </style>
+
+
+
+    <!--  5   -->
+    <!-- ******************************** 1. text ********************************-->
     <style name="txt_common">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -22,6 +33,10 @@
         <item name="android:textSize">@dimen/text_size_title</item>
         <item name="android:textColor">@color/grey_title_dark</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+   <style name="txt_title_margin_top" parent="txt_title">
+        <item name="android:layout_marginTop">@dimen/margin_top_normal</item>
     </style>
 
     <style name="txt_paragraph" parent="txt_common">
@@ -45,6 +60,18 @@
 
     <style name="txt_hint_inner" parent="txt_title">
         <item name="android:textSize">@dimen/text_size_normal_plus</item>
+    </style>
+
+    <style name="txt_hint_inner_right" parent="txt_title">
+        <item name="android:textSize">@dimen/text_size_normal_plus</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginStart">@dimen/step_small</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:contentDescription">@string/no_description</item>
+        <item name="android:textColor">@color/white</item>
+        <!--        <item name="android:textColor">@color/grey_700</item>-->
     </style>
 
 
@@ -91,7 +118,7 @@
     </style>
 
 
-    <!--   banner -->
+    <!--  ******************************** banner ********************************-->
     <style name="style_card_banner">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -114,8 +141,8 @@
     <style name="card_constraint">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:paddingTop">@dimen/card_radius_small</item>
-        <item name="android:paddingBottom">@dimen/card_radius_small</item>
+        <item name="android:paddingTop">@dimen/card_radius_normal_for_top</item>
+        <item name="android:paddingBottom">@dimen/card_radius_normal_for_top</item>
         <item name="android:paddingStart">@dimen/card_radius_normal</item>
         <item name="android:paddingEnd">@dimen/card_radius_normal</item>
     </style>
