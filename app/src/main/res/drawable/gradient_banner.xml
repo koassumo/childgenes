@@ -9,9 +9,9 @@
 <!--        android:endColor="#ECB0C4"-->
 <!--        android:angle="180" />-->
     <gradient
-        android:startColor="#E64F7F"
-        android:endColor="#EE98B6"
-        android:angle="180" />
+        android:startColor="#00FFFFFF"
+        android:endColor="#60514607"
+        android:angle="120" />
 
     <corners
         android:topLeftRadius="@dimen/radius_small"

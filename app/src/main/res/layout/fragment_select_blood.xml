@@ -39,7 +39,10 @@
         android:text="@string/select_eyes_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/blood_select_card_1"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
 
     <!-- 1 Brown-->
     <com.google.android.material.card.MaterialCardView
@@ -48,7 +51,9 @@
         android:layout_marginTop="@dimen/step_normal_plus"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
-        app:layout_constraintTop_toBottomOf="@+id/blood_select_title">
+        app:layout_constraintTop_toBottomOf="@+id/blood_select_title"
+        app:layout_constraintBottom_toTopOf="@id/blood_select_card_2"
+        app:layout_constraintVertical_chainStyle="packed">
         <!--        app:cardBackgroundColor="@color/bloodsColorBrown"-->
 
         <ImageView
@@ -85,7 +90,9 @@
         style="@style/card_parent"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
-        app:layout_constraintTop_toBottomOf="@+id/blood_select_card_1">
+        app:layout_constraintTop_toBottomOf="@+id/blood_select_card_1"
+        app:layout_constraintBottom_toTopOf="@id/blood_select_card_3"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
             android:id="@+id/iv_empty_gradient_blue"
@@ -122,7 +129,9 @@
         android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
-        app:layout_constraintTop_toBottomOf="@+id/blood_select_card_2">
+        app:layout_constraintTop_toBottomOf="@+id/blood_select_card_2"
+        app:layout_constraintBottom_toTopOf="@id/blood_select_card_4"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
             android:id="@+id/iv_empty_gradient_green"
@@ -159,7 +168,9 @@
         android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
         app:layout_constraintStart_toStartOf="@id/guide_line_start"
-        app:layout_constraintTop_toBottomOf="@+id/blood_select_card_3">
+        app:layout_constraintTop_toBottomOf="@+id/blood_select_card_3"
+        app:layout_constraintBottom_toTopOf="@id/blood_line_bottom"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
             android:id="@+id/iv_empty_gradient_4"
@@ -189,5 +200,11 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/blood_line_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

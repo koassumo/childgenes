@@ -26,10 +26,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.igo.childgenes.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_rh"
+        android:name="com.igo.childgenes.ui.rh.RhFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_rh" />
 
     <fragment
         android:id="@+id/select_eyes_fragment"

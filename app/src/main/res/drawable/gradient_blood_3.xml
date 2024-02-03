@@ -4,9 +4,13 @@
 <!--        android:startColor="#BD3C65"-->
 <!--        android:endColor="#ECB0C4"-->
 <!--        android:angle="180" />-->
+<!--    <gradient-->
+<!--        android:startColor="#DA7998"-->
+<!--        android:endColor="#EDC7D4"-->
+<!--        android:angle="180" />-->
     <gradient
-        android:startColor="#DA7998"
-        android:endColor="#EDC7D4"
+        android:startColor="#F3DE36"
+        android:endColor="#F8EC89"
         android:angle="180" />
     <corners
         android:topLeftRadius="@dimen/radius_xx_small"

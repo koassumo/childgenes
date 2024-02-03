@@ -468,24 +468,25 @@ class HomeFragment : Fragment() {
 
     private fun hideSegmentGrandparents() {
         // segment 'grandparents'
-        binding.eyeSubtitleMessageMotherGranny.visibility = View.GONE
-        binding.eyeCardMotherGranny.visibility = View.GONE
-        binding.eyeSubtitleMessageMotherGrandpa.visibility = View.GONE
-        binding.eyeCardMotherGrandpa.visibility = View.GONE
-        binding.eyeSubtitleMessageFatherGranny.visibility = View.GONE
-        binding.eyeCardFatherGranny.visibility = View.GONE
-        binding.eyeSubtitleMessageFatherGrandpa.visibility = View.GONE
-        binding.eyeCardFatherGrandpa.visibility = View.GONE
-        binding.eyeMaterialDividerF1.visibility = View.GONE
-        binding.eyeMaterialDividerF2.visibility = View.GONE
-        binding.eyeMaterialDividerF3.visibility = View.GONE
-        binding.eyeMaterialDividerF4.visibility = View.GONE
-        binding.eyeMaterialDividerF5.visibility = View.GONE
-        binding.eyeMaterialDividerF6.visibility = View.GONE
-        binding.eyeMaterialDividerF7.visibility = View.GONE
-        binding.eyeMaterialDividerF8.visibility = View.GONE
-        binding.eyeMaterialDividerF9.visibility = View.GONE
-        binding.eyeMaterialDividerF10.visibility = View.GONE
+        binding.eyeGroupGrandparents.visibility = View.GONE
+//        binding.eyeSubtitleMessageMotherGranny.visibility = View.GONE
+//        binding.eyeCardMotherGranny.visibility = View.GONE
+//        binding.eyeSubtitleMessageMotherGrandpa.visibility = View.GONE
+//        binding.eyeCardMotherGrandpa.visibility = View.GONE
+//        binding.eyeSubtitleMessageFatherGranny.visibility = View.GONE
+//        binding.eyeCardFatherGranny.visibility = View.GONE
+//        binding.eyeSubtitleMessageFatherGrandpa.visibility = View.GONE
+//        binding.eyeCardFatherGrandpa.visibility = View.GONE
+//        binding.eyeMaterialDividerF1.visibility = View.GONE
+//        binding.eyeMaterialDividerF2.visibility = View.GONE
+//        binding.eyeMaterialDividerF3.visibility = View.GONE
+//        binding.eyeMaterialDividerF4.visibility = View.GONE
+//        binding.eyeMaterialDividerF5.visibility = View.GONE
+//        binding.eyeMaterialDividerF6.visibility = View.GONE
+//        binding.eyeMaterialDividerF7.visibility = View.GONE
+//        binding.eyeMaterialDividerF8.visibility = View.GONE
+//        binding.eyeMaterialDividerF9.visibility = View.GONE
+//        binding.eyeMaterialDividerF10.visibility = View.GONE
     }
 
 
@@ -519,24 +520,25 @@ class HomeFragment : Fragment() {
 
     private fun unHideSegmentGrandparents() {
         // segment 'grandparents'
-        binding.eyeSubtitleMessageMotherGranny.visibility = View.VISIBLE
-        binding.eyeCardMotherGranny.visibility = View.VISIBLE
-        binding.eyeSubtitleMessageMotherGrandpa.visibility = View.VISIBLE
-        binding.eyeCardMotherGrandpa.visibility = View.VISIBLE
-        binding.eyeSubtitleMessageFatherGranny.visibility = View.VISIBLE
-        binding.eyeCardFatherGranny.visibility = View.VISIBLE
-        binding.eyeSubtitleMessageFatherGrandpa.visibility = View.VISIBLE
-        binding.eyeCardFatherGrandpa.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF1.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF2.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF3.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF4.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF5.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF6.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF7.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF8.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF9.visibility = View.VISIBLE
-        binding.eyeMaterialDividerF10.visibility = View.VISIBLE
+        binding.eyeGroupGrandparents.visibility = View.VISIBLE
+//        binding.eyeSubtitleMessageMotherGranny.visibility = View.VISIBLE
+//        binding.eyeCardMotherGranny.visibility = View.VISIBLE
+//        binding.eyeSubtitleMessageMotherGrandpa.visibility = View.VISIBLE
+//        binding.eyeCardMotherGrandpa.visibility = View.VISIBLE
+//        binding.eyeSubtitleMessageFatherGranny.visibility = View.VISIBLE
+//        binding.eyeCardFatherGranny.visibility = View.VISIBLE
+//        binding.eyeSubtitleMessageFatherGrandpa.visibility = View.VISIBLE
+//        binding.eyeCardFatherGrandpa.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF1.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF2.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF3.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF4.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF5.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF6.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF7.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF8.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF9.visibility = View.VISIBLE
+//        binding.eyeMaterialDividerF10.visibility = View.VISIBLE
     }
 
     private fun changeCardHint(textView: TextView, eyeColor: String) {

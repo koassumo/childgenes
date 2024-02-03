@@ -1,20 +1,9 @@
-package com.igo.childgenes.ui.notifications
+package com.igo.childgenes.ui.rh
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
-import com.igo.childgenes.R
-import com.igo.childgenes.databinding.FragmentNotificationsBinding
-import com.igo.childgenes.ui.home.HomeFragment
+import com.igo.childgenes.databinding.FragmentRhBinding
 
-class NotificationsFragment : Fragment() {
+class RhFragment : Fragment() {
     companion object {
         const val PARENT_PERSON = "com.igo.childgenes.ui.PARENT_PERSON"
         const val MOTHER = "Mother"
@@ -32,7 +21,7 @@ class NotificationsFragment : Fragment() {
         var eyesFatherColor = NOT_SELECTED
     }
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentRhBinding? = null
     private val binding get() = _binding!!
 
     override fun onDestroyView() {

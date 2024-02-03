@@ -14,11 +14,35 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="@dimen/step_xxx_large">
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/eye_group_grandparents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="eye_guide_line_start,
+                                  eye_subtitle_message_mother_granny,
+                                  eye_card_mother_granny,
+                                  eye_subtitle_message_mother_grandpa,
+                                  eye_card_mother_grandpa,
+                                  eye_subtitle_message_father_granny,
+                                  eye_card_father_granny,
+                                  eye_subtitle_message_father_grandpa,
+                                  eye_card_father_grandpa,
+                                  eye_material_divider_f_1,
+                                  eye_material_divider_f_2,
+                                  eye_material_divider_f_3,
+                                  eye_material_divider_f_4,
+                                  eye_material_divider_f_5,
+                                  eye_material_divider_f_6,
+                                  eye_material_divider_f_7,
+                                  eye_material_divider_f_8,
+                                  eye_material_divider_f_9,
+                                  eye_material_divider_f_10"/>
 
             <!--  Grids / guide lines  -->
             <androidx.constraintlayout.widget.Guideline
@@ -124,7 +148,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintGuide_percent="0.76" />
+                        app:layout_constraintGuide_percent="0.6" />
 
                     <ImageView
                         android:id="@+id/eye_iv_eyes"
@@ -136,18 +160,28 @@
                         android:visibility="visible" />
 
                     <ImageView
-                        android:id="@+id/eye_iv_line_title_bottom"
+                        android:id="@+id/iv_empty_gradient_brown"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:alpha="0.1"
-                        android:background="@color/black"
+                        android:layout_height="@dimen/step_zero"
+                        android:background="@drawable/gradient_banner"
                         android:contentDescription="@string/no_description"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@id/eye_guide_line_title_bottom" />
 
+<!--                    <ImageView-->
+<!--                        android:id="@+id/eye_iv_line_title_bottom"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:alpha="0.1"-->
+<!--                        android:background="@color/black"-->
+<!--                        android:contentDescription="@string/no_description"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/eye_guide_line_title_bottom" />-->
+
                     <TextView
+                        android:id="@+id/textView"
                         style="@style/banner_text"
                         android:layout_gravity="center_vertical"
                         android:layout_marginBottom="@dimen/step_normal"
@@ -240,17 +274,17 @@
                         android:id="@+id/eye_mother_granny_icon"
                         style="@style/iv_icon"
                         android:src="@drawable/ic_eye_4"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/eye_mother_granny_icon_hint"
                         style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/eye_mother_granny_icon"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -302,17 +336,17 @@
                         android:id="@+id/eye_mother_grandpa_icon"
                         style="@style/iv_icon"
                         android:src="@drawable/ic_eye_4"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/eye_mother_grandpa_icon_hint"
                         style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/eye_mother_grandpa_icon"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -365,17 +399,17 @@
                         android:id="@+id/eye_father_granny_icon"
                         style="@style/iv_icon"
                         android:src="@drawable/ic_eye_4"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/eye_father_granny_icon_hint"
                         style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/eye_father_granny_icon"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -428,17 +462,17 @@
                         android:id="@+id/eye_father_grandpa_icon"
                         style="@style/iv_icon"
                         android:src="@drawable/ic_eye_4"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/eye_father_grandpa_icon_hint"
                         style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/eye_father_grandpa_icon"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -565,18 +599,17 @@
                         android:id="@+id/eye_mother_icon"
                         style="@style/iv_icon"
                         android:src="@drawable/ic_eye_4"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/eye_mother_icon_hint"
                         style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/eye_mother_icon"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
-
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -666,17 +699,17 @@
                         android:id="@+id/eye_father_icon"
                         style="@style/iv_icon"
                         android:src="@drawable/ic_eye_4"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/eye_father_icon_hint"
                         style="@style/txt_hint_inner_right"
                         android:text="@string/select_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/eye_father_icon"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

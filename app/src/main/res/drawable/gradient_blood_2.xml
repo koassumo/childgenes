@@ -4,11 +4,16 @@
 <!--        android:startColor="#A01C47"-->
 <!--        android:endColor="#DD9EB3"-->
 <!--        android:angle="180" />-->
+<!--    <gradient-->
+<!--        android:startColor="#D8537E"-->
+<!--        android:endColor="#EDC1D0"-->
+<!--        android:angle="180" />-->
     <gradient
-        android:startColor="#D8537E"
-        android:endColor="#EDC1D0"
+        android:startColor="#8094FA"
+        android:endColor="#B4BEF1"
         android:angle="180" />
-    <corners
+
+      <corners
         android:topLeftRadius="@dimen/radius_xx_small"
         android:topRightRadius="@dimen/radius_xx_small"
         android:bottomRightRadius="@dimen/radius_xx_small"
