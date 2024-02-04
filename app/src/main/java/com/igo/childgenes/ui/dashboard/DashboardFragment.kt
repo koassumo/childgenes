@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
 import com.igo.childgenes.databinding.FragmentDashboardBinding
-import com.igo.childgenes.ui.home.HomeFragment
 
 
 class DashboardFragment : Fragment() {
@@ -104,13 +103,13 @@ class DashboardFragment : Fragment() {
 
         binding.bloodCardMother.setOnClickListener {
             findNavController().navigate(
-                R.id.action_navigation_dashboard_to_selectBloodFragment,
+                R.id.action_navigation_dashboard_to_select_blood_fragment,
                 bundleOf(PARENT_PERSON to MOTHER)
             )
         }
         binding.bloodCardFather.setOnClickListener {
             findNavController().navigate(
-                R.id.action_navigation_dashboard_to_selectBloodFragment,
+                R.id.action_navigation_dashboard_to_select_blood_fragment,
                 bundleOf(PARENT_PERSON to FATHER)
             )
         }
@@ -324,7 +323,7 @@ class DashboardFragment : Fragment() {
     }
 
     private fun scrollDown() {
-        binding.nestedMain.fling(5000);
+        binding.bloodNested.fling(5000);
     }
 
     private fun hideSegmentGrandparents() {
@@ -351,10 +350,10 @@ class DashboardFragment : Fragment() {
 
     private fun changeCardHint(textView: TextView, personProperty: String) {
         when (personProperty) {
-            GROUP_1 -> textView.text = getString(R.string.O)
-            GROUP_2 -> textView.text = getString(R.string.A)
-            GROUP_3 -> textView.text = getString(R.string.B)
-            GROUP_4 -> textView.text = getString(R.string.AB)
+            GROUP_1 -> textView.text = getString(R.string.type_o)
+            GROUP_2 -> textView.text = getString(R.string.type_a)
+            GROUP_3 -> textView.text = getString(R.string.type_b)
+            GROUP_4 -> textView.text = getString(R.string.type_ab)
         }
     }
 

@@ -34,8 +34,6 @@ class SelectBloodFragment : Fragment() {
 
         // get data from bundle
         val parentPerson = requireArguments().getString(DashboardFragment.PARENT_PERSON)
-        // binding.messageSelect.text = "Select $parentPerson's Eyes Color"
-        //Toast.makeText(context, "Ваш текст сообщения $parentPerson ", Toast.LENGTH_SHORT).show()
 
         // transfer data back to mainFragment
         binding.bloodSelectCard1.setOnClickListener{

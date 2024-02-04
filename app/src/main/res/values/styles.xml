@@ -186,16 +186,16 @@
         <item name="android:layout_marginEnd">@dimen/step_zero</item>
     </style>
 
-    <style name="card_child_brown" parent="card_child">
+    <style name="card_child_upper" parent="card_child">
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="card_child_blue" parent="card_child">
+    <style name="card_child_middle" parent="card_child">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/step_x_small</item>
     </style>
 
-    <style name="card_child_green" parent="card_child">
+    <style name="card_child_downer" parent="card_child">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/step_x_small</item>
     </style>

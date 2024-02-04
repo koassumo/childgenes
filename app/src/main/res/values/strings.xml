@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">Сhild genes</string>
-    <string name="title_home">Eyes color</string>
-    <string name="title_blood">Blood type</string>
-    <string name="title_dashboard">Blood type</string>
-    <string name="title_notifications">Height</string>
+    <string name="eye_title">Eyes color</string>
+    <string name="blood_title">Blood type</string>
+    <string name="rh_title">Rh factor</string>
 
     <string name="father">Father</string>
     <string name="mother">Mother</string>
@@ -23,7 +22,6 @@
     <string name="blood_4">Type IV (AB)</string>
 
 
-
     <string name="how_to_explain">How to explain</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_long">111</string>
@@ -33,11 +31,12 @@
     <string name="select_color">Select\ncolor</string>
     <string name="select_type">Select\ntype</string>
 
+    <string name="type_o">Type I\n(O)</string>
+    <string name="type_a">Type II\n(A)</string>
+    <string name="type_b">Type III\n(B)</string>
+    <string name="type_ab">Type IV\n(AB)</string>
 
-    <string name="O">Type I\n(O)</string>
-    <string name="A">Type II\n(A)</string>
-    <string name="B">Type III\n(B)</string>
-    <string name="AB">Type IV\n(AB)</string>
-
+    <string name="rh_plus">Rh +</string>
+    <string name="rh_minus">Rh -</string>
 
 </resources>

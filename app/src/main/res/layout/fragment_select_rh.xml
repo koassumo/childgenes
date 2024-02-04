@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rh_select_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.rh.SelectRhFragment">
+
+    <!--  Grids / guide lines  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line_centre_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/rh_select_title"
+        style="@style/txt_title_margin_top"
+        android:text="@string/select_eyes_color"
+        app:layout_constraintBottom_toTopOf="@id/rh_select_card_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <!-- 1 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rh_select_card_1"
+        style="@style/card_parent"
+        android:layout_marginTop="@dimen/step_normal_plus"
+        app:layout_constraintBottom_toTopOf="@id/rh_select_card_2"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@id/guide_line_start"
+        app:layout_constraintTop_toBottomOf="@+id/rh_select_title"
+        app:layout_constraintVertical_chainStyle="packed">
+        <!--        app:cardBackgroundColor="@color/bloodsColorBrown"-->
+
+        <ImageView
+            android:id="@+id/iv_empty_gradient_brown"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_rh_1"
+            android:contentDescription="@string/no_description" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
+
+            <ImageView
+                android:id="@+id/rh_select_1_icon"
+                style="@style/iv_icon"
+                android:src="@drawable/baseline_rh_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rh_select_1_hint"
+                style="@style/txt_hint_inner_right"
+                android:text="@string/type_o"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rh_select_1_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 2 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rh_select_card_2"
+        style="@style/card_parent"
+        app:layout_constraintBottom_toBottomOf="@id/rh_line_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line_centre_vertical"
+        app:layout_constraintStart_toStartOf="@id/guide_line_start"
+        app:layout_constraintTop_toBottomOf="@+id/rh_select_card_1"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:id="@+id/iv_empty_gradient_blue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_rh_2"
+            android:contentDescription="@string/no_description" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/card_constraint">
+
+            <ImageView
+                android:id="@+id/rh_select_2_icon"
+                style="@style/iv_icon"
+                android:src="@drawable/baseline_rh_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rh_select_2_hint"
+                style="@style/txt_hint_inner_right"
+                android:text="@string/type_a"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rh_select_2_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rh_line_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.igo.childgenes.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/eye_title"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_navigation_home_to_select_eyes_fragment"
@@ -18,18 +18,22 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.igo.childgenes.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/blood_title"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_navigation_dashboard_to_selectBloodFragment"
-            app:destination="@id/selectBloodFragment" />
+            android:id="@+id/action_navigation_dashboard_to_select_blood_fragment"
+            app:destination="@id/select_blood_fragment" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_rh"
         android:name="com.igo.childgenes.ui.rh.RhFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_rh" />
+        android:label="@string/rh_title"
+        tools:layout="@layout/fragment_rh" >
+        <action
+            android:id="@+id/action_navigation_rh_to_select_rh_fragment"
+            app:destination="@id/select_rh_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/select_eyes_fragment"
@@ -37,8 +41,13 @@
         android:label="fragment_select"
         tools:layout="@layout/fragment_select_eyes" />
     <fragment
-        android:id="@+id/selectBloodFragment"
+        android:id="@+id/select_blood_fragment"
         android:name="com.igo.childgenes.ui.dashboard.SelectBloodFragment"
         android:label="fragment_select_blood"
         tools:layout="@layout/fragment_select_blood" />
+    <fragment
+        android:id="@+id/select_rh_fragment"
+        android:name="com.igo.childgenes.ui.rh.SelectRhFragment"
+        android:label="fragment_select_rh"
+        tools:layout="@layout/fragment_select_rh" />
 </navigation>
