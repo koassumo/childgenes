@@ -347,6 +347,7 @@
     <color name="grey_title_dark">#654B17</color>
     <color name="white_transparent">#FFFFFF</color>
     <color name="black_transparent">#C1000000</color>
+    <color name="full_transparent">#00000000</color>
 
     <color name="brown_background_x_light">#f0eddd</color>
     <color name="brown_background_light">#e6e4bf</color>

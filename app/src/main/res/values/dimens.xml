@@ -16,7 +16,8 @@
 
 
     <!--large-->
-    <dimen name="step_huge_xx">320dp</dimen>
+    <dimen name="step_huge_xxx">320dp</dimen>
+    <dimen name="step_huge_xx">270dp</dimen>
     <dimen name="step_huge_x">180dp</dimen>
     <dimen name="step_huge">100dp</dimen>
 

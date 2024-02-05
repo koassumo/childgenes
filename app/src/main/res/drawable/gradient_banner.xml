@@ -17,6 +17,6 @@
         android:topLeftRadius="@dimen/radius_small"
         android:topRightRadius="@dimen/radius_small"
         android:bottomRightRadius="@dimen/radius_xx_small"
-        android:bottomLeftRadius="@dimen/radius_xx_small">
+        android:bottomLeftRadius="@dimen/radius_normal">
     </corners>
 </shape>

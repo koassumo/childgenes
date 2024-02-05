@@ -9,6 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
 import com.igo.childgenes.databinding.FragmentSelectRhBinding
+import com.igo.childgenes.ui.*
 
 class SelectRhFragment : Fragment() {
 
@@ -32,22 +33,22 @@ class SelectRhFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // get data from bundle
-        val parentPerson = requireArguments().getString(RhFragment.PARENT_PERSON)
+        val parentPerson = requireArguments().getString(PARENT_PERSON)
 
         // transfer data back to mainFragment
         binding.rhSelectCard1.setOnClickListener{
             parentFragmentManager.setFragmentResult(
-                RhFragment.RESPOND, bundleOf(
-                RhFragment.PARENT_PERSON to parentPerson,
-                RhFragment.RH_TYPE to RhFragment.RH_PLUS)
+                RESPOND, bundleOf(
+                PARENT_PERSON to parentPerson,
+                RH_TYPE to RH_PLUS)
             )
             findNavController().popBackStack()
         } 
         binding.rhSelectCard2.setOnClickListener{
             parentFragmentManager.setFragmentResult(
-                RhFragment.RESPOND, bundleOf(
-                RhFragment.PARENT_PERSON to parentPerson,
-                RhFragment.RH_TYPE to RhFragment.RH_MINUS)
+                RESPOND, bundleOf(
+                PARENT_PERSON to parentPerson,
+                RH_TYPE to RH_MINUS)
             )
             findNavController().popBackStack()
         }

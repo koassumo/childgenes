@@ -1,6 +1,37 @@
-//import com.igo.childgenes.ui.NOT_SELECTED
+package com.igo.childgenes.ui
 
-//package com.igo.childgenes.ui
+const val PARENT_PERSON = "PARENT_PERSON"
+const val MOTHER = "Mother"
+const val FATHER = "Father"
+
+const val MOTHER_GRANNY = "MotherGranny"
+const val MOTHER_GRANDPA = "MotherGrandpa"
+const val FATHER_GRANNY = "FatherGranny"
+const val FATHER_GRANDPA = "FatherGrandpa"
+
+const val RESPOND = "RESPOND"
+const val BLOOD_TYPE = "BLOOD_TYPE"
+const val EYES_COLOR = "EYES_COLOR"
+
+const val NOT_SELECTED = "NOT_SELECTED"
+
+const val BROWN = "BROWN"
+const val GREY = "GREY"
+const val GREEN = "GREEN"
+
+const val GROUP_1 = "GROUP_1"
+const val GROUP_2 = "GROUP_2"
+const val GROUP_3 = "GROUP_3"
+const val GROUP_4 = "GROUP_4"
+
+const val RH_TYPE = "RH_TYPE"
+
+const val RH_PLUS = "RH_PLUS"
+const val RH_MINUS = "RH_MINUS"
+
+
+
+
 //const val com.igo.childgenes.ui.PARENT_PERSON: String = "com.igo.childgenes.ui.PARENT_PERSON",
 //const val com.igo.childgenes.ui.MOTHER: String = "Mother",
 //const val com.igo.childgenes.ui.FATHER: String = "Father",

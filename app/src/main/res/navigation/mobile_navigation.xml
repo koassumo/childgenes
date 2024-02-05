@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.igo.childgenes.ui.dashboard.DashboardFragment"
+        android:name="com.igo.childgenes.ui.dashboard.BloodFragment"
         android:label="@string/blood_title"
         tools:layout="@layout/fragment_dashboard" >
         <action

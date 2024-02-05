@@ -1,5 +1,7 @@
 package com.igo.childgenes
 
+import android.content.res.Resources
+import android.os.Build
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.igo.childgenes.databinding.ActivityMainBinding
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,6 +45,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        LocaleManager.setLocale(resources, "ru")
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -60,5 +65,29 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
+        // Устанавливаем тему без ActionBar
+        //setTheme(com.google.android.material.R.style.Theme_AppCompat_DayNight_NoActionBar)
+
+        // После этой строки вызовется setContentView
+        // setContentView(R.layout.activity_main)
+
+
+
+    }
+    object LocaleManager {
+
+        fun setLocale(resources: Resources, languageCode: String) {
+            val configuration = resources.configuration
+            val locale = Locale(languageCode)
+            Locale.setDefault(locale)
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                configuration.setLocale(locale)
+            } else {
+                configuration.locale = locale
+            }
+
+            resources.updateConfiguration(configuration, resources.displayMetrics)
+        }
     }
 }

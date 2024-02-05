@@ -13,26 +13,11 @@ import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
 import com.igo.childgenes.databinding.FragmentHomeBinding
 import kotlin.math.roundToInt
+import com.igo.childgenes.ui.*
 
 class HomeFragment : Fragment() {
 
     companion object {
-        const val PARENT_PERSON = "PARENT_PERSON"
-        const val MOTHER = "Mother"
-        const val FATHER = "Father"
-        const val MOTHER_GRANNY = "MotherGranny"
-        const val MOTHER_GRANDPA = "MotherGrandpa"
-        const val FATHER_GRANNY = "FatherGranny"
-        const val FATHER_GRANDPA = "FatherGrandpa"
-
-        const val RESPOND = "RESPOND"
-        const val EYES_COLOR = "EYES_COLOR"
-
-        const val BROWN = "BROWN"
-        const val GREY = "GREY"
-        const val GREEN = "GREEN"
-        const val NOT_SELECTED = "NOT_SELECTED"
-
         var eyesMotherColor = NOT_SELECTED
         var eyesFatherColor = NOT_SELECTED
         var eyesMotherGrannyColor = NOT_SELECTED
@@ -175,18 +160,6 @@ class HomeFragment : Fragment() {
             }
             checkChildRenderNeeded()
         }
-
-//        binding.eyeInfo1ArrowDown.setOnClickListener {
-//            binding.eyeInfo1Content.visibility = View.VISIBLE
-//            binding.eyeInfo1ArrowDown.visibility = View.INVISIBLE
-//            binding.eyeInfo1ArrowUp.visibility = View.VISIBLE
-//        }
-//        binding.eyeInfo1ArrowUp.setOnClickListener {
-//            binding.eyeInfo1Content.visibility = View.GONE
-//            binding.eyeInfo1ArrowUp.visibility = View.INVISIBLE
-//            binding.eyeInfo1ArrowDown.visibility = View.VISIBLE
-//        }
-//
 
         binding.eyeInfo1Btn.setOnClickListener {
             if (binding.eyeInfo1ArrowUp.visibility == View.INVISIBLE) {

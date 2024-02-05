@@ -5,12 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
 import com.igo.childgenes.databinding.FragmentSelectEyesBinding
-import com.igo.childgenes.ui.home.HomeFragment.Companion
+import com.igo.childgenes.ui.*
 
 class SelectEyesFragment : Fragment() {
 
@@ -34,28 +33,28 @@ class SelectEyesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // get data from bundle
-        val parentPerson = requireArguments().getString(HomeFragment.PARENT_PERSON)
+        val parentPerson = requireArguments().getString(PARENT_PERSON)
         // binding.messageSelect.text = "Select $parentPerson's Eyes Color"
         //Toast.makeText(context, "Ваш текст сообщения $parentPerson ", Toast.LENGTH_SHORT).show()
 
         // transfer data back to mainFragment
         binding.eyeSelectCardBrown.setOnClickListener{
-            parentFragmentManager.setFragmentResult(HomeFragment.RESPOND, bundleOf(
-                HomeFragment.PARENT_PERSON to parentPerson,
-                HomeFragment.EYES_COLOR to HomeFragment.BROWN)
+            parentFragmentManager.setFragmentResult(RESPOND, bundleOf(
+                PARENT_PERSON to parentPerson,
+                EYES_COLOR to BROWN)
             )
             findNavController().popBackStack()
         }
         binding.eyeSelectCardGrey.setOnClickListener{
-            parentFragmentManager.setFragmentResult(HomeFragment.RESPOND, bundleOf(
-                HomeFragment.PARENT_PERSON to parentPerson,
-                HomeFragment.EYES_COLOR to HomeFragment.GREY))
+            parentFragmentManager.setFragmentResult(RESPOND, bundleOf(
+                PARENT_PERSON to parentPerson,
+                EYES_COLOR to GREY))
             findNavController().popBackStack()
         }
         binding.eyeSelectCardGreen.setOnClickListener{
-            parentFragmentManager.setFragmentResult(HomeFragment.RESPOND, bundleOf(
-                HomeFragment.PARENT_PERSON to parentPerson,
-                HomeFragment.EYES_COLOR to HomeFragment.GREEN))
+            parentFragmentManager.setFragmentResult(RESPOND, bundleOf(
+                PARENT_PERSON to parentPerson,
+                EYES_COLOR to GREEN))
             findNavController().popBackStack()
         }
     }

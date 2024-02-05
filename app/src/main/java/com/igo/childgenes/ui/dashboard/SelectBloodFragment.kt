@@ -9,7 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.igo.childgenes.R
 import com.igo.childgenes.databinding.FragmentSelectBloodBinding
-
+import com.igo.childgenes.ui.*
 
 class SelectBloodFragment : Fragment() {
 
@@ -33,32 +33,32 @@ class SelectBloodFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // get data from bundle
-        val parentPerson = requireArguments().getString(DashboardFragment.PARENT_PERSON)
+        val parentPerson = requireArguments().getString(PARENT_PERSON)
 
         // transfer data back to mainFragment
         binding.bloodSelectCard1.setOnClickListener{
-            parentFragmentManager.setFragmentResult(DashboardFragment.RESPOND, bundleOf(
-                DashboardFragment.PARENT_PERSON to parentPerson,
-                DashboardFragment.BLOOD_TYPE to DashboardFragment.GROUP_1)
+            parentFragmentManager.setFragmentResult(RESPOND, bundleOf(
+                PARENT_PERSON to parentPerson,
+                BLOOD_TYPE to GROUP_1)
             )
             findNavController().popBackStack()
         }
         binding.bloodSelectCard2.setOnClickListener{
-            parentFragmentManager.setFragmentResult(DashboardFragment.RESPOND, bundleOf(
-                DashboardFragment.PARENT_PERSON to parentPerson,
-                DashboardFragment.BLOOD_TYPE to DashboardFragment.GROUP_2))
+            parentFragmentManager.setFragmentResult(RESPOND, bundleOf(
+                PARENT_PERSON to parentPerson,
+                BLOOD_TYPE to GROUP_2))
             findNavController().popBackStack()
         }
         binding.bloodSelectCard3.setOnClickListener{
-            parentFragmentManager.setFragmentResult(DashboardFragment.RESPOND, bundleOf(
-                DashboardFragment.PARENT_PERSON to parentPerson,
-                DashboardFragment.BLOOD_TYPE to DashboardFragment.GROUP_3))
+            parentFragmentManager.setFragmentResult(RESPOND, bundleOf(
+                PARENT_PERSON to parentPerson,
+                BLOOD_TYPE to GROUP_3))
             findNavController().popBackStack()
         }
          binding.bloodSelectCard4.setOnClickListener{
-            parentFragmentManager.setFragmentResult(DashboardFragment.RESPOND, bundleOf(
-                DashboardFragment.PARENT_PERSON to parentPerson,
-                DashboardFragment.BLOOD_TYPE to DashboardFragment.GROUP_4))
+            parentFragmentManager.setFragmentResult(RESPOND, bundleOf(
+                PARENT_PERSON to parentPerson,
+                BLOOD_TYPE to GROUP_4))
             findNavController().popBackStack()
         }
     }

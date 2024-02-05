@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".ui.dashboard.BloodFragment">
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/blood_nested"
@@ -14,11 +14,35 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingBottom="@dimen/step_xxx_large">
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/blood_group_grandparents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="blood_guide_line_start,
+                                  blood_subtitle_message_mother_granny,
+                                  blood_card_mother_granny,
+                                  blood_subtitle_message_mother_grandpa,
+                                  blood_card_mother_grandpa,
+                                  blood_subtitle_message_father_granny,
+                                  blood_card_father_granny,
+                                  blood_subtitle_message_father_grandpa,
+                                  blood_card_father_grandpa,
+                                  blood_material_divider_f_1,
+                                  blood_material_divider_f_2,
+                                  blood_material_divider_f_3,
+                                  blood_material_divider_f_4,
+                                  blood_material_divider_f_5,
+                                  blood_material_divider_f_6,
+                                  blood_material_divider_f_7,
+                                  blood_material_divider_f_8,
+                                  blood_material_divider_f_9,
+                                  blood_material_divider_f_10"/>
 
                 <!--  Grids / guide lines  -->
                 <androidx.constraintlayout.widget.Guideline
@@ -124,7 +148,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            app:layout_constraintGuide_percent="0.76" />
+                            app:layout_constraintGuide_percent="0.5" />
 
                         <ImageView
                             android:id="@+id/blood_iv"
@@ -136,16 +160,25 @@
                             android:visibility="visible" />
 
                         <ImageView
-                            android:id="@+id/blood_iv_line_title_bottom"
+                            android:id="@+id/iv_empty_gradient_brown"
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:alpha="0.1"
-                            android:background="@color/black"
+                            android:layout_height="@dimen/step_zero"
+                            android:background="@drawable/gradient_banner"
                             android:contentDescription="@string/no_description"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="@id/blood_guide_line_title_bottom" />
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/blood_iv_line_title_bottom"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="0dp"-->
+<!--                            android:alpha="0.1"-->
+<!--                            android:background="@color/black"-->
+<!--                            android:contentDescription="@string/no_description"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="@id/blood_guide_line_title_bottom" />-->
 
                         <TextView
                             style="@style/banner_text"

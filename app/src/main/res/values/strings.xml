@@ -36,7 +36,7 @@
     <string name="type_b">Type III\n(B)</string>
     <string name="type_ab">Type IV\n(AB)</string>
 
-    <string name="rh_plus">Rh +</string>
-    <string name="rh_minus">Rh -</string>
+    <string name="rh_plus">Rh+</string>
+    <string name="rh_minus">Rh-</string>
 
 </resources>

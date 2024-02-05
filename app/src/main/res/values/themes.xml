@@ -6,6 +6,10 @@
     </style>
     <style name="Theme.СhildGenes" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
 
+        <!--settings for toolbar-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+
         <!--        &lt;!&ndash; Primary brand color. &ndash;&gt;-->
         <!--        <item name="colorPrimary">@color/purple_500</item>-->
         <!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->

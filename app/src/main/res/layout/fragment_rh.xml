@@ -1,23 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rh_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context=".ui.rh.RhFragment">
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+
+
+    <!--     toolbar       -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/rh_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/step_huge_xxx"
+        android:background="@color/full_transparent"
+        app:elevation="@dimen/step_zero"><!-- no shadow during scrolling -->
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/rh_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_top_normal"
+
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed"
+            app:contentScrim="?attr/colorPrimaryDark"
+            app:collapsedTitleTextColor="@color/grey_title_dark"
+            app:expandedTitleTextColor="@color/white"
+
+            app:collapsedTitleTextAppearance="@style/banner_text_collapsed"
+            app:expandedTitleTextAppearance="@style/banner_text_expanded"
+            app:titleTextEllipsize="end"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            >
+<!--        expandedTitleMarginStart марджины заголовка здесь в разметке    -->
+<!--            app:contentScrim="?attr/colorPrimary"   -"задника" контента когда свернут -->
+
+<!--            android:fitsSystemWindows="true"-->
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/rh_toolbar_cv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_collapseMode="none"
+                app:cardBackgroundColor="?attr/colorPrimaryDark"
+                app:cardCornerRadius="@dimen/radius_normal"> <!-- Задайте желаемый радиус закругления -->
+
+                <!-- Ваш Banner внутри MaterialCardView -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="none"
+                    android:keepScreenOn="true">
+
+                    <!-- Здесь ваш контент Banner -->
+                                <ImageView
+                                    android:id="@+id/rh_toolbar_iv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:layout_collapseMode="none"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/eyes"
+/>
+<!--                    style="@style/style_image_banner"-->
+<!--                    android:background="@drawable/gradient_banner"-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+<!--            -->
+<!--            <ImageView-->
+<!--                android:id="@+id/rh_toolbar_iv"-->
+<!--                style="@style/style_image_banner"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@drawable/gradient_banner"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/eyes"-->
+<!--                android:keepScreenOn="true"-->
+<!--                app:layout_collapseMode="parallax"/>-->
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:title="@string/rh_title"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                app:titleTextAppearance="@style/MyTitleTextAppearance"/>
+
+
+
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                app:title="@string/rh_title"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--                app:layout_collapseMode="pin">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/toolbar_title"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/rh_title"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/text_size_banner"-->
+<!--                    android:textFontWeight="900"/>-->
+<!--            </androidx.appcompat.widget.Toolbar>-->
+
+
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:keepScreenOn="false"-->
+            <!--                android:src="@drawable/eyes5"-->
+            <!--                app:layout_collapseMode="parallax"/>-->
+
+
+            <!--            <TextView-->
+            <!--                style="@style/banner_text"-->
+            <!--                android:layout_gravity="center_vertical"-->
+            <!--                android:layout_marginBottom="@dimen/step_normal"-->
+            <!--                android:elevation="@dimen/elevation_normal"-->
+            <!--                android:text="@string/rh_title"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textFontWeight="900"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/rh_nested"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="@dimen/step_xxx_large">
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/rh_group_grandparents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="rh_guide_line_start,
+                                  rh_subtitle_message_mother_granny,
+                                  rh_card_mother_granny,
+                                  rh_subtitle_message_mother_grandpa,
+                                  rh_card_mother_grandpa,
+                                  rh_subtitle_message_father_granny,
+                                  rh_card_father_granny,
+                                  rh_subtitle_message_father_grandpa,
+                                  rh_card_father_grandpa,
+                                  rh_material_divider_f_1,
+                                  rh_material_divider_f_2,
+                                  rh_material_divider_f_3,
+                                  rh_material_divider_f_4,
+                                  rh_material_divider_f_5,
+                                  rh_material_divider_f_6,
+                                  rh_material_divider_f_7,
+                                  rh_material_divider_f_8,
+                                  rh_material_divider_f_9,
+                                  rh_material_divider_f_10"/>
 
             <!--  Grids / guide lines  -->
             <androidx.constraintlayout.widget.Guideline
@@ -104,11 +264,11 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
+
             <!--Banner-->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/rh_banner"
                 style="@style/card_banner"
-                android:layout_height="270dp"
                 android:layout_marginBottom="@dimen/step_x_large"
                 app:layout_constraintEnd_toStartOf="@id/rh_guide_line_end"
                 app:layout_constraintStart_toStartOf="@id/rh_guide_line_start"
@@ -123,7 +283,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        app:layout_constraintGuide_percent="0.76" />
+                        app:layout_constraintGuide_percent="0.5" />
 
                     <ImageView
                         android:id="@+id/rh_iv"
@@ -134,17 +294,27 @@
                         android:src="@drawable/eyes"
                         android:visibility="visible" />
 
+
                     <ImageView
-                        android:id="@+id/rh_iv_line_title_bottom"
+                        android:id="@+id/iv_empty_gradient_brown"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:alpha="0.1"
-                        android:background="@color/black"
+                        android:layout_height="@dimen/step_zero"
+                        android:background="@drawable/gradient_banner"
                         android:contentDescription="@string/no_description"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@id/rh_guide_line_title_bottom" />
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/rh_iv_line_title_bottom"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:alpha="0.1"-->
+<!--                        android:background="@color/black"-->
+<!--                        android:contentDescription="@string/no_description"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/rh_guide_line_title_bottom" />-->
 
                     <TextView
                         style="@style/banner_text"
@@ -210,7 +380,7 @@
                 app:layout_constraintTop_toBottomOf="@id/rh_subtitle_message_mother_granny">
 
                 <ImageView
-                    android:id="@+id/rh_iv_mother_granny_gradient_rh_2"
+                    android:id="@+id/rh_iv_mother_granny_gradient_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/gradient_rh_2"
